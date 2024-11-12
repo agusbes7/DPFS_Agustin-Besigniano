@@ -1,142 +1,99 @@
-html, body {
-    height: 100%;
+html, body{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow: hidden;
 }
-
-/* Contenedor principal con CSS Grid */
+*{
+    box-sizing: border-box;
+   
+  
+}
 .container {
     display: grid;
     grid-template-areas:
-        "header"
-        "banner"
-        "navigation"
-        "promociones"
+        "header header"
+        "banner banner"
+        "navigation navigation"
+        "promociones promociones"
         "categorias productos"
-        "ofertas"
-        "footer";
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    gap: 10px;
-    padding: 20px;
-    width: 100%;
-    height: 100%;
-   background-color: white;
+        "ofertas ofertas"
+        "footer footer";
+    grid-template-columns: 1fr 3fr; /* Dos columnas: 1fr y 3fr */
+    /*grid-template-rows: auto auto auto auto auto auto auto;*/
+    grid-template-rows: 2% 15% 4% 2% auto; /*  5% 30% 10% 15%; /* Una fila para cada sección */
+    min-height: 100vh; /* Altura mínima para ocupar toda la pantalla */
+    background-color: white;
 }
 
-/* Áreas de cada sección */
-.header {
-    grid-area: header;
-    background-color: #5C545C;
-    text-align: center;
-    padding: 10px;
-}
-
-.banner {
-    grid-area: banner;
-    background-color: #DD4204;
+header { grid-area: header; background-color: #5C545C;}
+header p{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    
-    padding: 10px;
-}
-
-.navigation {
-    grid-area: navigation;
-    background-color: #333;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-}
-
-.promociones {
-    grid-area: promociones;
-    background-color: #99cc33;
-    padding: 10px;
-    text-align: center;
-}
-
-.categorias {
-    grid-area: categorias;
-    background-color: #ffdd99;
-    padding: 10px;
-}
-
-.productos {
-    grid-area: productos;
-    background-color: #f2f2f2;
-    padding: 10px;
-}
-
-.ofertas {
-    grid-area: ofertas;
-    background-color: #ccffcc;
-    padding: 10px;
-    text-align: center;
-}
-
-footer {
-    grid-area: footer;
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-}
-
-/* Estilos adicionales para cada sección */
-.banner img {
-    max-height: 80px;
-}
-
-.banner h1 {
-    font-size: 2em;
-    margin: 0;
-}
-
-.navigation ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 15px;
-}
-
-.navigation ul li {
-    color: white;
-    cursor: pointer;
-}
-
-.promociones ul {
-    list-style-type: none;
-    display: flex;
+        color: white;
     justify-content: center;
-    gap: 10px;
-    padding: 0;
-    margin: 10px 0 0;
-}
+    font-size: 60%;}
 
-.categorias ul, .productos ul {
-    list-style-type: none;
-    padding: 0;
-}
+.banner { display: flex;
+    flex-direction: row;
+    grid-area: banner;
+    height: 100%;
+     background-color: #DD4204;
+ justify-content: space-around;
+ align-items: center;
+overflow-x: visible;}
+   .banner_img_f , .banner_img_s{
+display: flex;
+justify-items: center;
+justify-items: center; }
+.banner_img_f{     height: 90%;}
+    .banner_img_s{            height: 50%;    }
+    .banner h1{
+        color: #FAC710;
+        font-size: 400%;
+        font-family: "Bangers", system-ui;
+        font-style: normal;
+        display: flex;
+    text-align: center;}
+    .navigation { 
+        grid-area: navigation;
+       
+          display: flex;
+           flex-direction: row;
+           gap: 5%;
+             align-items: center;  
+             height: 100%; } 
+             #menu { display: none; }
+              .navigation_opc {display: flex;
+                justify-content: center;
+                width: 80%; } 
+                  .navigation_list { display: flex; 
+                    flex-direction: row; 
+                    justify-content: space-around;
+                      }
+                      .navigation_list ul { display: flex;
+                         flex-direction: row;
+                          list-style-type: none;
+                          margin-top: 3%;
+    width: 50%;
+    height: 60%; }
+                             .navigation_list li { margin: 2%;
+                                background-color: #f10101;
+                                border: 10px;
+                                gap: 10px;
+                                border-radius: 20%;
+                               padding: 4%;
+                                color: cornsilk;
+                                opacity: 100%; } 
 
-.productos .encabezado-titulos {
-    margin-bottom: 15px;
-}
-
-.productos .tarjetas ul {
-    display: flex;
-    gap: 15px;
-    list-style-type: none;
-    padding: 0;
-}
-
-footer div {
-    display: none;
-    margin: 5px 0;
-}
+    .busqueda { 
+        display: flex;
+            height: 44%;
+            width: 20%;
+        gap: 1%;}
+/*-----------------------*/
+.promociones {  grid-area: promociones; background-color: #A0A0A0; }
+.categorias { grid-area: categorias; background-color: #909090; }
+.productos { grid-area: productos; background-color: #B0B0B0; }
+.ofertas { grid-area: ofertas; background-color: #808080; }
+footer { grid-area: footer; background-color: #707070; 
+display: none;}
