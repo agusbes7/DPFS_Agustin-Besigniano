@@ -14,9 +14,8 @@ html, body{
         "header header"
         "banner banner"
         "navigation navigation"
-        "promociones promociones"
-        "categorias productos"
         "ofertas ofertas"
+        "productos productos"
         "footer footer";
     grid-template-columns: 1fr 3fr; /* Dos columnas: 1fr y 3fr */
     grid-template-rows: 2% 15% 4% 3% auto; /* Una fila para cada sección */

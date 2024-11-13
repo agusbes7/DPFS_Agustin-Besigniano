@@ -5,48 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cronica de Juegos</title>
     <link rel="shortcut icon" href="./Medias/Imagenes/4kvothe logo3.png" type="image/x-icon">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/styles/styles.css">
    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 
 <!--.
+Probar en el futuro rediseñar todo con base en bootstrap y ver si ahorra tiempo y es mas facil de manipular
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <link src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
 -->
 </head>
 <body>
     <div class="container">
- <header >           <img src="/Medias/iconos/camion-de-carga.png" alt="camion de envio">
+<!-- ------------HEADER------------------------------------------------ -->
+
+<header >           <img src="/Medias/iconos/camion-de-carga.png" alt="camion de envio">
      <p>Envíos gratis a todo el país</p>    
      <img src="/Medias/iconos/camion-de-carga.png" alt="camion de envio">    </header>
-<!-- ------------------------------------------------------------ -->
+<!-- ------------------BANNER------------------------------------------ -->
    <section class="banner">
                         <img class="banner_img_f" src="./Medias/imagenes/Game_Chronicle__1_-removebg-preview.png" alt="Hombre pelirrojo con penetrantes ojos verdes">
             <h1>GAME CHRONICLE</h1>
             <img class="banner_img_s" src="./Medias/iconos/icons8-guitar-96-removebg-preview-removebg-preview.png" alt="Laud instrumento musical">
         </section>
 
-<!-- ------------------------------------------------------------ -->
+<!-- ------------------------NAVIGATION------------------------------------ -->
 
         <nav class="navigation">
-<!-- ------------------------------------------------------------ -->
+<!-- -----------------LISTA DE NAVEGACION-------------------------- -->
 
             <div class="navigation_opc"> 
-                <div id="menu"> <img src="/Medias/iconos/menu.png" alt="barra de menu">
-                 </div>
                   <div class="navigation_list"> 
+                <!--Truco para boton sin js-->
+                    <input type="checkbox" name="menu_Responsive" id="menu_toggle">
+                    <label for="menu_toggle" class="menu_label"></label> 
+                    <div id="menu" class='bx bx-menu'></div>
+                    
+                   
                     <ul> 
-                        <li>Inicio</li> 
-                        <li>Juegos</li> 
-                        <li>Libros</li> 
-                        <li>Accesorios</li>
-                         <li>Contacto</li> 
+                        <li><a href="index.html">Inicio</a></li> 
+                        <li><a href="index.html">Juegos</a></li> 
+                        <li><a href="index.html">Libros</a></li> 
+                        <li><a href="index.html">Articulos</a></li>
+                         <li><a href="index.html">Contacto</a></li> 
+                    <li><a href="./secciones/login.html">cuenta</a></li>
                         </ul> 
                     </div>
                  </div>
-<!-- ------------------------------------------------------------ -->
+<!-- -------------------BUSCADOR BARRA DE NAV----------------------------------------- -->
                  <div class="busqueda">
                     <input type="text" class="input" placeholder="Buscar">
                     <button type="submit" class="input_button">
@@ -65,7 +74,24 @@
             </ul>
          </section>
 <!-- ------------------------------------------------------------ -->
-        <section class="ofertas">                       <p>Ofertas promocionales, producto o tarjeta opcional</p> </section>
+        <section class="ofertas">                       <p>Ofertas promocionales, producto o tarjeta opcional</p>
+            <div class="ofertas_Mes">
+                <ul>
+                    <li>25% descuento en todo lo relacionado con el señor de los anillos pagando con tarjeta Supervielle</li>
+                <li class="tarjeta">
+                    <a href="#" class="tarjeta-link">
+                        <img src="/Medias/productos/catan2.jpg" alt="Imagen de tarjeta" class="tarjeta-img">
+                        <p class="descripcion">Amp 5-6 Exploradores y Piratas </p>
+                        <p class="precio"><del>$55000</del> $45000</p>
+                    </a></li>
+                    <li class="tarjeta">
+                        <a href="#" class="tarjeta-link">
+                            <img src="/Medias/productos/articulo 2.webp" alt="Imagen de tarjeta" class="tarjeta-img">
+                            <p class="descripcion">Reliquias de la muerte</p>
+                            <p class="precio"><del>$10000</del>$7700</p>
+                        </a>
+                    </li></ul>
+            </div> </section>
 <!-- ------------------------------------------------------------ -->
 
         <aside class="categorias">
