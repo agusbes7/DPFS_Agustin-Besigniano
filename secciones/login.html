@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cronica de Juegos</title>
     <link rel="shortcut icon" href="../Medias/Imagenes/4kvothe logo3.png" type="image/x-icon">
-  <link rel="stylesheet" href="/styles/styles_login.css">
+  <!--<link rel="stylesheet" href="/styles/styles_login.css">-->
+  <link rel="stylesheet" href="/styles/styles_general.css">
    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
@@ -32,9 +33,11 @@
 <!-- -----------------LISTA DE NAVEGACION-------------------------- -->
 
             <div class="navigation_opc"> 
-                <div id="menu"> <img src="./Medias/iconos/menu.png" alt="barra de menu">
-                 </div>
                   <div class="navigation_list"> 
+                      <!--Truco para boton sin js-->
+                      <input type="checkbox" name="menu_Responsive" id="menu_toggle">
+                      <label for="menu_toggle" class="menu_label"></label> 
+                      <div id="menu" class='bx bx-menu'></div>
                     <ul> 
                         <li>Inicio</li> 
                         <li>Juegos</li> 
