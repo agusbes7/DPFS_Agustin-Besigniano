@@ -18,7 +18,7 @@ html,body {    margin: 0;              padding: 0;
     /* Dos columnas: 1fr y 3fr */
     /* Una fila para cada sección */
     min-height: 100vh;
-    grid-template-rows: 1.5%  10%  4% 1fr  auto;
+    grid-template-rows: 1.5%  10%  3% 1fr  auto;
 flex-grow: 1;
     /* Altura mínima para ocupar toda la pantalla */
     background-color: white;
@@ -37,7 +37,7 @@ header img {
     height: 70%;
     margin-left: 1%;
     margin-right: 1%;}
-header p {
+p {
     color: white;
     text-align: center;
     justify-content: center;
@@ -47,6 +47,7 @@ header p {
     font-style: italic;
     word-spacing: 16px;
     letter-spacing: 3px;}
+
 /*---------------------BANNER-----------------------*/
 .banner{
     overflow: hidden;
@@ -84,7 +85,7 @@ margin-right: 1%;}
     grid-area: navigation;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: stretch;
     height: 100%;
 background-color: white;
 gap: 1%;}
@@ -92,17 +93,13 @@ gap: 1%;}
 /*Solo la mitad de altura del contenedor van a usar*/
 .navigation > .navigation_opc,
 .navigation > .busqueda{
-    height: 50%;
+    height: 70%;
        overflow: hidden;}
 
 /* lista de secciones de la pagina*/
 .navigation_opc{
     width: 60%;
-margin-right: 2%;
-/*margin-left: 2%;
-align-items: center;
-justify-content: center;*/
-}
+margin-right: 2%;}
 
 
 .navigation_opc ul {
@@ -130,54 +127,50 @@ text-align: center;}
     font-size: 80%;
     font-family: "Open Sans", sans-serif;
     font-style: italic;
-
-
 }
+
+.navigation_opc ul li:active,
+.busqueda .input_button:active {     background-color: #DD4204; }
+
+.navigation_opc li a:hover {
+    color:#FAC710;;
+    border-radius: 50%;
+    padding: 0;}
+
 .busqueda {
     display: flex;
-   margin-left: 5%;
-       width: 20%;
-     
-    margin-right: 2%;
-    gap: 0.5%;
+    align-items: center;
+       width: 35%;
+       border-radius: 30%;
+     gap: 0.5%;
 }
-
 .input {
-    width: 100%;
+justify-content: space-around;
+    width: 80%;
     height: 65%;
-    justify-content: center;
     padding: 8px 12px;
     border: 1px solid #ccc;
     border-radius: 5px 0 0 5px;
     font-size: 1rem;
     outline: none;
-    height: 40%;
 }
 
 /* Botón de búsqueda */
 .input_button {
+    height: 60%;
     background-color: red;
     border: 1px solid #ccc;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
     display: flex;
-    
+    align-items: center;
+    justify-content: center;
     padding: 0 10px;}
     .input_button img{
-        width: 80%;
-        height: 100%;
+        width: 50%;
+        height: 50%;
     }
 
-
-/*
-.navigation_list li a{    text-decoration: none;}
-.navigation_list li a:hover {
-    color:#FAC710;;
-    border-radius: 50%;
-    padding: 0;}
-    .navigation_list ul li:active {     background-color: #DD4204; }
-
-*/
 /*-----------Raya responsiva para navegacion*-------------------------------*/
 #menu {
 display: none;
@@ -199,10 +192,15 @@ display: none;
 align-self: end;
             display: flex;
             flex-direction: column;
-        background-color: #5C545C;
-    color: white;
-width: 100%;
-        }
+        background-color: #DD4204;
+   width: 100%;  }
+.mensaje p{
+    width: 100%;
+    font-size: 100%;
+    text-align: center;
+    justify-content: center;
+    font-style: normal;
+}
 .foo_container{
     display:  none;
 }

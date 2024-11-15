@@ -6,7 +6,7 @@
     <title>Cronica de Juegos</title>
     <link rel="shortcut icon" href="./Medias/Imagenes/4kvothe logo3.png" type="image/x-icon">
 
-  <link rel="stylesheet" href="/styles/stylesf.css">
+  <link rel="stylesheet" href="/styles/stylesHome.css">
   <link rel="stylesheet" href="/styles/styles_general.css">
 
    <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,7 +44,7 @@ Probar en el futuro rediseñar todo con base en bootstrap y ver si ahorra tiempo
                 
                 <!--Truco para boton sin js-->
                     <input type="checkbox" name="menu_Responsive" id="menu_toggle">
-                    <label for="menu_toggle" class="menu_label"></label> 
+                    <label for="menu_toggle" class="menu_label">☰</label> 
                     <div id="menu" class='bx bx-menu'></div>
                     
                    
@@ -78,28 +78,34 @@ Probar en el futuro rediseñar todo con base en bootstrap y ver si ahorra tiempo
          </section>
 <!-- ------------------------------------------------------------ -->
         <section class="ofertas">       
-                           <p>Ofertas promocionales, producto o tarjeta opcional</p>
+            <div class="ofertas_descripcion">           
+            <p class="ofertasp">Ofertas promocionales solo tarjetas de debito</p>
+            <p class="ofertasp">   <bold>25% descuento</bold>  en todo lo relacionado con el señor de los anillos pagando con tarjeta Supervielle</p>
+                </div>
             <div class="ofertas_Mes">
                 <ul>
-                    <li>25% descuento en todo lo relacionado con el señor de los anillos pagando con tarjeta Supervielle</li>
                 <li class="tarjeta">
                     <a href="#" class="tarjeta-link">
                         <img src="/Medias/productos/catan2.jpg" alt="Imagen de tarjeta" class="tarjeta-img">
                         <p class="descripcion">Amp 5-6 Exploradores y Piratas </p>
-                        <p class="precio"><del>$55000</del> $45000</p>
+                        <p class="precio"><del><small>$55000</small></del>  $45000</p>
                     </a></li>
                     <li class="tarjeta">
                         <a href="#" class="tarjeta-link">
                             <img src="/Medias/productos/articulo 2.webp" alt="Imagen de tarjeta" class="tarjeta-img">
                             <p class="descripcion">Reliquias de la muerte</p>
-                            <p class="precio"><del>$10000</del>$7700</p>
+                            <p class="precio"><del><small>$10000</small></del> $7700</p>
                         </a>
                     </li></ul>
             </div> </section>
-<!-- ------------------------------------------------------------ -->
+<!-- --------------------ASIDE---------------------------------------- -->
 
         <aside class="aside">
+         <div class="encabezado_aside">
             <h2>Categorías</h2>
+            <button onclick="cambiarGrilla()" type="button" name="asideB" id="  #toggleButton">&lt</button>
+        </div>
+
             <ul class="aside-list">
                 <!-- Categoría: Juegos -->
                 <li class="aside-item">
@@ -166,7 +172,8 @@ Probar en el futuro rediseñar todo con base en bootstrap y ver si ahorra tiempo
             <a href="#" class="tarjeta-link">
                 <img src="/Medias/productos/catan2.jpg" alt="Imagen de tarjeta" class="tarjeta-img">
                 <p class="descripcion">Amp 5-6 Exploradores y Piratas </p>
-                <p class="precio">$55000</p>
+                <p class="precio"><del><small>$55000</small></del>  $45000</p>
+                
             </a>
         </li>
         <li class="tarjeta">
@@ -251,13 +258,13 @@ Probar en el futuro rediseñar todo con base en bootstrap y ver si ahorra tiempo
                                 <a href="#" class="tarjeta-link">
                                     <img src="/Medias/productos/articulo 2.webp" alt="Imagen de tarjeta" class="tarjeta-img">
                                     <p class="descripcion">Reliquias de la muerte</p>
-                                    <p class="precio">$10000</p>
-                                </a>
+                                    <p class="precio"><del><small>$10000</small></del> $7700</p>
+                                                                    </a>
                             </li>
                             <li class="tarjeta">
                                 <a href="#" class="tarjeta-link">
                                     <img src="/Medias/productos/articulo3.webp" alt="Imagen de tarjeta" class="tarjeta-img">
-                                    <p class="descripcion">colla Reliquias de la muerte</p>
+                                    <p class="descripcion">collar Reliquias de la muerte</p>
                                     <p class="precio">$12000</p>
                                 </a>
                             </li>
@@ -281,10 +288,16 @@ Probar en el futuro rediseñar todo con base en bootstrap y ver si ahorra tiempo
 <!-- ------------------------------------------------------------ -->
 
                 <footer>
-                    <div class="mensaje">Frase</div>
-                    <div class="foo_container">Estructura</div>
+                    <div class="mensaje"><p>@Derechos Reservados 2024@ <i>Hora de perseguir el viento</i></p>
+                        <input type="checkbox" name="menu_Responsive" id="menu_toggle">
+                        <label for="menu_toggle" class="menu_label"></label>
+                        <div class="foo_container">Estructura</div>
+                    </div>
+                   
+                    
                 </footer>
 
     </div>
+    <script src="Funciones.js"></script>
 </body>
 </html>
