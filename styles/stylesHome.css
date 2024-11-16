@@ -1,265 +1,249 @@
-.contenido{
+.contenido {
     display: grid;
     grid-template-areas:
         "pagos pagos"
         "aside ofertas"
-        "aside  productos";
-        grid-template-columns: 1fr 3fr;
-        grid-template-rows: 1.5%  15%  80%;
-       /* Dos columnas: 1fr y 3fr */
-    /* Una fila para cada sección */
-    /* Altura mínima para ocupar toda la pantalla */
-overflow: hidden;}
-
-
+        "aside productos";
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1.5% 15% 80%;
+    overflow: hidden; /* Puede ser innecesario si el contenido no se desborda */
+}
 
 /*---------------------INFORMACION TARJETAS MEDIOS DE PAGO-----------------------*/
 
-.informacion{
+.informacion {
     grid-area: pagos;
-   align-content: start;
+    align-content: start;
     width: 100%;
     display: flex;
-flex-direction: row;
-background-color: #ed5819;}
-p{
+    flex-direction: row;
+    background-color: #ed5819;
+}
+
+p {
     width: 40%;
     height: 70%;
     margin-right: 2%;
-font-size: 80%;}
+    font-size: 80%;
+}
 
-.informacion ul{
+.informacion ul {
     width: 60%;
     display: flex;
     flex-direction: row;
-text-decoration: none;}
-.informacion li,
-.informacion li a{
+    text-decoration: none;
+}
+
+.informacion li, .informacion li a {
     text-decoration: none;
     height: 100%;
-width: 100%;
+    width: 100%;
 }
-.informacion li img{
+
+.informacion li img {
     width: 50%;
     height: 50%;
 }
+
 /*---------------------OFERTAS PROMOCIONALES-----------------------*/
-.ofertas{
+.ofertas {
     margin-top: 1%;
     grid-area: ofertas;
     display: flex;
     flex-direction: column;
-   width: 100%;
-    align-items: start;}
-    .ofertas_descripcion{
-        all:unset;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        width: 100%;
-        margin-left: 1%;
-        margin-right: 1%;}
-           .ofertasp{
+    width: 100%;
+    align-items: flex-start;
+}
+
+.ofertas_descripcion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.ofertasp {
     color: #DD4204;
     font-family: "Arial Black", Gadget, sans-serif;
-font-size: 90%;
-letter-spacing: -1%;
-word-spacing: 3px;
-font-weight: 700;
-text-decoration: none;
-font-style: normal;
-font-variant: small-caps;
-text-transform: uppercase;
+    font-size: 90%;
+    letter-spacing: -1%;
+    word-spacing: 3px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
 }
-.ofertas_Mes{
+
+.ofertas_Mes {
     width: 100%;
     display: flex;
-    flex-direction: row;}
-    .ofertas_Mes ul {
-        display: flex;
-        flex-direction: row;
-        list-style-type: none;
-        width: 60%;
-        padding: 0;
-        margin: 0;
-        align-items: center;
-        justify-content: space-around;
-    }
-    .ofertas_Mes li {
-        display: flex;
-        justify-content: center;
-    }
-    
-    .ofertas_Mes li img {
-        max-height: 60%;
-        max-width: 60%;
-        height: auto;
-        width: auto;
-    }
-/* ------------------- Productos--------------- */
-    .Encabezado_de_titulos {
-        text-align: center;
-        color: white;
-        background-color: red;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        font-style: bold;
-        font-size: 90%;
-        letter-spacing: 1%;
-    }
-    .productos {
-        display: flex;
-        flex-direction: column;
-        grid-area: productos;
-        background-color: white;
-        margin-right: 1%;
-        margin-left: 2%;
-    }
-      /*----------------- Estilo general para las tarjetas-----------*/
-    .tarjetas {
-        padding: 1%;
-        background-color: #f4f4f4;
-        border-radius: 10px;
-        width: 100%;
-        overflow: hidden;
-    }
-    
-    .tarjetas-list {
-        display: flex;
-        flex-direction: row;
-        gap: 15px;
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        justify-content: center;
-        align-items: center;
-        overflow-x: hidden;
-        /* Evitar que se desborden las tarjetas */
-        scroll-behavior: smooth;
-        /* Desplazamiento suave */
-        transition: transform 0.3s ease;
-    }
-    
-    .tarjeta {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 200px;
-        background-color: white;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        padding: 10px;
-        transition: transform 0.3s ease;
-    }
-    
-    .tarjeta-link {
-        text-decoration: none;
-        color: #333;
-    }
-    
-    .tarjeta-img {
-        width: 100%;
-        height: auto;
-        border-radius: 5px;
-        margin-bottom: 10px;
-    }
-    
-    .descripcion {
-        all:unset;
-        font-size: 14px;
-        text-align: center;
-        margin-bottom: 8px;
-        color: black;
-    }
-    
-    .precio {
-        all:unset;
+    flex-direction: row;
+}
 
-        font-size: 16px;
-        color: #f10101;
-        font-weight: bold;
-    }
-    
-    .flecha img {
-        width: 30px;
-        height: 30px;
-        cursor: pointer;
-        transition: transform 0.3s ease;
-    }
-    
-    .flecha-izquierda {
-        transform: rotate(90deg);
-    }
-    
-    .flecha-derecha {
-        transform: rotate(-90deg);
-    }
-    
-    /* Efecto de hover en las tarjetas */
-    .tarjeta:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    }
-    
-    .comprime_seccion {
-        margin-top: 20px;
-        text-align: center;
-    }
-   
-    .comprimir-flecha {
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-    }
-    
-    .tarjetas {
-        overflow-x: auto;
-        white-space: nowrap;
-    }
-/* --------------------ASIDE---------------------------------------- */
-.aside{
-    margin-top: 1%;
-    display: flex;
-    flex-direction:column ;
-    grid-area: aside;
-    background-color:  #f5f71129;
-    transition: all 0.3s ease;
-    height: 100%;}
-/* Estilos para el botón de menú dentro del aside */
-.encabezado_aside{
+.ofertas_Mes ul {
     display: flex;
     flex-direction: row;
-height: 10%;
-gap: 1%;
-width: 100%;
-}
-.encabezado_aside h2{   
+    list-style-type: none;
     width: 60%;
-    text-align: center; font-size: 80%;}
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: space-around;
+}
 
-  #toggleButton {
-    position: absolute;
-    left: 100%; /* Justo fuera del aside */
-    top: 10px; /* Ajusta la posición vertical */
-    transform: translateX(-50%);
-    z-index: 10;
-    cursor: pointer;
-    height: 10%;
-    width: 10%;
-    color: red;
-    font-style: bold;
-    font-size: 100%;
-     border-radius: 10%;
+.ofertas_Mes li {
+    display: flex;
     justify-content: center;
-  }
-/* Estilos cuando el aside está oculto */
-.aside.hidden {
+}
+
+.ofertas_Mes li img {
+    max-height: 60%;
+    max-width: 60%;
+}
+
+/*------------------ PRODUCTOS ----------------*/
+
+.productos {
+    display: flex;
+    flex-direction: column;
+    grid-area: productos;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    margin-right: 2%;
+}
+
+.titulos {
+    display: flex;
+    flex-direction: row;
+    height: 7%;
+    color: white;
+    background-color: red;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 90%;
+    letter-spacing: 2%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 2%;
+}
+
+/*------------------ BOTONES PARA OCULTAR MOSTRAR ----------------*/
+
+.ocultar_tipo,
+.mostrar_tipo {
+    height: 30%;
+    width: 4%;
+    justify-content: center;
+    align-items: center;
+    color: #FAC710;
+    font-size: 90%;
+    background-color: unset;
+    border: 1% solid #FAC710;
+    border-radius: 20%;
+    margin: 1%;
+}
+
+.ocultar_tipo {
+    display: flex;
+}
+
+.mostrar_tipo {
     display: none;
 }
 
-#toggleButton.hidden {
-    left: 10px; /* Posición del botón cuando el menú está oculto */
+/*------------------ CONTENEDOR DE PRODUCTOS ----------------*/
+/*------------------ PRODUCTOS ----------------*/
+
+.productos_tipo {
+    height: 33%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-.aside-list{
-    overflow-y: scroll;}
+.tarjetas {
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+    display: flex;
+}
+
+.tarjetas-list {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    transition: transform 0.3s ease;
+}
+
+.flecha {
+    width: 1%;
+    border: 2% solid #FAC710;
+    background: unset;
+}
+
+.flecha-izquierda,
+.flecha-derecha {
+    color: #ed5819;
+}
+
+.tarjeta {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+    padding: 1%;
+}
+
+.tarjeta-link {
+    height: 70%;  /* La sección de la imagen ocupa el 50% de la tarjeta */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tarjeta-img {
+    height: 100%;  /* La imagen ocupa el 100% del contenedor */
+    width: 75%;    /* La imagen ocupa el 50% del contenedor de la imagen */
+    object-fit: contain; /* Ajusta la imagen sin perder proporciones */
+}
+
+.descripcion,
+.precio {
+    width: 100%;
+    height: 15%;
+    font-size: 90%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    word-spacing: 0;
+    letter-spacing: 2px;
+}
+
+.descripcion {
+    color:black; 
+}
+.precio{color: red;
+font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
+/*------------------ ASIDE ----------------*/
+
+.aside {
+    margin-top: 1%;
+    display: flex;
+    flex-direction: column;
+    grid-area: aside;
+    
+}
