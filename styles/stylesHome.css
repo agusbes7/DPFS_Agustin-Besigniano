@@ -3,9 +3,9 @@
     display: grid;
     grid-template-areas:
         "pagos pagos"
-        "aside ofertas"
+        "ofertas ofertas"
         "aside productos";
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 0.5fr 3fr;
     grid-template-rows: 1.5% 15% 80%;
     overflow: hidden; /* Puede ser innecesario si el contenido no se desborda */
 }
@@ -102,6 +102,7 @@ span{
     width: 100%;
     margin-bottom: 1%;
 }
+/**/
 .ofertas .tarjetas{height: 70%;}
 
 .ofertas .tarjeta {    height: 100%;
@@ -135,6 +136,7 @@ padding: 0}
     display: flex;
     flex-direction: column;
     grid-area: productos;
+  overflow: hidden;
     background-color: white;
     width: 100%;
     height: 100%;
@@ -159,7 +161,8 @@ padding: 0}
 /*------------------ BOTONES PARA OCULTAR MOSTRAR ----------------*/
 
 .ocultar_tipo,
-.mostrar_tipo {
+.mostrar_tipo,
+.encabezado_aside button{
     height: 60%;
     width: 4%;
     justify-content: center;
@@ -181,13 +184,13 @@ padding: 0}
 }
 
 /*------------------ CONTENEDOR DE PRODUCTOS ----------------*/
-/*------------------ PRODUCTOS ----------------*/
 
 .productos_tipo {
     height: 33%;
     width: 100%;
     display: flex;
     flex-direction: column;
+overflow: visible;
 }
 
 .tarjetas {
@@ -264,14 +267,31 @@ padding: 0}
 }
 .precio{color: red;
 font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
+.carrito, .eliminar{
+    border: 2% solid green;
+    border-radius: 10%;
+color: green;
+background-color: unset;}
+.eliminar{display: none;}
+.compras{
+    border-radius: 10%;
+background-color: unset;
+}
 /*HOVER TARJETA*/
 .tarjeta:hover ,
 .flecha:hover{
     transform: translateY(-10px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
     background-color: #FAC710;
-    opacity: 80%; }
+}
+.tarjeta  a img:hover{
+    opacity: 80%; 
+    transform: (2,2);
+    overflow: visible;
+    position: absolute;
+z-index: 10;
 
+}
     
 
 /*------------------ ASIDE ----------------*/
@@ -281,5 +301,42 @@ font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
     display: flex;
     flex-direction: column;
     grid-area: aside;
-    
+    margin: 0;
+    padding: 0;}
+.encabezado_aside{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: red;
+    color: white;
+    margin: 1%;
+    gap: 5%;
+font-size: 80%;
+font-family: Arial, Helvetica, sans-serif;}
+.encabezado_aside button{
+    justify-content: unset;
+    align-items: unset;
+    margin: 0;
+    padding: 2%;
+    width: unset;
+    font-size: 90%;}
+    .aside-list{    margin: 0;
+        padding: 0;
+    overflow-y: scroll;
+overflow-x: hidden;}
+.aside-link{
+    display: flex;
+gap: 2%;
+    list-style-type: none;
+color: red;}
+.subcategoria-list{
+font-style: unset;
+    list-style-image: url('../Medias/iconos/pila-de-libros.png');}
+.subcategoria-link{
+    align-items: start;
+    list-style-type: none;
+   text-decoration: unset;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 90%;
+
 }

@@ -1,4 +1,4 @@
-        function cambiarGrilla() {
+    /*    function cambiarGrilla() {
             // Obtén el contenedor de la grilla y el aside
             var container = document.querySelector('.contenido');
             var aside = document.querySelector('.aside');
@@ -19,4 +19,31 @@
                 toggleButton.classList.remove('hidden');
             }
         }
-        
+        const aside = document.querySelector('.aside');
+const mostrarBtn = document.getElementById('mostrarAside');
+const ocultarBtn = document.getElementById('ocultarAside');
+const container = document.querySelector('.container');
+
+ocultarBtn.addEventListener('click', () => {
+  aside.style.display = 'none'; // Oculta el aside
+  mostrarBtn.style.display = 'block'; // Muestra el botón de 'Mostrar Aside'
+
+  // Cambia la estructura del grid
+  container.style.gridTemplateAreas = `
+    "pagos pagos"
+    "ofertas ofertas"
+    "productos productos"
+  `;
+});
+
+mostrarBtn.addEventListener('click', () => {
+  aside.style.display = 'block'; // Muestra el aside nuevamente
+  mostrarBtn.style.display = 'none'; // Oculta el botón de 'Mostrar Aside'
+
+  // Restaura la estructura del grid
+  container.style.gridTemplateAreas = `
+    "pagos pagos"
+    "aside ofertas"
+    "aside productos"
+  `;
+});*/
