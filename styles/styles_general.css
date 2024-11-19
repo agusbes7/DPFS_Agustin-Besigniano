@@ -15,12 +15,9 @@ html,body {    margin: 0;              padding: 0;
     "navigation navigation"
     "contenido contenido"
     "footer footer";
-    /* Dos columnas: 1fr y 3fr */
-    /* Una fila para cada sección */
     min-height: 100vh;
     grid-template-rows: 1.5%  10%  3% 1fr  auto;
 flex-grow: 1;
-    /* Altura mínima para ocupar toda la pantalla */
     background-color: white;
 }
 /*---------------------HEADER-----------------------*/
@@ -96,13 +93,11 @@ margin-right: 1%;}
 background-color: white;
 gap: 1%;}
 
-/*Solo la mitad de altura del contenedor van a usar*/
 .navigation > .navigation_opc,
 .navigation > .busqueda{
     height: 70%;
        overflow: hidden;}
 
-/* lista de secciones de la pagina*/
 .navigation_opc{
     width: 60%;
 margin-right: 2%;}
