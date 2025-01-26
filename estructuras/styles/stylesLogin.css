@@ -1,0 +1,23 @@
+
+    .container > * {
+        border: 1px dashed red; /* Ayuda a identificar los problemas visuales */
+    }
+
+/*-----------------------------------------------------------------
+.contenido {
+    display: grid;
+    grid-template-areas:
+        "pagos pagos"
+        "ofertas ofertas"
+        "aside productos";
+    grid-template-columns: 0.5fr 3fr;
+    grid-template-rows: 1.5% 15% 80%;
+    overflow: hidden;  Puede ser innecesario si el contenido no se desborda 
+}*/
+
+.contenido{
+    display: none;
+    flex-direction: row;
+    gap: 1%;
+}
+

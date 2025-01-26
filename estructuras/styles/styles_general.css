@@ -21,6 +21,13 @@ flex-grow: 1;
     background-color: white;
 }
 /*---------------------HEADER-----------------------*/
+.header, .banner, .navigation, .footer {
+    min-width: 100%;}
+    .contenido {
+        overflow: auto;
+    }
+    
+
 header{
        grid-area: header;
     display: flex;
@@ -210,4 +217,36 @@ align-self: end;
 }
 .foo_container{
     display:  none;
+}
+
+@media (max-width:600px){
+    .navigation > .navigation_opc,
+    .navigation > .busqueda{
+        height: 50%;}    
+    .navigation_opc{
+        width: 40%;
+    margin-right: 2%;}
+    
+    
+    .navigation_opc ul {
+        display: none;
+        flex-direction: column;
+    gap: 0.5%;
+       height:  45%;
+    }
+    .busqueda{width: 50%;}
+/*-----------Raya responsiva para navegacion*-------------------------------*/
+    #menu {
+    display: flex;
+       color: #DD4204;
+        cursor: pointer;
+        height: 60%;
+    width: 30%;
+text-align: center;}
+    
+    #menu_toggle{
+        display: flex;}
+    .menu_label{
+        display: none;
+    }
 }

@@ -342,3 +342,41 @@ font-style: unset;
 
 }
 /*Media queries */
+@media(max-width: 890px){
+    .descripcion,
+    .precio {font-size: 75%;}
+    .ofertas .descripcion,
+.ofertas .precio{
+    font-size: 65%;}
+
+}
+@media (max-width:800px) {
+    .tarjetas{
+        width: 98%;
+    }
+    
+}
+@media(max-width: 650px){
+    .contenido {
+        display: grid;
+        grid-template-areas:
+            "pagos pagos"
+            "ofertas ofertas"
+            "productos productos";
+        grid-template-columns: 1fr 1fr;}
+    .aside{display: none;}
+}
+@media(max-width: 600px){
+    .mensaje p{font-size: 80%;}
+    .tarjetas-list{
+        display: flex;
+        flex-direction: column;
+    height: 100%;}
+        .tarjeta{
+            height: 20%;
+            width: 100%;
+            flex-direction: row;       }
+            .flecha-izquierda{
+                transform: rotate(90deg);}
+                .flecha-derecha{transform: rotate(90deg);}
+}
