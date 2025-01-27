@@ -1,76 +1,14 @@
-
 .contenido {
     display: grid;
     grid-template-areas:
-        "pagos pagos"
-        "ofertas ofertas"
+       "ofertas ofertas"
         "aside productos";
     grid-template-columns: 0.5fr 3fr;
-    grid-template-rows: 1.5% 15% 80%;
+    grid-template-rows:  15% 80%;
     overflow: hidden; 
 }
 
-/*---------------------INFORMACION TARJETAS MEDIOS DE PAGO-----------------------*/
 
-.informacion {
-    grid-area: pagos;
-    align-content: start;
-    width: 100%;
-    display: flex;
-    overflow: hidden;
-    flex-direction: row;
-    background-color: #ed5819;
-}
-
-.informacion p {
-    color: white;
-    text-align: center;
-    font-size: 85%;
-    justify-content: unset;
-    font-family: "Open Sans", sans-serif;
-    font-style: italic;
-    word-spacing: 16px;
-    height: 90%;
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-right: 2%;
-    padding: 0;
-}
-
-.informacion ul {
-    width: 25%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    text-decoration: none;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.informacion li, .informacion li a {
-    text-decoration: none;
-    height: 90%;
-    width: 20%;
-    margin: 0;
-    padding: 0;
-    gap: 1%;
-}
-
-.informacion li img{
-    text-decoration: none;
-    width: 40%;
-    height:80%;
-}
-span{
-    margin: 0;
-    padding: 0;
-    justify-content: start;
-}
-
-.informacion li img:hover , span:hover{
-    transform: scale(1.5,1.5);
-}
 /*---------------------OFERTAS PROMOCIONALES-----------------------*/
 .ofertas {
     margin-top: 1%;
@@ -360,7 +298,6 @@ font-style: unset;
     .contenido {
         display: grid;
         grid-template-areas:
-            "pagos pagos"
             "ofertas ofertas"
             "productos productos";
         grid-template-columns: 1fr 1fr;}

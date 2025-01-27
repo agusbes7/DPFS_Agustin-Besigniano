@@ -1,29 +1,21 @@
-.container{
-    grid-template-rows: 1.5% 10% 8% 1fr auto;
-}
     .contenido {
-    display: grid;
-    grid-template-areas:
-        "pagos pagos"
-        "login login"
- "registro registro";
-    grid-template-columns: 0.5fr 3fr;
-    grid-template-rows: 3.5% auto auto;
-    overflow: hidden; 
-}
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden; }
 
+/*---------------------Login y registro-----------------------*/
 
-/*---------------------INFORMACION TARJETAS MEDIOS DE PAGO-----------------------*/
-
-
-.login{
-    grid-area: login;
+.login, .registro{
 display: flex;
 flex-direction: column;
 background-color: rgb(255, 210, 189);
 align-items: center;
 }
-.login p{
+.registro{
+    width: 100%;
+    align-items: start;}
+/*-------------------------*/    
+.login p, .registro p{
     color: white;
     text-align: center;
     background-color: red;
@@ -36,8 +28,10 @@ align-items: center;
    font-size: 200%;
    font-family: "Bangers", system-ui;
    text-transform: capitalize;   
-   font-style: bold;
-}
+   font-style: bold;}
+.registro p{width: 100%;}
+
+/*--------------------form---------------------------------*/
 form{
     display: flex;
     flex-direction: column;
@@ -48,22 +42,49 @@ gap: 5%;
 align-items: center;
 text-align: center;
 justify-content: center;}
-
+.registro form{
+    width: 80%;
+    align-items: start;
+    text-align: start;
+    justify-content: start;}
+    
+/*---------------Organizacion de los datos-----------------------*/
 .form_ato{
     display: flex;
 flex-direction: row;
-gap: 10%;}
-.form_ato label{
+gap: 5%;}
+.form_ato2 {
+    display: flex;
+    flex-direction: row;
+    gap: 5%; /* Espacio entre elementos */
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    overflow: hidden;
+    margin: 1% 0;
+    padding: 1%;
+    font-size: 85%;
+    border: 1px solid #ddd; /* Para diferenciar bloques */
+    border-radius: 5px;
+  }  .form_ato2 label {
+    flex: 1; /* El label ocupa espacio proporcional */
+    text-align: right;
+    margin-right: 1%;
+  }
+
+  .form_ato2 input,
+  .form_ato2 select {
+    flex: 2; /* Los inputs ocupan más espacio */
+    padding: 0.5em;
     font-size: 100%;
-    color: #480202;
-    letter-spacing: 4%;
-}
-.form_ato input{
-font-size: 100%;
-}
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+
 
 .b_login{
-        color: rgb(255, 255, 255);
+        color: rgb(255, 219, 219);
          font-size: 100%;
           line-height: 11px; 
           padding: 1%;
@@ -77,11 +98,32 @@ font-size: 100%;
             background-color: red;}
             .b_login:hover {
         background: #ff6a20; 
-        transform: scale(1.5,1.5);
-}
-        .b_login:active {
-        background: #480202; }
+        transform: scale(1.5,1.5);}
+        .b_login:active {background: #480202; }
+ 
+ 
+ 
+        /*--------------querys----------------------- */
+  @media (max-width: 768px) {
+    .form_ato2 {
+      flex-direction: column; /* Cambia a formato vertical */
+      align-items: stretch; /* Alinear al contenedor */
+    }
 
-.registro{
-    grid-area: registro;
-    display: none;}
+    .form_ato2 label {
+      text-align: left; /* Cambia la alineación para pantallas pequeñas */
+      margin-right: 0;
+    }
+
+    .form_ato2 input,
+    .form_ato2 select {
+      width: 100%; /* Ajusta el ancho */
+    }
+  }
+
+    @media (max-width:650px){
+        .form_ato{
+            flex-direction: column;
+        }
+        
+    }

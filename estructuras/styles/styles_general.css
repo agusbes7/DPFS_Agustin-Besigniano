@@ -8,29 +8,27 @@ overflow-x: hidden;
 .container {
     display: grid;
   
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-areas:
-    "header header"
-    "banner banner"
-    "navigation navigation"
-    "contenido contenido"
-    "footer footer";
+    "header"
+    "banner"
+    "navigation"
+    "pagos"
+    "contenido"
+    "footer";
     min-height: 100vh;
-    grid-template-rows: 1.5%  10%  3% 1fr  auto;
+    grid-template-rows: 1.5%  10%  3% 1.5% auto  auto;
 flex-grow: 1;
-    background-color: white;
-}
+    background-color: white;}
 /*---------------------HEADER-----------------------*/
-.header, .banner, .navigation, .footer {
-    min-width: 100%;
-}
+.header, .banner, .navigation,.informacion, .footer {    min-width: 100%;}
 
     .contenido {
         grid-area: contenido;
-        display: grid;
-        overflow: hidden; /* Evitar que el contenido sobresalga */
-    }
+       
+        overflow: hidden;} /* Evitar que el contenido sobresalga */
     
+      
     
 
 header{
@@ -202,9 +200,70 @@ display: none;
 .menu_label{
     display: none;
 }
-/*generico para cada pagina*/
-.contenido{
-    grid-area: contenido;}
+/*---------------------INFORMACION TARJETAS MEDIOS DE PAGO-----------------------*/
+
+.informacion {
+    grid-area: pagos;
+    align-content: start;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+    background-color: #ed5819;
+}
+
+.informacion p {
+    color: white;
+    text-align: center;
+    font-size: 85%;
+    justify-content: unset;
+    font-family: "Open Sans", sans-serif;
+    font-style: italic;
+    word-spacing: 16px;
+    height: 90%;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 2%;
+    padding: 0;
+}
+
+.informacion ul {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.informacion li, .informacion li a {
+    text-decoration: none;
+    height: 90%;
+    width: 20%;
+    margin: 0;
+    padding: 0;
+    gap: 1%;
+}
+
+.informacion li img{
+    text-decoration: none;
+    width: 40%;
+    height:80%;
+}
+span{
+    margin: 0;
+    padding: 0;
+    justify-content: start;
+}
+
+.informacion li img:hover , span:hover{
+    transform: scale(1.5,1.5);
+}
+
+
+
 
         footer{
             grid-area: footer;
