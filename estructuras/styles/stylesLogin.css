@@ -1,23 +1,89 @@
+html,body {    margin: 0;
+    padding: 0;
+    overflow-x: hidden;}
 
-    .container > * {
-        border: 1px dashed red; /* Ayuda a identificar los problemas visuales */
-    }
+* { box-sizing: border-box;}
+.container{grid-template-rows: 2.5%  10%  10% 60%  auto;}
 
-/*-----------------------------------------------------------------
 .contenido {
+    grid-area: contenido;
     display: grid;
     grid-template-areas:
         "pagos pagos"
-        "ofertas ofertas"
-        "aside productos";
-    grid-template-columns: 0.5fr 3fr;
-    grid-template-rows: 1.5% 15% 80%;
-    overflow: hidden;  Puede ser innecesario si el contenido no se desborda 
-}*/
+ "login login"
+ "registro registro";
+grid-template-rows: 5%  auto auto;
 
-.contenido{
-    display: none;
-    flex-direction: row;
-    gap: 1%;
+     overflow: hidden; 
 }
+.informacion{
+    grid-area: pagos;
+    display: flex;
+}
+.login{
+  
+    width: 100%;
+    grid-area: login;
+    display: flex;
+flex-direction: column;
 
+    color: white;
+margin: 1%; 
+border: 5% solid #e10000;
+border-radius: 5%;
+
+text-align: center;
+align-items: center;}
+form{
+display: flex;
+flex-direction: column;
+gap: 1%;
+background-color: bisque;
+color: red;
+padding: 8%;
+margin: 2%;
+text-align: start;
+align-items: start;
+border-radius: 15px;}
+.login p {
+    color: white;
+    text-align: center;
+    background-color: red;
+    padding: 3%;
+   font-size: 120%;
+   letter-spacing: 10px;
+   word-spacing: 16.8px;
+  
+   font-weight: 700;
+   text-decoration: none solid rgb(68, 68, 68);
+   font-size: 200%;
+   font-family: "Bangers", system-ui;
+   text-transform: capitalize;}
+   .login form{
+    background-color: bisque;
+    padding: 5%;
+    gap: 2%;
+   }
+.form_ato{
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    margin: 3%;
+}
+.form_ato label{
+    font-family: Impact, Charcoal, sans-serif;
+font-size: 40;
+letter-spacing: 1.6px;
+word-spacing: -0.8px;
+color: red;
+font-weight: 400;
+text-decoration: none solid rgb(68, 68, 68);
+font-style: italic;
+font-variant: normal;
+text-transform: none;
+}
+.registro{
+    grid-area: registro;
+    display: none;
+    visibility: unset;
+}

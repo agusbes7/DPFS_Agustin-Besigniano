@@ -27,11 +27,12 @@ Las fuentes de Referencia son las siguientes paginas:
     El sitio  por el contenido tiene predominancia de orientacion a ciertos sectores más juveniles, pero no deja de contener productos para el publico en general y de todas las edades.  
 
 ---
-## Logo
+## Logo  
+
 Me inspire de un personaje que me gusta mucho de una saga de libros conocida como la Cronica del Asesino de reyes desarrolle varios bocetos en el camino con la ayuda de una IA y logre alterar un poco algunos detalles usando **[Canva](https://www.canva.com/)** y **[GIMP](http://www.gimp.org.es/)**. Al carecer de habilidad para el diseño grafico y no conocer como explotar el potencial de los softwares obtuve un resultado  que medianamente se acercaba a lo que queria. Dejo algunos bocetos debajo.
 De este mismo personaje se origina el nombre de la tienda **GAME CHRONICLE**
-El instrumento que acompaña al resultado final es un Laud. Muchos de los bocetos generados sentia que no representaban la esencia adecuada del personaje y no generaba un laud la IA
-![text](<./estructuras/Medias/Modelos/bocetos logo/4kvothe logo3.png>)  
+El instrumento que acompaña al resultado final es un Laud. Muchos de los bocetos generados sentia que no representaban la esencia adecuada del personaje y no generaba un laud la IA  
+
 ![text](<./estructuras/Medias/Modelos/bocetos logo/Game Chronicle.png>)  
 ![text](<./estructuras/Medias/Modelos/bocetos logo/Game_Chronicle-removebg-preview.png>)
 ---
