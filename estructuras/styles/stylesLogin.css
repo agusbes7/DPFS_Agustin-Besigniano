@@ -13,6 +13,7 @@ color: rgb(243 217 217);
 align-items: center;
 }
 .registro{
+  display: none;
     width: 100%;
     align-items: start;}
 /*-------------------------*/    
@@ -32,6 +33,20 @@ align-items: center;
 .registro p{width: 100%;}
 
 /*--------------------form---------------------------------*/
+.desplegar_ocultar{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.desplegar_ocultar p{
+    color: black;
+font-size: 80%;}
+.desplegar_ocultar p:hover, form a:hover{
+  transform: scale(2);
+  color: blue;
+  font-style: bold;
+}
 form{
     display: flex;
     flex-direction: column;
@@ -101,7 +116,7 @@ text-transform: none;
             background-color: red;}
 .b_login:hover {
         background: #ff6a20; 
-        transform: scale(1.5,1.5);}
+        transform: scale(1.2,1.2);}
 .b_login:active {background: #480202; }
  
  .registro .b_login{

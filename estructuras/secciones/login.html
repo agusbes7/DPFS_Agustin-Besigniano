@@ -110,12 +110,16 @@ Probar en el futuro rediseñar todo con base en bootstrap para practicar y ver s
 
 
     <button class="b_login">Iniciar</button><br>
-    <a href="recuperar_cuenta.html">¿Has olvidado tu contraseña?</a><br><br>
-    <button class="b_login">Registrar</button>
-<br>
-</form>
-            </section>
-<section class="registro">
+    <a href="recuperar_cuenta.html" class="desplegar_ocultar">¿Has olvidado tu contraseña?</a><br><br>
+                </form>
+            </section><br><br>
+           <div class="desplegar_ocultar">
+            <p>¿Aun no tienes una cuenta?</p>
+            <button class="b_login" class="aux" onclick=mostrarOcultarRegistro()>Registrar</button><br>
+            </div>
+               
+
+            <section class="registro">
    <p>Datos personales</p>
    <form action="">
     <div class="form_ato2">
@@ -201,7 +205,7 @@ Probar en el futuro rediseñar todo con base en bootstrap para practicar y ver s
        
 
     </div>
-    <script src="Funciones.js"></script>
+    <script src="../../Funciones.js"></script>
 </body>
 
 </html>
