@@ -1,51 +1,29 @@
-html,body {    margin: 0;
-    padding: 0;
-    overflow-x: hidden;}
-
-* { box-sizing: border-box;}
-.container{grid-template-rows: 2.5%  10%  10% 60%  auto;}
-
-.contenido {
-    grid-area: contenido;
+.container{
+    grid-template-rows: 1.5% 10% 8% 1fr auto;
+}
+    .contenido {
     display: grid;
     grid-template-areas:
         "pagos pagos"
- "login login"
+        "login login"
  "registro registro";
-grid-template-rows: 5%  auto auto;
+    grid-template-columns: 0.5fr 3fr;
+    grid-template-rows: 3.5% auto auto;
+    overflow: hidden; 
+}
 
-     overflow: hidden; 
-}
-.informacion{
-    grid-area: pagos;
-    display: flex;
-}
+
+/*---------------------INFORMACION TARJETAS MEDIOS DE PAGO-----------------------*/
+
+
 .login{
-  
-    width: 100%;
     grid-area: login;
-    display: flex;
-flex-direction: column;
-
-    color: white;
-margin: 1%; 
-border: 5% solid #e10000;
-border-radius: 5%;
-
-text-align: center;
-align-items: center;}
-form{
 display: flex;
 flex-direction: column;
-gap: 1%;
-background-color: bisque;
-color: red;
-padding: 8%;
-margin: 2%;
-text-align: start;
-align-items: start;
-border-radius: 15px;}
-.login p {
+background-color: rgb(255, 210, 189);
+align-items: center;
+}
+.login p{
     color: white;
     text-align: center;
     background-color: red;
@@ -53,37 +31,57 @@ border-radius: 15px;}
    font-size: 120%;
    letter-spacing: 10px;
    word-spacing: 16.8px;
-  
-   font-weight: 700;
+     font-weight: 700;
    text-decoration: none solid rgb(68, 68, 68);
    font-size: 200%;
    font-family: "Bangers", system-ui;
-   text-transform: capitalize;}
-   .login form{
-    background-color: bisque;
-    padding: 5%;
-    gap: 2%;
-   }
+   text-transform: capitalize;   
+   font-style: bold;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    padding:1%;
+background-color: white;
+width: 70%;
+gap: 5%;
+align-items: center;
+text-align: center;
+justify-content: center;}
+
 .form_ato{
     display: flex;
-    flex-direction: row;
-    gap: 10%;
-    margin: 3%;
-}
+flex-direction: row;
+gap: 10%;}
 .form_ato label{
-    font-family: Impact, Charcoal, sans-serif;
-font-size: 40;
-letter-spacing: 1.6px;
-word-spacing: -0.8px;
-color: red;
-font-weight: 400;
-text-decoration: none solid rgb(68, 68, 68);
-font-style: italic;
-font-variant: normal;
-text-transform: none;
+    font-size: 100%;
+    color: #480202;
+    letter-spacing: 4%;
 }
+.form_ato input{
+font-size: 100%;
+}
+
+.b_login{
+        color: rgb(255, 255, 255);
+         font-size: 100%;
+          line-height: 11px; 
+          padding: 1%;
+        border-radius: 15%;
+         font-family: Georgia, serif; 
+         font-weight: normal; 
+         text-decoration: none;
+          font-style: normal;
+           font-variant: normal;
+            text-transform: none;
+            background-color: red;}
+            .b_login:hover {
+        background: #ff6a20; 
+        transform: scale(1.5,1.5);
+}
+        .b_login:active {
+        background: #480202; }
+
 .registro{
     grid-area: registro;
-    display: none;
-    visibility: unset;
-}
+    display: none;}
