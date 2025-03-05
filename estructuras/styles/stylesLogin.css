@@ -43,7 +43,7 @@ align-items: center;
     color: black;
 font-size: 80%;}
 .desplegar_ocultar p:hover, form a:hover{
-  transform: scale(2);
+  transform: scale(1.5);
   color: blue;
   font-style: bold;
 }
