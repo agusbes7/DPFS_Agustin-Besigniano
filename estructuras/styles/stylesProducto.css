@@ -1,81 +1,108 @@
 .contenido {
     display: flex;
-    flex-direction: column
-}
+    flex-direction: column;
+    border: 0.7rem solid red;
+    margin: 2rem;}
+.contenido *{
+    padding: 0;
+    margin: 0;}
+    /*----------------------------*/
 .item{
-    display:flex;
-    flex-direction:row;
-    align-content: center;
- align-content: space-between;
-    overflow: hidden;
-}
-.detalle{
-  width:55%;
-    margin-top: 10%;
-   }
-.detalle p{
-    width: 90%;
-    font-size: 150%;
-    color: rgb(172, 10, 10);
-    text-align: justify;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-style: italic,bold;
-    font-weight: 900;
-    word-spacing: 3%;
-    letter-spacing: 1.5%;}
-/*---------------CONTENEDOR DE PRODUCTO---------*/
-
-.tarjeta2 {
-height: unset;
-width: 45%;
+        display:flex;
+        flex-direction:row;
+        height: auto;
+        align-content: center;
+        align-content: space-between;
+        overflow: hidden;
+        border-bottom: 0.4rem solid red;
+    padding: 1rem;}
+/*---------------*/
+.Imagen{ width: 50%;
+    padding: 2rem;
 align-items: center;
- }
-
-.tarjeta-link2 {
-    height: 50%; 
-    width: 100%;}
-
-.tarjeta-img{
-    height: 60%;
-}
-.descripciones,
-.precios {
-    width: 100%;
-margin: 0;
-padding: 0;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-.descripciones{
-    color: orangered;
-letter-spacing: 2%;
-font-size: 130%;
-margin-top: 1%;
-}
-.precios{color: red;
-    font-size: 160%;
-z-index: 1;
-margin-bottom: 2%;}
-
-/*HOVER TARJETA*/
-.tarjeta2:hover{
-    transform: translateY(0);
-    box-shadow: none;
-    background-color:unset;
-}
-.tarjeta2  a img:hover,
-.detalle p:hover{
-    opacity: 80%; 
-    transform: (1.5,1.5);
-    transform: scale(1.2);
+justify-content: center;}
+.tarjeta-img{ 
+    object-fit: contain;
+    height: 90%;
+width: 90%;}
+.tarjeta-img:hover{
+    opacity: 90%; 
+    transform: (2,2);
     overflow: visible;
 z-index: 10;
-object-fit: contain;
-}
-.tarjetas{
-    display: none;
-}
-.compras{
- display: flex;
- align-items: center;
+object-fit: contain;}
 
-}    
+/*-----------------*/
+.detalle{width: 50%;
+display: flex;
+flex-direction: column;
+padding-top: 3rem;
+gap: 3%;}
+.precios,.titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+.titulo{
+    color: rgb(221, 0, 0);
+    letter-spacing: 0.05rem;
+    font-size: 2.5rem;
+    letter-spacing: 0.2rem;
+    word-spacing: 0.1rem;}
+    .precios {
+        font-family: bold,Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+        color: rgb(231, 0, 0);
+        font-size: 1.5rem;}
+    #descripcion{
+        flex-wrap: wrap;
+       font-size: 1.4rem;
+       color: rgb(21, 1, 1);
+       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+       font-style: italic,bold;
+       text-decoration: solid;
+       font-weight: 900;
+       word-spacing: 0.4rem;
+       letter-spacing: 0.2rem;}
+.compras2{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;}
+.carrito2, .eliminar2{
+    font-size: 1rem;
+    border-radius: 10%;
+    width: 45%;
+    color: rgb(126, 34, 0);
+}
+.eliminar2{display: none;}
+/*------tarjetas---------------*/
+.tarjetas{display: flex;
+flex-direction: column;}
+.tarjetas h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    font-variant: small-caps;
+    font-size: 1.5rem;
+    color: brown;
+
+}
+/*-------Querys---------------------*/
+@media (max-width: 600px){
+
+    .item{
+    flex-direction:column;
+    height: 50%;}
+    .media{height: auto;}
+.tarjeta-img,.Imagen,.detalle{width: 100%;}
+.Imagen{padding: unset;
+height: 50%;}
+.detalle{padding-top: unset;}
+#descripcion {
+    font-size: 1.2rem;
+    word-spacing: 0.2rem;
+    letter-spacing: unset;}
+}
+@media (max-width: 320px){
+    .item{height: auto;}}

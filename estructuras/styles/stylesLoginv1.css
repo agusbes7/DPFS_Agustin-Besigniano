@@ -1,0 +1,164 @@
+.contenido {
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  overflow: hidden; 
+  border: 0.7rem solid red;
+  margin: 2rem;}
+.contenido *{
+  margin: 0;
+  padding: 0;}
+/*---------------------Login y registro-----------------------*/
+.login, .registro{
+  width: 100%;
+  height: auto;
+  padding: 1%;}
+  .registro{display: none;
+  flex-direction: column;
+  margin-bottom: 1%;}
+  /*------------formulario de login y registro-----------------------------*/
+.formLR{
+  display: flex; 
+  flex-direction: column;
+width: 100%;
+gap: 2%;
+align-items: center;
+text-align: center;}
+.form_radio, /*input tipo radio*/
+.format_input1 { /*input tipo texto y pass*/
+    display: flex;
+    flex-direction: row;
+    gap: 3%; /* Espacio entre elementos */
+    align-items: center;
+    justify-content: space-between;
+    padding: 1%;
+    font-size: 1.2rem;
+    border-radius: 0.2rem;} 
+  .form_radio{gap: 5%;}
+/*-------------Texto del form----------------*/
+  .format_input1 label, .form_radio label {
+color: rgb(217 18 18);
+font-family: "Arial Black", Gadget, sans-serif;
+letter-spacing: 1%;
+text-decoration: none;
+font-style: italic;
+font-variant: small-caps;
+font-style: italic,bold;}
+
+/*-----------------modificaciones de registro-----------------*/
+.registro .format_input1{flex-direction: row;
+  flex-wrap: wrap;
+  flex: 1;}
+.registro .formLR{display: flex;
+  flex-direction: column;
+ }
+ .registro  .form_radio, /*input tipo radio*/
+ .registro .format_input1 {
+  font-size: 1rem;
+  gap: 1.5%;
+  width: 80%;}
+ .registro .format_input1 input,
+ .registro  .format_input1 select,
+ .registro .form_radio input,
+ .registro .form_radio select {
+  width: 75%;}
+
+  /*----------------------------------------*/
+
+
+.registro .format_input1 {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se acomoden en filas */
+  justify-content: space-between;
+  width: 80%;
+  gap: 1rem;
+
+}
+.campo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(33.33% - 15px); /* Ajusta el espacio entre campos */
+}
+
+
+/*-------------------------------------------*/
+.contenido h1{
+  color: white;
+  text-align: center;
+  background-color: red;
+  padding: 3%;
+ letter-spacing: 0.4rem;
+ word-spacing: 1rem;
+   font-weight: 700;
+ text-decoration: none solid rgb(68, 68, 68);
+ font-size: 2.5rem;
+ font-family: "Bangers", system-ui;
+ text-transform: capitalize;   
+ font-style: bold;}
+/*-------------------------------------------*/
+.format_input1 input,
+.format_input1 select,
+.form_radio input,
+.form_radio select  {
+  flex: 1.5; /* Los inputs ocupan más espacio */
+  padding: 1.5%;
+  font-size: 85%;
+  border: 1px solid #ccc;
+  border-radius: 5%;}
+  /*Buttons
+  ------------------login and register-------*/
+  .desplegar_ocultar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1%; }
+  .desplegar_ocultar p{
+    color: #0d00c592;
+    font-family: bold, impact, serif;
+  margin-bottom: 0.5rem;
+  }
+  .desplegar_ocultar .b_login{
+    font-size: 1.2rem;}
+
+.b_login{
+  color: rgb(255, 219, 219);
+   font-size: 1.5rem;
+  width: 15%;
+  border-radius: 10%;
+   font-family: Georgia, serif; 
+   font-weight: normal; 
+   text-decoration: none;
+    font-style: normal;
+     font-variant: normal;
+      text-transform: none;
+      background-color: red;}
+.registro .b_login{margin: 1%;}
+.b_login:hover {
+  background: #ff6a20; 
+  transform: scale(1.2,1.2);}
+/*-------------------------------------------*/
+/* En pantallas más pequeñas, 2 campos por fila */
+@media (max-width: 768px) {
+  .campo {
+    width: calc(50% - 15px);
+  }
+}
+@media (max-width: 500px) {
+.login .format_input1{ flex-direction: column;}
+.b_login{width: 40%;}
+.contenido h1 {padding: 1%;
+  word-spacing: 0.5rem;
+  font-size: 2rem;
+}}
+/* En móviles, 1 campo por fila */
+@media (max-width: 480px) {
+  .campo {
+    width: 100%;
+  }
+}
+@media (max-width: 350px) {
+
+.form_radio{flex-direction: column;}
+}
