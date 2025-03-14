@@ -76,7 +76,7 @@ width: 50%;}
 margin-right: 1%;}
 .banner h1 {
     color: #FAC710;
-    font-size: 5rem;
+    font-size: 4rem;
     font-family: "Bangers", system-ui;
     font-style: normal;
     display: flex;
@@ -218,11 +218,8 @@ footer{
 .navigation_opc ul li{padding: 0.1rem;}
 .navigation_opc ul {gap:0;
 border-radius: 0;}
-.informacion p {font-size: 0.7rem;
-width: unset;}
-.informacion ul{
-    width: unset;
-}}
+.informacion li{
+    height: unset;}}
 @media (max-width: 580px){
 
     html{font-size: 10px;}
@@ -269,8 +266,7 @@ max-height: 45vh;  /* Limita la altura si se expande demasiado */
 #menu_toggle:checked ~ .busqueda {
             display: flex;
             max-height: auto;}
-    .informacion li{
-        height: unset;}
+   
 .ofertersp{
     word-spacing: 0.1rem;
     font-size: 0.7rem;

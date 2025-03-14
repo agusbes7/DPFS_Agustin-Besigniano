@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0">
+    <title>Cronica de Juegos</title>
+<link rel="shortcut icon" href="../Medias/Imagenes/4kvothe logo3.png" type="image/x-icon">
+<link rel="stylesheet" href="../styles/stylesgeneralv1.css">
+
+
+<link rel="stylesheet" href="../styles/stylesCarrito.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet"     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+      
+    <div class="container">
+  <!-- ------------HEADER------------------------------------------------ -->
+
+  <header> <img src="../Medias/iconos/camion-de-carga.png" alt="camion de envio" id="izq">
+    <p>Envíos gratis a todo el país</p>
+    <img src="../Medias/iconos/camion-de-carga.png" alt="camion de envio" id="der">
+</header>
+    
+        <!-- ------------------BANNER------------------------------------------ -->
+        <section class="banner">
+            <img class="banner_img_f" src="../Medias/Imagenes/Game_Chronicle__1_-removebg-preview.png"
+                alt="Hombre pelirrojo con penetrantes ojos verdes">
+        <div class="banner_format">
+        <h1>GAME CHRONICLE</h1>
+            <img class="banner_img_s" src="../Medias/iconos/icons8-guitar-96-removebg-preview-removebg-preview.png"
+                alt="Laud instrumento musical">
+            </div>
+            </section>
+
+        <!-- ------------------------NAVIGATION------------------------------------ -->
+
+        <nav class="navigation">
+            <!-- -----------------LISTA DE NAVEGACION-------------------------- -->
+<!-- Botón de menú hamburguesa -->
+<input type="checkbox" id="menu_toggle">
+<label for="menu_toggle" class="menu_label">☰</label>
+
+            <div class="navigation_opc">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html">Juegos</a></li>
+                    <li><a href="index.html">Libros</a></li>
+                    <li><a href="index.html">Articulos</a></li>
+                    <li><a href="index.html">Contacto</a></li>
+                    <li><a href="./login.html">cuenta</a></li>
+                </ul>
+
+            </div>
+            <!-- -------------------BUSCADOR BARRA DE NAV----------------------------------------- -->
+            <div class="busqueda">
+                <form action="#">
+                    <input type="text" placeholder="Search"
+                           name="search">
+                    <button>
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+              
+            </div>
+        </nav>
+        <!-- ------------------------------------------------------------ -->
+        <section class="informacion">
+            <p>Aceptamos efectivo, transferencia, tarjetas </p>
+        
+            <ul>
+                <li><img src="../Medias/iconos/visa.png" alt="visa"></li>
+                <li><img src="../Medias/iconos/tarjeta-de-credito (1).png" alt="tarjeta de credito"></li>
+                <li><img src="../Medias/iconos/redondo.png" alt="Mastercard"></li>
+                <li><img src="../Medias/iconos/tarjeta-de-credito.png" alt="tarjeta"></li>
+         <li><span><a href="./secciones/carrito.html"><img src="../Medias/iconos/carrito-de-compras.png" alt="carrito de compras">∅</a></span></li>
+            </ul>
+        </section>
+        <!-- ------------------------------------------------------------ -->
+        <div class="contenido">
+     <div class="articulosCarrito">
+          
+                      <h1>carrito</h1>
+
+        <table>
+            <col class="col1">
+            <col class="col2">
+            <col class="col3">
+            <col class="col4">
+            <col class="col5">
+            <col class="col6">
+            <col class="col7">
+
+
+            <thead>
+            <tr>
+              <th>Articulo</th>
+              <th>imagen</th>
+              <th>Descripcion</th>
+              <th>Costo Unitario $</th>
+              <th>Unidades</th>
+              <th>subTotal</th>
+              <th> </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td class="col2">
+                    <img class="image" src="../Medias/productos/assimov fin de la eternidad.jpg" 
+                         alt="portada de libro de Isaac Asimov">
+                  📸
+                </td>
+                
+                <td>Issac Asimov: robot e imperio</td>
+                <td>25000</td>
+                <td>2</td>
+                <td>50000</td>
+                <td><button  id="1" onclick="eliminarFila(tdis)">🗑️</button></td>
+
+            </tr>
+            <tr>
+                <td>2</td>
+                <td class="col2">
+                    <img class="image" src="../Medias/productos/libro5.jpg" 
+                         alt="portada de libro del señor de los anillos">
+                  📸
+                </td>
+                <td>El señor de los anillos</td>
+                <td>25000</td>
+                <td>1</td>
+                <td>25000</td>
+                <td><button  id="2" onclick="eliminarFila(tdis)">🗑️</button></td>
+
+            </tr>
+            <tr>
+                <td>3</td>
+                <td class="col2">
+                    <img class="image" src="../Medias/productos/redcathedral.webp" 
+                         alt="portada de juego redcatdedral">
+                  📸
+                </td>
+                <td>Red catdedral</td>
+                <td>45000</td>
+                <td>2</td>
+                <td>90000</td>
+                <td><button  id="3" onclick="eliminarFila(tdis)">🗑️</button></td>
+                
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>-</td>
+                <td>-----</td> 
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Total</td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td>-</td>
+                <td>-----</td> 
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>165000</td>
+                <td></td>
+
+            </tr>
+        </tfoot>
+        </table>
+     <button id="confirmar">confirmar</button>
+            
+     </div>
+</div>
+
+         
+        
+            <footer>
+                <div class="mensaje">
+                    <p>@Derechos Reservados 2024@ <i>Hora de perseguir el viento</i></p>
+                    <input type="checkbox" name="menu_Responsive" id="menu_toggle">
+                    <label for="menu_toggle" class="menu_label"></label>
+                    <div class="foo_container">Estructura</div>
+                </div>
+    
+    
+            </footer>
+        </div>
+        <!-- ------------------------------------------------------------ -->
+
+       
+
+    </div>
+    <script src="../../Funciones.js"></script>
+</body>
+
+</html>

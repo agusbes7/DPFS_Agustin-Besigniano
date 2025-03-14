@@ -1,0 +1,69 @@
+.contenido {
+    display: flex;
+    height: auto;
+    flex-direction: row;
+    overflow: hidden; 
+    position: relative;
+    border: 0.7rem solid red;
+    margin: 2rem;}
+    .contenido *{
+    margin: 0;
+    padding: 0;
+    overflow: hidden; }
+/*------------------Articulos del Carrito-------------------------------------------------*/
+.articulosCarrito h1{
+    display: flex;
+    color: rgb(203, 0, 0);
+    font-size: 3rem;
+    padding-top: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;   }
+
+   .articulosCarrito{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1%;
+position: relative;
+width: 100%;}
+/*-----------------BUTTON-------------------------------------------------------*/
+    #confirmar{
+        margin-top: 1%;
+        background-color: red;
+        color: white;
+        font-size: 1rem;
+        font-style: italic;
+        font-weight: 900;
+        width: 50%;
+    }
+/*--------------------------------*/
+.image{display: none;}
+table{width: 100%;
+overflow: hidden;
+}
+thead{background-color: rgb(255, 186, 160);
+color: red;
+font-size: 1rem;}
+.image {
+    display: none; /* Imagen oculta por defecto */
+    opacity: 0; /* Transparente al principio */
+    transition: transform 2s cubic-bezier(0.42, 0, 0.58, 1), opacity 2s ease;
+height: 50%;
+width: auto;}
+/* Cuando el ratón pasa por encima de la celda, la imagen se muestra y se desplaza */
+.col2:hover .image {
+    display: block; /* Muestra la imagen */
+    position: absolute; /* La posición de la imagen será relativa a la celda */
+    transform: scale(2) translate(50%, 0); 
+   opacity: 1; 
+    z-index: 9999; 
+    object-fit: contain;
+}
+@media (max-width: 500px) {
+    table {
+        height: auto; /* Limita la altura */
+        overflow-x: scroll; /* Activa scroll horizontal */
+           display: block; /* Permite que el overflow funcione */
+        min-width: 600px; /* Para que no se reduzca demasiado */
+    }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "proyecto-front",
+  "version": "1.0.0",
+  "description": "proyecto de fullstack Developer de Digital House tienda de juegos/libros/articulos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "AgusBes",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
