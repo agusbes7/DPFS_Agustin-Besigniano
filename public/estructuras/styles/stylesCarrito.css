@@ -1,23 +1,24 @@
 .contenido {
     display: flex;
     height: auto;
-    flex-direction: row;
+    flex-direction: column;
     overflow: hidden; 
-    position: relative;
-    border: 0.7rem solid red;
+ 
+   justify-content: center;
+   align-items: center;
     margin: 2rem;}
     .contenido *{
     margin: 0;
     padding: 0;
     overflow: hidden; }
 /*------------------Articulos del Carrito-------------------------------------------------*/
-.articulosCarrito h1{
+.contenido h1,h2{
     display: flex;
     color: rgb(203, 0, 0);
     font-size: 3rem;
-    padding-top: 1rem;
+   font-weight: 900;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;   }
-
+h2{justify-content: center;}
    .articulosCarrito{
     display: flex;
     flex-direction: column;
@@ -27,7 +28,7 @@
 position: relative;
 width: 100%;}
 /*-----------------BUTTON-------------------------------------------------------*/
-    #confirmar{
+.boton{
         margin-top: 1%;
         background-color: red;
         color: white;
@@ -35,35 +36,190 @@ width: 100%;}
         font-style: italic;
         font-weight: 900;
         width: 50%;
+        border: none;
+        cursor: pointer;
     }
-/*--------------------------------*/
-.image{display: none;}
+   
+/*----------TABLA----------------------*/
+
 table{width: 100%;
 overflow: hidden;
-}
+border-collapse: collapse;}
+td, th{text-align: center;
+border: 0.1rem red solid;}
+/*---------------CONTADOR DE UNIDADES-----------------------*/
+
+.div_cantidad {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+gap: 0.3rem;
+font-size: 1rem;}
+.cantidad:hover{transform: unset;}
+
+.div_cantidad button,
+td button{
+    border: unset;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: perspective(500px);   }
+
+    td button:hover {
+      transform: scale(1.2) translateY(-0.2rem); /* Aumenta el tamaño y mueve el botón hacia arriba */
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Añade sombra para más realismo */
+    z-index: 999;
+    overflow: visible; }
+.div_cantidad button{ font-size: 1.2rem;}
+.decrementa_unidades{color: red;
+background-color: rgba(255, 255, 255, 0.678);
+opacity: 50%;}
+.incrementa_unidades{   color: green;}
+ 
+  /*--------------------------------*/
 thead{background-color: rgb(255, 186, 160);
 color: red;
 font-size: 1rem;}
-.image {
-    display: none; /* Imagen oculta por defecto */
-    opacity: 0; /* Transparente al principio */
-    transition: transform 2s cubic-bezier(0.42, 0, 0.58, 1), opacity 2s ease;
-height: 50%;
-width: auto;}
-/* Cuando el ratón pasa por encima de la celda, la imagen se muestra y se desplaza */
-.col2:hover .image {
-    display: block; /* Muestra la imagen */
-    position: absolute; /* La posición de la imagen será relativa a la celda */
-    transform: scale(2) translate(50%, 0); 
-   opacity: 1; 
-    z-index: 9999; 
-    object-fit: contain;
+
+tfoot td{
+    color: red;
+    font-style: italic,bold;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 1rem;
+background-color: rgb(255, 196, 196);
 }
-@media (max-width: 500px) {
-    table {
-        height: auto; /* Limita la altura */
-        overflow-x: scroll; /* Activa scroll horizontal */
-           display: block; /* Permite que el overflow funcione */
-        min-width: 600px; /* Para que no se reduzca demasiado */
-    }
+/*---------------------IMAGENES-----------------*/
+.div_image {
+  display: none; /* Imagen oculta por defecto */
+  width: 100%; /* El div ocupa el 100% del ancho del contenedor */
+  height: 50%; /* La altura se ajusta proporcionalmente */
+  background-color: rgb(210, 210, 210); /* Solo para darle un fondo visible al div, si es necesario */
+  position: fixed; /* Lo colocamos como absoluto para un mejor control */
+  top: 50%; /* Para centrar el div verticalmente */
+  left: 25%; /* Para dejar 25% de espacio en ambos lados */
+  transform: translateY(-50%); /* Centra el div en el eje Y */
+  z-index: 9999; /* Asegura que el div esté por encima de otros elementos */
+  opacity: 0; /* Inicialmente transparente */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Transición suave para efectos */
+overflow: visible;
+justify-content: center;
+}
+
+.image {
+  display: none; /* La imagen es visible cuando el contenedor se activa */
+ 
+  width: 20%; /* El 100% del ancho del contenedor */
+  height: auto; /* La altura es automática para mantener la proporción */
+  object-fit: contain; /* Mantiene la proporción de la imagen */
+}
+
+/* Cuando el ratón pasa por encima de la celda, la imagen se muestra y se desplaza */
+.col2:hover .div_image {
+  display: block; /* Muestra el contenedor */
+  opacity: 0.7; /* Hace que el contenedor sea visible */
+}
+
+.col2:hover .image {  display: block;}
+/*----------FORM DE PAGO----------------------*/
+.div_pago {
+    position: fixed;
+   bottom: 3%;
+    width: 100%;
+    height: 80%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  }
+  /*----------Agregado con js------------*/
+   .div_pago.mostrar {
+    visibility: visible;
+    opacity: 1;}
+
+  /* 📌 Ventana emergente */
+  .pago {
+    background: white;
+    width: 60%;
+    height: 80%;
+    padding: 1rem;
+overflow-y: scroll;
+ position: relative;
+    border-radius: 10%;
+    z-index: 1000;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+  /*------------scrollbar-------------------*/
+/* Estilos del scrollbar para navegadores basados en WebKit */
+.pago::-webkit-scrollbar {
+  width: 0.5rem; /* Ancho del scrollbar */
+  border-radius: 25%;
+}
+
+.pago::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color del track (fondo del scrollbar) */
+border-radius: 1rem;}
+.pago::-webkit-scrollbar-thumb {  background: #ff4a13;} /* Color del thumb (barra del scroll) */
+.pago::-webkit-scrollbar-thumb:hover { background: #ff0000;} /* Cambio de color al pasar el mouse */
+
+  /* 📌 Botón de cerrar */
+  .cerrar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: red;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+ .form_pago   label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    
+  }
+ 
+
+  .form_pago select,
+  .form_pago input,
+  .form_pago button {
+    width: 90%;
+    padding: 8px;
+  margin: 1%; }
+    
+  .form_pago select,
+  .form_pago input{
+  color: rgb(255, 72, 0);}
+
+.form_horizontal{display: flex;
+flex-direction: row;
+justify-content: center;}
+.form_horizontal label{width:-webkit-fill-available;}
+.form_pago h3{background-color: rgb(39, 46, 232);
+color:white}
+
+  .hidden { display: none;}
+  /*-----------------------------*/
+.medios-efectivo{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;}
+  .img_pago {
+    width: 1.5rem;
+    margin: 0.5rem;
+    cursor: pointer;}
+
+
+.resumen{
+  color: white;
+  background-color: red;
 }
