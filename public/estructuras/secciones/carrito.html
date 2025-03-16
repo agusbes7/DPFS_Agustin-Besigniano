@@ -70,7 +70,7 @@ rel="stylesheet">
               
             </div>
         </nav>
-        <!-- ------------------------------------------------------------ -->
+<!-- ---------------------INFORMACION------------------------------------------ -->
         <section class="informacion">
             <p>Aceptamos efectivo, transferencia, tarjetas </p>
         
@@ -79,107 +79,240 @@ rel="stylesheet">
                 <li><img src="../Medias/iconos/tarjeta-de-credito (1).png" alt="tarjeta de credito"></li>
                 <li><img src="../Medias/iconos/redondo.png" alt="Mastercard"></li>
                 <li><img src="../Medias/iconos/tarjeta-de-credito.png" alt="tarjeta"></li>
-         <li><span><a href="./secciones/carrito.html"><img src="../Medias/iconos/carrito-de-compras.png" alt="carrito de compras">∅</a></span></li>
             </ul>
         </section>
-        <!-- ------------------------------------------------------------ -->
+<!-----------------------CONTENIDO--------------------------------------------- -->
         <div class="contenido">
+            <h1>carrito</h1>
+<!-- --------------------ARTICULOS DE CARRITO...........-->
      <div class="articulosCarrito">
           
-                      <h1>carrito</h1>
 
         <table>
-            <col class="col1">
-            <col class="col2">
-            <col class="col3">
-            <col class="col4">
-            <col class="col5">
-            <col class="col6">
-            <col class="col7">
-
-
+           <!------------------- Encabezado de columnas-------------------------------->
             <thead>
             <tr>
-              <th>Articulo</th>
-              <th>imagen</th>
-              <th>Descripcion</th>
+                <th>Descripcion</th>
+                      <th>imagen</th>
               <th>Costo Unitario $</th>
               <th>Unidades</th>
               <th>subTotal</th>
               <th> </th>
             </tr>
         </thead>
+           <!------------------- Cuerpo de tablas-------------------------------->
+
         <tbody>
             <tr>
-                <td>1</td>
-                <td class="col2">
-                    <img class="image" src="../Medias/productos/assimov fin de la eternidad.jpg" 
-                         alt="portada de libro de Isaac Asimov">
-                  📸
-                </td>
-                
                 <td>Issac Asimov: robot e imperio</td>
+                <td class="col2">📸
+                  <div  class="div_image">
+                    <img class="image" src="../Medias/productos/assimov fin de la eternidad.jpg"  alt="portada de libro de Isaac Asimov"></div></td>
                 <td>25000</td>
-                <td>2</td>
+                <td>
+                <!-------------cantidad de unidades------------------>
+                  <div class="div_cantidad">
+                        <button type="button" class="decrementa_unidades" disabled>-</button>
+                        <span class="cantidad">1</span>
+                        <button type="button" class="incrementa_unidades">+</button>
+                  </div>
+                  </td>
                 <td>50000</td>
-                <td><button  id="1" onclick="eliminarFila(tdis)">🗑️</button></td>
+                <td><button  id="1" onclick="eliminarFila(this)">🗑️</button></td>
 
             </tr>
             <tr>
-                <td>2</td>
-                <td class="col2">
-                    <img class="image" src="../Medias/productos/libro5.jpg" 
-                         alt="portada de libro del señor de los anillos">
-                  📸
-                </td>
                 <td>El señor de los anillos</td>
+                <td class="col2">📸
+                  <div  class="div_image">
+                    <img class="image" src="../Medias/productos/libro5.jpg" alt="portada de libro del señor de los anillos"></div></td>
                 <td>25000</td>
-                <td>1</td>
+                <td>
+                  <div class="div_cantidad">
+                        <button type="button" class="decrementa_unidades" disabled>-</button>
+                        <span class="cantidad">1</span>
+                        <button type="button" class="incrementa_unidades">+</button>
+                  </div>
+                  </td>
                 <td>25000</td>
-                <td><button  id="2" onclick="eliminarFila(tdis)">🗑️</button></td>
+                <td><button  id="2" onclick="eliminarFila(this)">🗑️</button></td>
 
             </tr>
             <tr>
-                <td>3</td>
+                <td>Red catdedral</td>
                 <td class="col2">
+                  📸
+                  <div  class="div_image">
                     <img class="image" src="../Medias/productos/redcathedral.webp" 
                          alt="portada de juego redcatdedral">
-                  📸
-                </td>
-                <td>Red catdedral</td>
+                        </div></td>
                 <td>45000</td>
-                <td>2</td>
+                <td>
+                  <div class="div_cantidad">
+                        <button type="button" class="decrementa_unidades" disabled>-</button>
+                        <span class="cantidad">1</span>
+                        <button type="button" class="incrementa_unidades">+</button>
+                  </div>
+                  </td>
                 <td>90000</td>
-                <td><button  id="3" onclick="eliminarFila(tdis)">🗑️</button></td>
+                <td><button  id="3" onclick="eliminarFila(this)">🗑️</button></td>
                 
             </tr>
         </tbody>
+           <!------------------- Pie de tabla-------------------------------->
+
         <tfoot>
-            <tr>
-                <td>-</td>
-                <td>-----</td> 
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>Total</td>
-                <td></td>
-
-            </tr>
-            <tr>
-                <td>-</td>
-                <td>-----</td> 
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>165000</td>
-                <td></td>
-
-            </tr>
-        </tfoot>
+            <tr class="total-row">
+                <td   colspan="4">Total</td>
+                <td  colspan="2" id="monto">$23456</td>
+              </tr>
+              </tfoot>
         </table>
-     <button id="confirmar">confirmar</button>
+<!--------------------BOTON ----------------------------->        
+     <button  id="abrirPago" class="boton">confirmar</button>
+           </div>
+<!-------------------------SECCION DE PAGO------------------------------------------>
+  <div class="div_pago" >
+    <div class="pago">
+      <button class="cerrar" id="cerrarPago">X</button>
+     
+    <h2>Metodo de Pago</h2>
+<!-------------------------FORMULARIO------------------------------------------>
+    
+    <form class="form_pago">
+            <label for="metodo_pago">Medio de Pago:</label>
+            <select id="metodo_pago" class="select_metodo_pago" required>
+              <option value="">Seleccione un método</option>
+              <option value="efectivo">Efectivo</option>
+              <option value="debito">Tarjeta Débito</option>
+              <option value="credito">Tarjeta Crédito</option>
+              <option value="mp">Mercado Pago</option>
+            </select>
+    
+<!------------------ Pago en Efectivo ----------------------------->
+            <div id="pago_efectivo" class="hidden">
+              <label>Seleccione el medio de pago:</label>
+              <div class="medios-efectivo">
+                <label>
+                  <img src="../Medias/iconos/pagoFacil.png" alt="Pago Fácil" class="img_pago">
+                  <input type="radio" name="metodo_pago" value="pagoFacil" required>
+                </label>
+                <!---->
+                <label>
+                  <img src="../Medias/iconos/rapiPago.png" alt="Rapipago" class="img_pago">
+                  <input type="radio" name="metodo_pago" value="rapiPago">
+                  </label>
+                <!---->
+                  <label>
+                  <img src="../Medias/iconos/westerUnion.png" alt="Western Union" class="img_pago">
+                  <input type="radio" name="metodo_pago" value="westerUnion">
+                </label>
+
+              </div>
+            </div>
+<!------------------ Pago con Tarjeta----------------------------->
+
+    
+            <div id="pago_tarjeta" class="hidden">
+              <label for="nombre_tarjeta">Nombre del titular <sub>(Tal como aparece en la misma)</sub></label>
+              <input type="text" id="nombre_tarjeta" class="input_nombre_tarjeta">
+    
             
-     </div>
+              <label for="numero_tarjeta">Número de tarjeta</label>
+              <input type="text" id="numero_tarjeta" class="input_numero_tarjeta" maxlength="16" >
+              <div class="form_horizontal">
+              <label for="fecha_vencimiento">Fecha de Vencimiento</label>
+              <input type="month" id="fecha_vencimiento" class="input_fecha_vencimiento">
+            </div>
+            <div class="form_horizontal">
+
+              <label for="codigo_seguridad">Código de Seguridad:</label>
+              <input type="text" id="codigo_seguridad" class="input_codigo_seguridad" maxlength="3">
+            </div>
+            </div>
+    
+            <!--  Sección de Mercado Pago -->
+            <div id="pago_mp" class="hidden">
+              <p>Serás redirigido a Mercado Pago para completar tu pago.</p>
+            </div>
+    
+<!-- ...................... Cupón de descuento -->
+ <div class="form_horizontal">
+            <label for="cupon_descuento">Cupon:</label>
+            <input type="text" id="cupon_descuento" class="input_cupon" placeholder="Ingrese su código de descuento">
+          </div>
+<!--.............  Envío -->
+            <h3>Dirección de Envío</h3>
+            <div class="direccion">
+              <div>
+                <label for="provincia">Provincia:</label>
+                <select id="provincia" class="select_provincia" required>
+                  <option value="">Seleccione una provincia</option>
+  <option value="Buenos Aires">Buenos Aires</option>
+  <option value="Catamarca">Catamarca</option>
+  <option value="Chaco">Chaco</option>
+  <option value="Chubut">Chubut</option>
+  <option value="Córdoba">Córdoba</option>
+  <option value="Corrientes">Corrientes</option>
+  <option value="Entre Ríos">Entre Ríos</option>
+  <option value="Formosa">Formosa</option>
+  <option value="Jujuy">Jujuy</option>
+  <option value="La Pampa">La Pampa</option>
+  <option value="La Rioja">La Rioja</option>
+  <option value="Mendoza">Mendoza</option>
+  <option value="Misiones">Misiones</option>
+  <option value="Neuquén">Neuquén</option>
+  <option value="Río Negro">Río Negro</option>
+  <option value="Salta">Salta</option>
+  <option value="San Juan">San Juan</option>
+  <option value="San Luis">San Luis</option>
+  <option value="Santa Cruz">Santa Cruz</option>
+  <option value="Santa Fe">Santa Fe</option>
+  <option value="Santiago del Estero">Santiago del Estero</option>
+  <option value="Tierra del Fuego">Tierra del Fuego</option>
+  <option value="Tucumán">Tucumán</option>
+                </select>
+              </div>
+    
+              <div>
+                <label for="localidad">Localidad:</label>
+                <input type="text" id="localidad" class="input_localidad" required>
+              </div>
+    
+              <div>
+                <label for="calle">Calle:</label>
+                <div id="calle_responsive" class="form_horizontal">
+                <input type="text" id="calle" class="input_calle" required placeholder="ingrese la direccion">
+                  <input type="number" id="Altura" class="input_calleAltura" required placeholder="Nro">
+                  <input type="text" id="departamento" class="input_departamento" placeholder="piso/Depto">
+                
+                </div>
+              </div>
+    
+            </div><br>
+ <!-----------resumen------------>
+<div class="resumen_pago">
+   <table>
+           
+  <tr class="total-row">
+   <td   class="resumen">subTotal</td>
+   <td   id="monto">$23456</td>
+       </tr>
+       <tr class="total-row">
+         <td class="resumen"  >Descuento</td>
+         <td   id="codigo_descuento">0</td>
+       </tr>
+       <tr class="total-row">
+        <td  class="resumen" >Total</td>
+        <td   id="monto">$23456</td>
+            </tr>
+
+</table></div><br>
+
+            <button type="submit" class="boton boton_finalizar">Finalizar Compra</button>
+          </form>
+        </div>
+      </div>
 </div>
 
          
