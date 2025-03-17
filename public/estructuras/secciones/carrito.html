@@ -49,10 +49,10 @@ rel="stylesheet">
 
             <div class="navigation_opc">
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="index.html">Juegos</a></li>
-                    <li><a href="index.html">Libros</a></li>
-                    <li><a href="index.html">Articulos</a></li>
+                    <li><a href="../../index.html">Inicio</a></li>
+                    <li><a href="../../index.html">Juegos</a></li>
+                    <li><a href="../../index.html">Libros</a></li>
+                    <li><a href="../../index.html">Articulos</a></li>
                     <li><a href="index.html">Contacto</a></li>
                     <li><a href="./login.html">cuenta</a></li>
                 </ul>
@@ -87,7 +87,7 @@ rel="stylesheet">
 <!-- --------------------ARTICULOS DE CARRITO...........-->
      <div class="articulosCarrito">
           
-
+<div class="Carrito_Table">
         <table>
            <!------------------- Encabezado de columnas-------------------------------->
             <thead>
@@ -106,6 +106,7 @@ rel="stylesheet">
             <tr>
                 <td>Issac Asimov: robot e imperio</td>
                 <td class="col2">📸
+                  <br>
                   <div  class="div_image">
                     <img class="image" src="../Medias/productos/assimov fin de la eternidad.jpg"  alt="portada de libro de Isaac Asimov"></div></td>
                 <td>25000</td>
@@ -124,6 +125,8 @@ rel="stylesheet">
             <tr>
                 <td>El señor de los anillos</td>
                 <td class="col2">📸
+                  <br>
+
                   <div  class="div_image">
                     <img class="image" src="../Medias/productos/libro5.jpg" alt="portada de libro del señor de los anillos"></div></td>
                 <td>25000</td>
@@ -142,6 +145,8 @@ rel="stylesheet">
                 <td>Red catdedral</td>
                 <td class="col2">
                   📸
+                  <br>
+
                   <div  class="div_image">
                     <img class="image" src="../Medias/productos/redcathedral.webp" 
                          alt="portada de juego redcatdedral">
@@ -169,8 +174,11 @@ rel="stylesheet">
               </tfoot>
         </table>
 <!--------------------BOTON ----------------------------->        
-     <button  id="abrirPago" class="boton">confirmar</button>
            </div>
+     <button  id="abrirPago" class="boton">confirmar</button>
+
+          </div>
+
 <!-------------------------SECCION DE PAGO------------------------------------------>
   <div class="div_pago" >
     <div class="pago">
@@ -180,18 +188,30 @@ rel="stylesheet">
 <!-------------------------FORMULARIO------------------------------------------>
     
     <form class="form_pago">
-            <label for="metodo_pago">Medio de Pago:</label>
-            <select id="metodo_pago" class="select_metodo_pago" required>
-              <option value="">Seleccione un método</option>
-              <option value="efectivo">Efectivo</option>
-              <option value="debito">Tarjeta Débito</option>
-              <option value="credito">Tarjeta Crédito</option>
-              <option value="mp">Mercado Pago</option>
-            </select>
+      
+      
+      <div class="form_horizontal">
     
+        <div class="form_vertical">
+          <label for="metodo_pago">Medio de Pago:</label>
+        <select id="metodo_pago" class="select_metodo_pago" required>
+          <option value="">Seleccione un método</option>
+          <option value="efectivo">Efectivo</option>
+          <option value="debito">Tarjeta Débito</option>
+          <option value="credito">Tarjeta Crédito</option>
+          <option value="mp">Mercado Pago</option>
+        </select>
+      </div>
+
+      <div class="form_vertical">
+        <label for="cupon_descuento">Cupon:</label>
+        <input type="text" id="cupon_descuento" class="input_cupon" placeholder="Ingrese su código de descuento">
+      </div> 
+
+</div>
 <!------------------ Pago en Efectivo ----------------------------->
-            <div id="pago_efectivo" class="hidden">
-              <label>Seleccione el medio de pago:</label>
+ <div id="pago_efectivo" class="hidden">
+              <label>Seleccione el medio de pago</label>
               <div class="medios-efectivo">
                 <label>
                   <img src="../Medias/iconos/pagoFacil.png" alt="Pago Fácil" class="img_pago">
@@ -214,38 +234,43 @@ rel="stylesheet">
 
     
             <div id="pago_tarjeta" class="hidden">
-              <label for="nombre_tarjeta">Nombre del titular <sub>(Tal como aparece en la misma)</sub></label>
-              <input type="text" id="nombre_tarjeta" class="input_nombre_tarjeta">
-    
+              <label for="nombre_tarjeta">Nombre del titular</label>
+            <input type="text" id="nombre_tarjeta" class="input_nombre_tarjeta" placeholder="Tal como esta escrito en la misma">
+            <div class="form_horizontal">
+              <div  class="form_vertical">
             
               <label for="numero_tarjeta">Número de tarjeta</label>
-              <input type="text" id="numero_tarjeta" class="input_numero_tarjeta" maxlength="16" >
-              <div class="form_horizontal">
+              <input type="text" id="numero_tarjeta" class="input_numero_tarjeta" maxlength="19" placeholder="xxxx-xxxx-xxxx-xxxx" >
+              </div>
+                <div  class="form_vertical">
               <label for="fecha_vencimiento">Fecha de Vencimiento</label>
-              <input type="month" id="fecha_vencimiento" class="input_fecha_vencimiento">
-            </div>
-            <div class="form_horizontal">
+              <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/AA" maxlength="7">
 
-              <label for="codigo_seguridad">Código de Seguridad:</label>
-              <input type="text" id="codigo_seguridad" class="input_codigo_seguridad" maxlength="3">
+                  </div>
+           
+            <div class="form_vertical">
+              <label for="codigo_seguridad">Código de Seguridad</label>
+              <input type="text" id="codigo_seguridad" class="input_codigo_seguridad" maxlength="3" placeholder="xxx">
+            </div>
             </div>
             </div>
     
             <!--  Sección de Mercado Pago -->
             <div id="pago_mp" class="hidden">
               <p>Serás redirigido a Mercado Pago para completar tu pago.</p>
-            </div>
+            </div><br>
+
     
-<!-- ...................... Cupón de descuento -->
- <div class="form_horizontal">
-            <label for="cupon_descuento">Cupon:</label>
-            <input type="text" id="cupon_descuento" class="input_cupon" placeholder="Ingrese su código de descuento">
-          </div>
+
 <!--.............  Envío -->
-            <h3>Dirección de Envío</h3>
-            <div class="direccion">
-              <div>
-                <label for="provincia">Provincia:</label>
+<h3>Dirección de Envío</h3>
+<p>envios internacionales proximamente</p>
+
+            <div class="form_horizontal">
+    <!----------------------------------->
+
+              <div class="form_vertical">
+                <label for="provincia">Provincia</label>
                 <select id="provincia" class="select_provincia" required>
                   <option value="">Seleccione una provincia</option>
   <option value="Buenos Aires">Buenos Aires</option>
@@ -273,12 +298,14 @@ rel="stylesheet">
   <option value="Tucumán">Tucumán</option>
                 </select>
               </div>
-    
-              <div>
-                <label for="localidad">Localidad:</label>
-                <input type="text" id="localidad" class="input_localidad" required>
+    <!----------------------------------->
+              <div class="form_vertical">
+                <label for="localidad">Localidad</label>
+                <input type="text" id="localidad" class="input_localidad" required placeholder="ingrese la localidad">
               </div>
-    
+
+            </div>
+
               <div>
                 <label for="calle">Calle:</label>
                 <div id="calle_responsive" class="form_horizontal">
@@ -287,9 +314,7 @@ rel="stylesheet">
                   <input type="text" id="departamento" class="input_departamento" placeholder="piso/Depto">
                 
                 </div>
-              </div>
-    
-            </div><br>
+              </div><br>
  <!-----------resumen------------>
 <div class="resumen_pago">
    <table>
