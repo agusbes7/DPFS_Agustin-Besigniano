@@ -82,13 +82,23 @@ rel="stylesheet">
                 <li><img src="../Medias/iconos/tarjeta-de-credito (1).png" alt="tarjeta de credito"></li>
                 <li><img src="../Medias/iconos/redondo.png" alt="Mastercard"></li>
                 <li><img src="../Medias/iconos/tarjeta-de-credito.png" alt="tarjeta"></li>
-         <li><span><a href="../secciones/carrito.html"><img src="..//Medias/iconos/carrito-de-compras.png" alt="carrito de compras">∅</a></span></li>
             </ul>
         </section>
         <!-- ------------------------------------------------------------ -->
-
+        <div class="div_carrito">
+            <div class="carrito_icon">
+            <a href="./carrito.html"><img src="../Medias/iconos/carrito-de-compras.png" alt="carrito de compras"></a>
+            <span>∅</span>
+        </div>
+            <div class="mensaje_carrito">
+    <p>No hay articulos en el carrito aun</p>
+            </div>
+    <div class="preview_articulos">
+    contenido a definir
+    </div>
+        </div>
 <div class="contenido">
-
+    
 <div class="item"> 
           <div class="Imagen">
 <img src="../Medias/productos/catan.jpg" alt="Imagen de tarjeta" class="tarjeta-img">
@@ -152,6 +162,19 @@ rel="stylesheet">
                     <button class="eliminar" id="carrito_cb" onclick="remover(70000)">-</button>
                 </div>
             </li>
+            <li class="tarjeta">
+                <a href=".#" class="tarjeta-link">
+                    <img src="../Medias/productos/sueños de robot.jpg" alt="Imagen de tarjeta"
+                        class="tarjeta-img">
+                    </a>
+            
+                        <p class="descripcion">Sueños de robot</p>
+                    <p class="precio">$34555</p>
+                    <div class="compras">
+                        <button class="carrito" id="catan_base" onclick="total(70000)">+</button>
+                        <button class="eliminar" id="carrito_cb" onclick="remover(70000)">-</button>
+                    </div>
+                </li>
             <li class="flecha"><button  class="flecha-derecha" id="juegoAv">►</button></li>
 </ul>
         

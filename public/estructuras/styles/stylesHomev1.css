@@ -20,17 +20,36 @@
     .ofertas_descripcion {
     display: flex;
     flex-direction: column;
-    width: 100%;}
+    width: 100%;
+    background-color: gold;
+}
 /*--------------elemento p de ofertas_descripcion-------------*/
 .ofertasp {
     color: #5004dd;
     font-family: "Arial Black", Gadget, sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     word-spacing: 0.2rem;
     font-weight: 700;
     text-decoration: none;
     text-transform: uppercase;
-letter-spacing: unset;}
+letter-spacing: unset;
+animation: desplazamiento-ofertas 8s linear infinite;}
+@keyframes desplazamiento-ofertas {
+    0% {
+        transform: translateX(100%); /* Empieza fuera del lado derecho */
+        opacity: 0; /* Inicia invisible */
+    }
+    10% {
+        opacity: 1; /* Hace que el párrafo aparezca gradualmente */
+    }
+    90% {
+        transform: translateX(-100%); /* Desplaza completamente hacia la izquierda */
+        opacity: 1; /* Sigue visible */
+    }
+    100% {
+        opacity: 0; /* Desaparece al salir de la pantalla */
+    }
+}
 /*--------------elemento li de tarjetas-------------*/
 .ofertas .tarjeta {
     width: 30%;

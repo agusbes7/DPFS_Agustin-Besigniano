@@ -133,7 +133,8 @@ font-style: italic,bold;}
     font-style: normal;
      font-variant: normal;
       text-transform: none;
-      background-color: red;}
+      background-color: red;
+      transition-duration: 1.2s;      }
 .registro .b_login{margin: 1%;}
 .b_login:hover {
   background: #ff6a20; 

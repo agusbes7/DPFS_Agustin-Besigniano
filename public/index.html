@@ -84,20 +84,30 @@ Probar en el futuro rediseñar todo con base en bootstrap para practicar y ver s
                 <li><img src="./estructuras/Medias/iconos/tarjeta-de-credito (1).png" alt="tarjeta de credito"></li>
                 <li><img src="./estructuras/Medias/iconos/redondo.png" alt="Mastercard"></li>
                 <li><img src="./estructuras/Medias/iconos/tarjeta-de-credito.png" alt="tarjeta"></li>
-         <li><span><a href="./secciones/carrito.html"><img src="./estructuras/Medias/iconos/carrito-de-compras.png" alt="carrito de compras">∅</a></span></li>
             </ul>
         </section>
-        <!-- ------------------------------------------------------------ -->
-
+        <!-- ----------------CARRITO-------------------------------------------- -->
+       <div class="div_carrito">
+            <div class="carrito_icon">
+            <a href="./estructuras/secciones/carrito.html"><img src="./estructuras/Medias/iconos/carrito-de-compras.png" alt="carrito de compras"></a>
+            <span>∅</span>
+        </div>
+            <div class="mensaje_carrito">
+    <p>No hay articulos en el carrito aun</p>
+            </div>
+  <div class="preview_articulos">
+    contenido a definir
+    </div>
+</div>
+<!------------------------CONTENIDO---------------------------->
         <div class="contenido">
-          
+           
             <!-- ------------------------------------------------------------ -->
             <section class="ofertas">
                 <div class="ofertas_descripcion">
-                    <p class="ofertasp">Ofertas promocionales solo tarjetas de debito</p>
-                    <p class="ofertasp"><bold>25% descuento</bold> en todo lo relacionado con el señor de los anillos pagando con
-                        tarjeta Supervielle</p>
-                </div>
+                    <p class="ofertasp">Ofertas promocionales solo tarjetas de debito  
+                        <bold>25% descuento</bold> en todo lo relacionado con el señor de los anillos pagando con
+                        tarjeta Supervielle</p></div>
                 <div class="tarjetas">
                     <ul class="tarjetas-list">
                         <li class="tarjeta">
@@ -117,6 +127,7 @@ Probar en el futuro rediseñar todo con base en bootstrap para practicar y ver s
                                 <p class="precio"><del><small>$10000</small></del> $7700</p>
                                               </li>
                     </ul>
+                </div>
 
             </section>
             <!-- --------------------ASIDE---------------------------------------- 
@@ -195,11 +206,9 @@ Probar en el futuro rediseñar todo con base en bootstrap para practicar y ver s
                             <p class="descripcion">Catan Base</p>
                             <p class="precio">$70000</p>
                             <div class="compras">
-                        <button class="eliminar" id="carrito_cb" onclick="remover(70000,this.id)">-</button>
+                        <button class="eliminar">-</button>
                         <span class="items_producto">0</span>
-                        <button class="carrito" id="catan_base" onclick="total(70000,this.id)">+</button>
-
-
+                        <button class="carrito">+</button>
                     </div>
                     </li>
                     <li class="tarjeta">
@@ -210,10 +219,9 @@ Probar en el futuro rediseñar todo con base en bootstrap para practicar y ver s
                             <p class="descripcion">Amp 5-6 Exploradores y Piratas </p>
                             <p class="precio"><del><small>$55000</small></del> $45000</p>
                             <div class="compras">
-                                <button class="eliminar" id="carrito_cb" onclick="remover(70000,'catan_base')">-</button>
-                        <span class="items_producto">0</span>
-                        <button class="carrito" id="catan_base" onclick="total(70000,'carrito_cb')">+</button>
-
+                                <button class="eliminar">-</button>
+                                <span class="items_producto">0</span>
+                                <button class="carrito">+</button>
                             </div>
                     </li>
                     <li class="tarjeta">
@@ -224,10 +232,9 @@ Probar en el futuro rediseñar todo con base en bootstrap para practicar y ver s
                             <p class="descripcion">Amp 5-6 mercaderes y barbaros</p>
                             <p class="precio">$55000</p>
                             <div class="compras">
-                                <button class="eliminar" id="carrito_cb" onclick="remover(70000,this.id)">-</button>
+                                <button class="eliminar">-</button>
                                 <span class="items_producto">0</span>
-                                <button class="carrito" id="catan_base" onclick="total(70000,this.id)">+</button>
-
+                                <button class="carrito">+</button>
                             </div>
                         </li>
                     <li class="tarjeta">
@@ -239,10 +246,9 @@ Probar en el futuro rediseñar todo con base en bootstrap para practicar y ver s
                                 <p class="descripcion">Red Cathedral</p>
                             <p class="precio">$56000</p>
                             <div class="compras">
-                                <button class="eliminar" id="carrito_cb" onclick="remover(70000,this.id)">-</button>
+                                <button class="eliminar">-</button>
                                 <span class="items_producto">0</span>
-                                <button class="carrito" id="catan_base" onclick="total(70000,this.id)">+</button>
-
+                                <button class="carrito">+</button>
                             </div>
                         </li>
                     <li class="flecha"><button  class="flecha-derecha" id="juegoAv">►</button></li>
@@ -274,9 +280,9 @@ Probar en el futuro rediseñar todo con base en bootstrap para practicar y ver s
                                 <p class="descripcion">Sandman:Vol 2 Casa de Muñecas</p>
                             <p class="precio">$20000</p>
                             <div class="compras">
-                                <button class="eliminar" id="carrito_cb" onclick="remover(70000,this.id)">-</button>
+                                <button class="eliminar"  >-</button>
                                 <span class="items_producto">0</span>
-                                <button class="carrito" id="catan_base" onclick="total(70000,this.id)">+</button>
+                                <button class="carrito"  >+</button>
 
                             </div>
                         </li>
@@ -290,9 +296,9 @@ Probar en el futuro rediseñar todo con base en bootstrap para practicar y ver s
                                 <p class="descripcion">Sandman:Vol 3 Pais de sueños</p>
                             <p class="precio">$18000</p>
                             <div class="compras">
-                                <button class="eliminar" id="carrito_cb" onclick="remover(70000,this.id)">-</button>
+                                <button class="eliminar"  >-</button>
                                 <span class="items_producto">0</span>
-                                <button class="carrito" id="catan_base" onclick="total(70000,this.id)">+</button>
+                                <button class="carrito"  >+</button>
 
                             </div>
                         </li>
@@ -304,9 +310,9 @@ Probar en el futuro rediseñar todo con base en bootstrap para practicar y ver s
                             <p class="descripcion">Issac Asimov: robot e imperio</p>
                             <p class="precio">$25000</p>
                             <div class="compras">
-                                <button class="eliminar" id="carrito_cb" onclick="remover(70000,this.id)">-</button>
+                                <button class="eliminar"  >-</button>
                                 <span class="items_producto">0</span>
-                                <button class="carrito" id="catan_base" onclick="total(70000,this.id)">+</button>
+                                <button class="carrito"  >+</button>
 
                             </div>
                     </li>
@@ -318,9 +324,9 @@ Probar en el futuro rediseñar todo con base en bootstrap para practicar y ver s
                             <p class="descripcion">La trilogia de la Fundacion</p>
                             <p class="precio">$20000</p>
                             <div class="compras">
-                                <button class="eliminar" id="carrito_cb" onclick="remover(70000,this.id)">-</button>
+                                <button class="eliminar"  >-</button>
                                 <span class="items_producto">0</span>
-                                <button class="carrito" id="catan_base" onclick="total(70000,this.id)">+</button>
+                                <button class="carrito"  >+</button>
 
                             </div>
                         </li>
@@ -356,9 +362,9 @@ Probar en el futuro rediseñar todo con base en bootstrap para practicar y ver s
                                 <p class="descripcion">El señor de los anillos</p>
                             <p class="precio">$30000</p>
                             <div class="compras">
-                                <button class="eliminar" id="carrito_cb" onclick="remover(70000,this.id)">-</button>
+                                <button class="eliminar"  >-</button>
                                 <span class="items_producto">0</span>
-                                <button class="carrito" id="catan_base" onclick="total(70000,this.id)">+</button>
+                                <button class="carrito"  >+</button>
 
                             </div>
                         </li>
@@ -370,9 +376,9 @@ Probar en el futuro rediseñar todo con base en bootstrap para practicar y ver s
                                 <p class="descripcion">Reliquias de la muerte</p>
                             <p class="precio"><del><small>$10000</small></del> $7700</p>
                             <div class="compras">
-                                <button class="eliminar" id="carrito_cb" onclick="remover(70000,this.id)">-</button>
+                                <button class="eliminar"  >-</button>
                                 <span class="items_producto">0</span>
-                                <button class="carrito" id="catan_base" onclick="total(70000,this.id)">+</button>
+                                <button class="carrito"  >+</button>
 
                             </div>
                         </li>
@@ -384,9 +390,9 @@ Probar en el futuro rediseñar todo con base en bootstrap para practicar y ver s
                             <p class="descripcion">collar Reliquias de la muerte</p>
                             <p class="precio">$12000</p>
                             <div class="compras">
-                                <button class="eliminar" id="carrito_cb" onclick="remover(70000,this.id)">-</button>
+                                <button class="eliminar"  >-</button>
                                 <span class="items_producto">0</span>
-                                <button class="carrito" id="catan_base" onclick="total(70000,this.id)">+</button>
+                                <button class="carrito"  >+</button>
 
                             </div>
                         </li>
@@ -398,9 +404,9 @@ Probar en el futuro rediseñar todo con base en bootstrap para practicar y ver s
                             <p class="descripcion">Cuerpo de linternas verdes</p>
                             <p class="precio">$15000</p>
                             <div class="compras">
-                                <button class="eliminar" id="carrito_cb" onclick="remover(70000,this.id)">-</button>
+                                <button class="eliminar"  >-</button>
                                 <span class="items_producto">0</span>
-                                <button class="carrito" id="catan_base" onclick="total(70000,this.id)">+</button>
+                                <button class="carrito"  >+</button>
 
                             </div>
                         </li>
@@ -411,10 +417,10 @@ Probar en el futuro rediseñar todo con base en bootstrap para practicar y ver s
             </div>
 
         </section> 
-
+        </div>
                     <!-- ------------------------------------------------------------ -->
                    
-                </div>
+                
         
             <footer>
                 <div class="mensaje">
@@ -424,14 +430,12 @@ Probar en el futuro rediseñar todo con base en bootstrap para practicar y ver s
                     <div class="foo_container">Estructura</div>
                 </div>
     
-    
-            </footer>
+               </footer>
         </div>
         <!-- ------------------------------------------------------------ -->
 
        
 
-    </div>
     <script src="Funciones.js"></script>
 </body>
 

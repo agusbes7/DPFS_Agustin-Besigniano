@@ -4,6 +4,7 @@ html,body {    margin: 0;
 * { box-sizing: border-box;}
 .container {
         display: grid;
+        position: relative;
         grid-template-columns: 1fr;
         grid-template-areas:
         "header"
@@ -97,8 +98,7 @@ margin:0;}
     flex-direction: row;
     align-items: center; 
     justify-content: space-between;
-    background-color: white;
-}
+    background-color: white;}
 .navigation_opc, .busqueda {
     height: 100%; 
         display: flex;
@@ -140,9 +140,7 @@ z-index: 10;}
 .navigation_opc ul li:active,
 .busqueda button :active {     background-color: #DD4204; }
 /* Botón de búsqueda */
-.busqueda button {background-color: red;
-transition-duration: 1.2s;}
-.busqueda button:hover{background-color: blue;}
+.busqueda button {background-color: red;}
 
 /*-----------Raya responsiva para navegacion*-------------------------------*/
 #menu {
@@ -153,103 +151,34 @@ display: none;
 
 #menu_toggle{display: none;}
 .menu_label{display: none;}
-/*---------------------Carrito---------------------*/
-.div_carrito{
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    z-index: 9999;
-    opacity: 0.7;
-    top: 10%;
-    left: 92%;
-    font-size: 0.6rem;
-    -webkit-box-shadow: 2px 2px 2px 3px #000000; 
-    box-shadow: 2px 2px 2px 3px #000000;
-transition-duration: 1.2s;
-animation: hundirse 1.5s ease-in-out infinite; 
-align-items: center;
-justify-content: center;
-margin: 1%;}
-/*--------------------------------------------------------------------------*/
-.carrito_icon{display: flex;
-flex-direction: row;
-width: 100%;
-justify-content: center;
-background-color: rgb(169, 169, 255);}
-.div_carrito a img{width: 2rem;}
-/*-----------------------Carrito vacio---------------------------------------------------*/
-
-.mensaje_carrito{
-  
-    display: none;
-     height: 80%;
-    top: 10%;
-padding: 0.1rem;}
-.mensaje_carrito p{ 
-    color: #FAC710;
-    letter-spacing: unset;
-    word-spacing: unset;
-    font-weight: 500;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 1rem;
-    transition-duration: 1.5s;}
-.preview_articulos{display: none;}
-/*-----------------------------hover carrito---------------------------------------------*/
-.div_carrito:hover {
-    opacity: 1;
-   left: 74%;
-    width: 20%;
-    height: 20%;
-    background-color: white;}
-.div_carrito:hover .carrito_icon{
-background-color: blue;
-}
-.div_carrito:hover .mensaje_carrito{
-    display: flex;
-justify-content: center;
-align-items: center;}
-/*-------------------------Animacion-------------------------------------------------*/
-
-@keyframes hundirse {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-5px); 
-    }
-    100% {
-        transform: translateY(0); /* Vuelve a la posición original */
-    }
-}
  /*---------------------INFORMACION TARJETAS MEDIOS DE PAGO-----------------------*/
 .informacion {
     grid-area: pagos;
-    overflow-x: auto;
+    overflow: hidden;
     display: flex;
     flex-direction: row;
-    background-color: #ed5819;
-min-width: 750px;}
+    background-color: #ed5819;}
 
 .informacion p {
     display: flex;
     color: white;
-    font-size: 16x;
+    font-size: 1.2rem;
      font-family: "Open Sans", sans-serif;
     font-style: italic;
     word-spacing: 0.2rem;
-    width: 70%;
+    width: 60%;
 margin: 0;}
 .informacion p, .informacion ul{
             display: flex;
             flex-direction: row;
             align-items: center; }
-.informacion ul{
-    width: 30%;
+.informacion ul, #carro {
+    width: 35%;
    flex-direction: row;
     text-decoration: none;
     list-style: none;}
 
-.informacion li, .informacion li a{
+.informacion li, .informacion li a, #carro {
     text-decoration: none;
     height: 60%;
     width: 20%;
@@ -257,8 +186,8 @@ margin: 0;}
 
 .informacion li img{
     text-decoration: none;
-    width: 30px;
-    height: 30px;
+    width: 40%;
+    height:80%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     transform: perspective(500px);
 }
@@ -281,6 +210,48 @@ footer{
     background-color: #DD4204;
     width: 100%; }
 .foo_container{display: none;}
+/*----------------------------------------------------*/
+.div_carrito{
+    position: fixed;
+    z-index: 9999;
+    opacity: 0.7;
+   
+    top: 10%;
+    left: 96%;
+    font-size: 0.6rem;
+    -webkit-box-shadow: -6px 4px 11px 6px #000000; 
+    box-shadow: 2px 2px 2px 3px #000000;
+transition-duration: 1.2s;
+}
+.div_carrito a img{
+    width: 2rem;}
+
+.mensaje_carrito{
+    border-radius: 20%;
+    border: 3px solir wheat;
+    display: none;
+   height: 0;
+       right: 2%;
+    position: fixed;}
+.mensaje_carrito p{ 
+    color: #FAC710;
+    letter-spacing: unset;
+    word-spacing: unset;
+    font-weight: 700;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1rem;
+transition-duration: 1.5s;}
+.div_carrito:hover{
+    opacity: 1;
+    background-color: blue;
+}
+.div_carrito:hover .mensaje_carrito{display: block;
+z-index: 999;
+background-color: #DD4204;
+
+width: auto;}
+
+
 /*--------------------Media queries--------------------------*/
 
 @media (max-width: 870px) {
@@ -295,38 +266,15 @@ footer{
         .navigation_opc{ width: 50%;}
         .busqueda{width: 40%;}
         .navigation_opc ul li{border-radius: 20%;}}
-        @media (max-width: 720px) {
-            .informacion {
-                justify-content: space-around;
-                overflow-x: scroll; 
-                min-width: unset;
-                flex-wrap: nowrap;
-           margin: 1%;
-        padding: 2px; }
-        
-            .informacion p,
-            .informacion ul {
-                margin-left: 2px;
-                margin-right: 2px;
-                width: auto;
-                flex-shrink: 0; 
-            }
-        
-            .informacion li {
-                flex-shrink: 0; /* Mantén su tamaño fijo */
-                width: auto; /* Ajusta para no forzar al flexbox a contraerlos */
-            }
-        }
-
     @media (max-width: 700px){
         .banner{gap: 1%;}
         .navigation_opc ul li{padding: 0.2rem;}}
-   
 @media (max-width: 635px){
 .navigation_opc ul li{padding: 0.1rem;}
 .navigation_opc ul {gap:0;
 border-radius: 0;}
-  }
+.informacion li{
+    height: unset;}}
 @media (max-width: 580px){
 
     html{font-size: 10px;}
@@ -374,17 +322,14 @@ max-height: 45vh;  /* Limita la altura si se expande demasiado */
             display: flex;
             max-height: auto;}
    
-.ofertasp{
+.ofertersp{
     word-spacing: 0.1rem;
     font-size: 0.7rem;
 }    
     }
  @media (max-width: 400px) {
     .banner{padding: 1%;}
-    .banner_format{flex-direction: column;}
-    .informacion li img{
-        width: 20px;
-        height: 20px;}}
+    .banner_format{flex-direction: column;}}
     @media (max-width: 300px) {
 html{font-size:7px;}
 

@@ -76,14 +76,14 @@ function eliminarFila(boton) {
   fila.parentNode.removeChild(fila); // Se elimina la fila de la tabla
 }
 //--------------------pago
-// 📌 Abrir ventana de pago
+//  Abrir ventana de pago
 document.getElementById("abrirPago").addEventListener("click", function () {
-  document.querySelector(".div_pago").classList.add("mostrar");
+document.querySelector(".div_pago").classList.add("mostrar");
 });
 
-// 📌 Cerrar ventana de pago
+//  Cerrar ventana de pago
 document.getElementById("cerrarPago").addEventListener("click", function () {
-  document.querySelector(".div_pago").classList.remove("mostrar");
+document.querySelector(".div_pago").classList.remove("mostrar");
 });
 
 
@@ -91,9 +91,9 @@ document.getElementById("cerrarPago").addEventListener("click", function () {
 document.querySelector(".select_metodo_pago").addEventListener("change", function() {
   let metodo = this.value;
 
-  document.getElementById("pago_efectivo").classList.add("hidden");
-  document.getElementById("pago_tarjeta").classList.add("hidden");
-  document.getElementById("pago_mp").classList.add("hidden");
+document.getElementById("pago_efectivo").classList.add("hidden");
+document.getElementById("pago_tarjeta").classList.add("hidden");
+document.getElementById("pago_mp").classList.add("hidden");
 
   if (metodo === "efectivo") {
     document.getElementById("pago_efectivo").classList.remove("hidden");
