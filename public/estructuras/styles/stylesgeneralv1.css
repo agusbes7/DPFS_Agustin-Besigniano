@@ -46,7 +46,7 @@ header img {
     margin-left: 1%;
     margin-right: 1%;
     overflow-x: hidden;
-}
+ }
 /*---------------------------------BANNER------------------------------------------*/
 .banner{
 overflow: hidden;
@@ -58,6 +58,7 @@ max-height: 40vh;  /* Limita la altura si se expande demasiado */
 display: flex;
 align-items: center;
 justify-content: space-around;
+
 }
 .banner_format{
     display: flex;
@@ -69,8 +70,11 @@ width: 50%;}
      max-width: 100%;
     max-height: 100%;
     display: flex;
-    justify-items: center;}
-.banner_img_f {height: 100%;}
+    justify-items: center;
+    animation: hundirse 1.5s ease-in-out infinite; 
+}
+.banner_img_f {height: 100%;
+}
 
 .banner_img_s {    height: 25%;
 margin-right: 1%;}
