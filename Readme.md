@@ -1,83 +1,85 @@
 # Bienvenidos
 
-![Banner de github](./estructuras/Medias/Imagenes/Banner-3.jpg)
+![Banner de github](./public/estructuras/Medias/Imagenes/Banner-3.jpg)
 
+---  
+
+###  Presentacion   **SPRINT 2**
+    
+>A continuacion les comparto el trello del desafio que arme como guia para este sprint  [Desafio digital house](https://trello.com/invite/b/67d358788411ca33fc61e5bd/ATTIe1de96c027078418d2cf4be7685b84c3A37DD0EA/proyecto-dh)      
+
+![Logo digital House](./public/estructuras/Medias/Modelos/logo%20digital.png)
+
+A partir de este punto incursionaré en Sprints 2 en adelante.
+El readme del sprint anterior lo deje disponible dentro de la carpeta de **'history readme'** como forma de tener seguimientos del proyecto ademas de poder verlo en el historial. No profundizaré demasiado en cosas ya mencionadas en el sprint anterior. Por ultimo tambien queda la retroalimentacion generada del sprint anterior. Sugiero leer ambas antes de venir aqui.  
+
+---  
+Estuve mucho tiempo ausente al seguir el proyecto con la constancia que me hubiese gustado por cuestiones extras. Sin embargo comenzamos a agarrar ritmo de nuevo y progresar con los contenidos del curso y del sprint para ponernos al dia.  
+Pase varios dias desarrollando y refinando el index que posee estructuras basicas comunes a todas las secciones como el banner,footer,header,contenido(variable de seccion en seccion), la barra de navegacion. Tambien aplique mejoras significativas y media querys para hacer responsivo el mismo. Por ultimo agregue algun que otro codigo js que requeria para lograr el comportamiento deseado en mi pagina. Cuando quedo en condiciones optimas(siempre se puede mejorar y refinar, pero tambien es cierto que el proceso suele ser agotador y a veces es mejor cambiar de tarea para no agotarse). 
+![Index.html](./public/estructuras/Medias/maquetas/vlc-record-2025-03-17-04h10m05s-2025-03-17%2004-07-29.mp4-.gif)
+
+Del sprint anterior mi estructura de proyecto era la siguiente 
+
+📁Home
+📁Producto
+📁Login
+>Podria incluir el registro como seccion extra pero decidi hacerlo dentro mismo login.  
+
+No considere la seccion del carrito debi agregarla posteriormente y hacer manualmente el diseño, pero con la ventaja de ya contar con el esquema basico de todas las secciones solo debia rellenar el contenido y la mejor estructura en la que pensé fue una tabla de items  
+📁Carrito
+
+
+A su vez mi proyecto requiere 3 secciones extras dedicadas a los productos con estructura muy similar al Home
+
+📁Juegos  
+📁Articulos  
+📁Libros
+
+ Tambien inclui una link de contacto en la navegacion que estoy en proceso de decidir si es mejor dejar como un mensaje o un bloque extra al oprimirlo o crear una seccion nueva entera. Lo consideré mas como informacion adicional de direccion,correo,telefono, pero podria incluir secciones de mensajes con un formulario y permitir enviarlos desde el mismo sitio.
+ 
+ 📁Por ultimo dentro del carrito Añadí una seccion para el proceso de compra aunque podria haberse realizado como una seccion más. Durante esta parte surgieron  muchas preguntas que aun esperan respuesta sobre mecanismos de seguridad y el procesamiento de la informacion sensible de tarjetas y otras medios. Estoy indecisos sobre si me conviene usar pasarelas dejando el proceso de compra en manos externa o si procesar pagos  en la pagina enviando hacia un 3ro los datos de la tarjeta o la informacion necesaria para generar  ordenes de pago.
+
+ en definitiva el esquema dentro de lo publico es el siguiente  
+ index.html  
+Funciones.js  
+ 📁estructuras  
+   |_📁Medias  
+   |_📁Stilos  
+   |_📁Secciones  
+..............|_Juegoshtml   
+..............|_Articulos.html    
+..............|_Libros.html  
+..............|_Producto.html  
+..............|_Login.html  
+..............|_Carrito.html  
+
+>cuando avance con estas secciones sin estar familiarizado con js mas avanzado y herramientas como node js, express, el implementar bases de datos no estaba seguro de como podia cargar miles de productos aqui y tener todo controlado cada seccion con boton correspondiente y  tantos comportamiento tan milimetricos que era dificil iba a tener documentos tendiendo a infinito como en limites.Me preocupe demasiado por controlar cosas que excedian el control que html y css podian brindar y eso alargo mucho el proceso de trabajo. Luego comence a avanzar con los contenidos  del curso y me despreocupe de eso, ademas eran problemas para otros sprints. 
+Dejo algunas imagenes de secciones para que puedan observar 
 ---
-##  Presentacion   **SPRINT 1**
-Como primer desafio del curso de **Digital House** tenia que armar una estructura basica de un futuro proyecto a implementar   
-![Logo digital House](./estructuras/Modelos/logo%20digital.png)
 
 
-🟩A continuacion les comparto el trello del desafio armado por el profesor encargado [Desafio digital house](https://trello.com/b/P20UN0sx/dpfsprintall)  
+![alt text](./public/estructuras/Medias/Imagenes/banXH0tDw.jpg)
 
-🟩 Y tomando como base el del profesor comparto el Trello personal que fui arreglando [Tablero propio](https://trello.com/b/k2kpoAcS/chronicle)  
+## **INDEX**
+>![alt text](<public/estructuras/Medias/maquetas/sprint 2/index1.jpg>)  
 
----
-## Tematica
+>![alt text](<public/estructuras/Medias/maquetas/sprint 2/index2.jpg>)
 
-Elegi como tematica una tienda de juegos de mesa, libros(incluyendo comics,mangas) y articulos de la cultura popular como un anillo del señor de los anillos o la varita de harry potter etc.
-Las fuentes de referencia se caracterizan por dedicarse a vender juegos que no tienen un origen nacional son importados en su gran mayoria se  los conoce bajo la modalidad Eurogames son juegos que no tienen un camino lineal a la victoria permitiendo multiples formas de coronarse. A su vez varias de ellas venden libros y articulos de coleccion podriamos decirles.
+## **CARRITO**
+>![alt text](<public/estructuras/Medias/maquetas/sprint 2/carrito1.jpg>)  
 
-Las fuentes de Referencia son las siguientes paginas: 
+>![alt text](<public/estructuras/Medias/maquetas/sprint 2/carrito2.jpg>)  
 
-[🟢Abracadabra juguetes](https://www.abracadabrajuguetes.com.ar/)        [🟢Invictvs](https://invictvs.com.ar/tienda/?gad_source=1&gclid=Cj0KCQiAoae5BhCNARIsADVLzZc2Ar2lcGnmqvqMbP4j6ZdZEsbvlm8NUYmCB9mS8cvGldXsH1ko9pEaAmlZEALw_wcB)    [🟢cosmere Books](https://www.cosmerebooks.com.ar/?srsltid=AfmBOopy4uaz00TFQEg4oqdxFzC9DyjN9rfLDVHztEuEy0L926IzV4oW)  
-  [🟢Dados en manos](https://www.dadosenmano.com.ar/juegos-de-mesa/?mpage=3)  [🟢Tienda educando](https://www.tienda.educando.com.ar/listado/juegos-juguetes/juegos-mesa-cartas/?srsltid=AfmBOorjrLIXJ8t1NiiP0ObbtZCW08CDdsYnJPE_nXJZH0vKi4quq7Eq)[🟢Magicclair](https://www.magiclair.com.ar/collections/boardgame-juegos-de-mesa)  
-    [🟢Payana juegos](https://payanajuegos.com.ar/categoria-producto/juegos-de-mesa/componentes/artesanales/)   [🟢Tienda maldon](https://tienda.maldon.com.ar/todos-los-juegos/)     [🟢La revisteria](https://www.larevisteriacomics.com/?gad_source=1&gclid=Cj0KCQiAoae5BhCNARIsADVLzZcfM5b4eq5hcGeN1gX9B1BdF6nivr_xSZQfQ61bA8YCmWelNKj4boUaAngUEALw_wcB)  
+>![alt text](<public/estructuras/Medias/maquetas/sprint 2/carrito3.jpg>)  
+>![alt text](<public/estructuras/Medias/maquetas/sprint 2/carrito4.jpg>)
 
-    El sitio  por el contenido tiene predominancia de orientacion a ciertos sectores más juveniles, pero no deja de contener productos para el publico en general y de todas las edades.  
+## **LOGIN**  
+>![alt text](<public/estructuras/Medias/maquetas/sprint 2/login1.jpg>)  
 
----
-## Logo  
+>![alt text](<public/estructuras/Medias/maquetas/sprint 2/login2.jpg>)  
 
-Me inspire de un personaje que me gusta mucho de una saga de libros conocida como la Cronica del Asesino de reyes desarrolle varios bocetos en el camino con la ayuda de una IA y logre alterar un poco algunos detalles usando **[Canva](https://www.canva.com/)** y **[GIMP](http://www.gimp.org.es/)**. Al carecer de habilidad para el diseño grafico y no conocer como explotar el potencial de los softwares obtuve un resultado  que medianamente se acercaba a lo que queria. Dejo algunos bocetos debajo.
-De este mismo personaje se origina el nombre de la tienda **GAME CHRONICLE**
-El instrumento que acompaña al resultado final es un Laud. Muchos de los bocetos generados sentia que no representaban la esencia adecuada del personaje y no generaba un laud la IA  
+## **PRODUCTO**   
 
-![text](<./estructuras/Medias/Modelos/bocetos logo/Game Chronicle.png>)  
-![text](<./estructuras/Medias/Modelos/bocetos logo/Game_Chronicle-removebg-preview.png>)
----
-## wireframe
-Realice un boceto del diseño aproximado de la secciones en general, Puede variar de la implementacion real y tambien puede que falten algunos diseños y elementos en los mismos.
-![Vista superior del index](<./estructuras/Medias/Modelos/index superior.jpg>)  ![Vista inferior del index](<Modelos/index inferior.jpg>)   
->Diseño aproximado del index en mobiles  
+>![alt text](<public/estructuras/Medias/maquetas/sprint 2/producto1.jpg>)  
 
-![text](<./estructuras/Medias/Modelos/index mobile.jpg>)   
->diseño del login  aproximado
-
-![text](./estructuras/Medias/Modelos/login.jpg)   
->Diseño de productos y carrito de compras  
-
-![text](<./estructuras/Medias/Modelos/productos y carrito.jpg>)  
-
->Vista Mobile aproximada  
-
-![text](<./estructuras/Medias/Modelos/productos mobile.jpg>)  
----
-## Logos y tipografia
-Estos colores son los que mas resaltan y se usan en el proyecto puede aparecer alguna tonalidad de gris o negro o colores muy suaves que combinen con el blanco
-![alt text](./estructuras/Medias/Modelos/colores.jpg)
- Las tipografias predominantes en el proyecto son:  
-
-font-family: "Bangers", system-ui;  
-
-font-family: "Open Sans", sans-serif;
-
-## Implementacion
-Aunque el desafio no lo solicitaba... Por algunos malos entendidos ya tengo una version del index o Home avanzada(No deja de ser un trabajo en progreso y mejorable).  
->Utilice una combinacion de estructura grid con secciones manejadas con flex internamente  
-
-Teniendo en cuenta que la mayoría de los sitios web mantienen una estructura común en muchas de sus secciones, como un encabezado (header), un banner, una barra de navegación y un pie de página (footer), cada sección conserva estos elementos, mientras que lo único que varía es el diseño del contenido principal.
-
-**El resto de las secciones y los media queries no estan implementadas**
-
->Gran parte del index fue realizado con % y algunos rem sabiendo que es necesario un diseño responsivo a futuro.
-
-
-## Producto
-Pensando en otros aspectos cada articulo del sitio esta dentro de una clase tarjeta con imagen,descripcion, precio y un boton para añadir al carrito(implementacion futura).  
-
-En este punto del curso desconozco como hacerlo, pero creo que cada tarjeta debe tener una serie de atributos para ser tratado como si fuera una instancia de la clase tarjeta y agregarles ciertas caracteristicas logicas como si hay unidades disponibles del producto, cuantas como numero entero, cada producto tiene un ID unico y a su vez si hay un login hay instancias de usuarios que deberian tener historiales de compra compuestos o agregados de tarjeta.   
-
-![alt text](./estructuras/Medias/Imagenes/banXH0tDw.jpg)
-
-
+>![alt text](<public/estructuras/Medias/maquetas/sprint 2/producto2.jpg>)
