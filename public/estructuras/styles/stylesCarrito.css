@@ -3,14 +3,19 @@
     height: auto;
     flex-direction: column;
     overflow: hidden; 
- 
+/*------------probando------*/
+    position: relative;
    justify-content: center;
    align-items: center;
-    margin: 2rem;}
+    margin: 1.2rem;}
     .contenido *{
     margin: 0;
     padding: 0;
     overflow: hidden; }
+    .contenido p{ color: blue;
+      font-size: 1rem;
+      word-spacing: unset;
+      letter-spacing: unset;}
 /*------------------Articulos del Carrito-------------------------------------------------*/
 .contenido h1,h2{
     display: flex;
@@ -25,8 +30,14 @@ h2{justify-content: center;}
     justify-content: center;
     align-items: center;
     margin: 1%;
-position: relative;
 width: 100%;}
+.Carrito_Table{
+  width: 100%;
+  display: block;
+  overflow-x: auto;
+  margin: 1%;
+}
+
 /*-----------------BUTTON-------------------------------------------------------*/
 .boton{
         margin-top: 1%;
@@ -38,12 +49,16 @@ width: 100%;}
         width: 50%;
         border: none;
         cursor: pointer;
+        border-radius: 15%;
+transition-duration: 1.2s;      }
+    .boton:hover{
+      background-color: blue;
     }
    
 /*----------TABLA----------------------*/
 
 table{width: 100%;
-overflow: hidden;
+  min-width: 650px;
 border-collapse: collapse;}
 td, th{text-align: center;
 border: 0.1rem red solid;}
@@ -89,37 +104,29 @@ font-size: 1rem;
 background-color: rgb(255, 196, 196);
 }
 /*---------------------IMAGENES-----------------*/
-.div_image {
-  display: none; /* Imagen oculta por defecto */
-  width: 100%; /* El div ocupa el 100% del ancho del contenedor */
-  height: 50%; /* La altura se ajusta proporcionalmente */
-  background-color: rgb(210, 210, 210); /* Solo para darle un fondo visible al div, si es necesario */
-  position: fixed; /* Lo colocamos como absoluto para un mejor control */
-  top: 50%; /* Para centrar el div verticalmente */
-  left: 25%; /* Para dejar 25% de espacio en ambos lados */
-  transform: translateY(-50%); /* Centra el div en el eje Y */
-  z-index: 9999; /* Asegura que el div esté por encima de otros elementos */
-  opacity: 0; /* Inicialmente transparente */
-  transition: opacity 0.5s ease, transform 0.5s ease; /* Transición suave para efectos */
-overflow: visible;
-justify-content: center;
-}
+  .div_image {
+    display: none; 
+  
+  
+       height: 0;
+    position: absolute;
+   justify-content: center;
+  align-content: center;
+left:0%;
+top: 10%;
+right: 0%;
 
-.image {
-  display: none; /* La imagen es visible cuando el contenedor se activa */
- 
-  width: 20%; /* El 100% del ancho del contenedor */
-  height: auto; /* La altura es automática para mantener la proporción */
-  object-fit: contain; /* Mantiene la proporción de la imagen */
 }
-
-/* Cuando el ratón pasa por encima de la celda, la imagen se muestra y se desplaza */
-.col2:hover .div_image {
-  display: block; /* Muestra el contenedor */
-  opacity: 0.7; /* Hace que el contenedor sea visible */
+  .image {
+    width: auto;
+     height: 80%;
+     object-fit: contain;
+     opacity: 0.8;
 }
-
-.col2:hover .image {  display: block;}
+     .col2:hover .div_image {
+      display: flex; 
+      height: 150px;}
+      
 /*----------FORM DE PAGO----------------------*/
 .div_pago {
     position: fixed;
@@ -176,7 +183,7 @@ border-radius: 1rem;}
     border: none;
     width: 30px;
     height: 30px;
-    font-size: 18px;
+    font-size: 1.1rem;
     border-radius: 50%;
     cursor: pointer;
   }
@@ -185,9 +192,16 @@ border-radius: 1rem;}
     font-weight: bold;
     display: block;
     margin-top: 10px;
-    
+    font-size: 0.8rem;
+    color: red;
   }
- 
+ #fechaVen{display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+font-size: 1rem;
+font-weight: 700;
+width: 45%;}
 
   .form_pago select,
   .form_pago input,
@@ -204,6 +218,9 @@ border-radius: 1rem;}
 flex-direction: row;
 justify-content: center;}
 .form_horizontal label{width:-webkit-fill-available;}
+.form_vertical{display: flex;
+flex-direction: column;
+width: 80%;}
 .form_pago h3{background-color: rgb(39, 46, 232);
 color:white}
 
@@ -217,9 +234,42 @@ color:white}
     width: 1.5rem;
     margin: 0.5rem;
     cursor: pointer;}
-
-
+.resumen_pago{
+ 
+  border: 2px solid rgb(75, 0, 0);
+}
+.resumen_pago table{min-width: unset}
+.resumen_pago td, .resumen_pago th{
+    border: unset;
+}
 .resumen{
   color: white;
   background-color: red;
 }
+@media (max-width:620px){
+ .articulosCarrito table{min-width: 620px;
+overflow-x: scroll;} 
+}
+@media(max-width: 530px){
+
+  .form_horizontal{flex-direction: column;}
+  .form_vertical{flex-direction: row;}
+  .pago{width: 75%;}
+  .contenido h2{
+    font-size: 1.5rem;
+  }
+  .form_pago select, .form_pago input, .form_pago button{
+    padding: 2px;
+  }
+}
+@media(max-width: 330px){
+
+  .form_pago label{
+    display: none;
+  }
+  .form_pago .medios-efectivo label{
+    display: flex;
+  }
+  .medios-efectivo{ flex-direction: column;
+  justify-content: space-around;}
+  .img_pago{width: 2.5rem;}}
