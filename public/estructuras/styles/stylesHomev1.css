@@ -4,7 +4,7 @@
        "ofertas"
         "productos";
     grid-template-columns: auto;
-    grid-template-rows: 200px 1fr;
+    grid-template-rows: 250px 1fr;
     overflow: hidden; }
     .contenido *{
        margin: 0;
@@ -21,8 +21,8 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: gold;
-}
+background-color: deepskyblue;}
+
 /*--------------elemento p de ofertas_descripcion-------------*/
 .ofertasp {
     color: #5004dd;
@@ -34,42 +34,30 @@
     text-transform: uppercase;
 letter-spacing: unset;
 animation: desplazamiento-ofertas 8s linear infinite;}
+
+/*------------Animacion----------------------------------*/
 @keyframes desplazamiento-ofertas {
-    0% {
-        transform: translateX(100%); /* Empieza fuera del lado derecho */
-        opacity: 0; /* Inicia invisible */
-    }
-    10% {
-        opacity: 1; /* Hace que el párrafo aparezca gradualmente */
-    }
-    90% {
-        transform: translateX(-100%); /* Desplaza completamente hacia la izquierda */
-        opacity: 1; /* Sigue visible */
-    }
-    100% {
-        opacity: 0; /* Desaparece al salir de la pantalla */
-    }
+    0% {transform: translateX(100%); 
+        opacity: 0;    }
+    10% {opacity: 1;   }
+    90% {transform: translateX(-100%); /* Desplaza completamente hacia la izquierda */
+        opacity: 1;    }
+    100% {opacity: 0;    }}
+/*--------------elemento UL de ofertas -------------*/
+.ofertas .tarjetas-list{
+    flex-direction: row;
+    width: 100%;
+    margin: 1%;
+    justify-content: center;
+    align-items: center;}
+.ofertas .tarjeta{width: 45%;
+background-color: gold;
+animation: hundirse 1.5s ease-in-out infinite; 
 }
-/*--------------elemento li de tarjetas-------------*/
-.ofertas .tarjeta {
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;}
-    .ofertas .tarjetas{    height: min-content;}
-    .ofertas .tarjetas-list{align-items: unset;}
-/*--------------elemento imagen de la tarjeta-------------*/
-.ofertas .tarjeta-link {
-    height: 60%;  
-    width: unset;}
-.ofertas .tarjeta-img {
-    height: 100%;  
-    object-fit: contain;} /* Ajusta la imagen sin perder proporciones */
-/*--------------elemento p de tarjeta-------------*/
-.ofertas .descripcion,.ofertas .precio
- {height: unset;
-font-size: 0.7rem;}
-/*------------------ PRODUCTOS ----------------*/
+.ofertas .tarjetas{width: 100%;}
+.ofertas .tarjeta-img{height: 110px;
+width: auto;}
+/*------------------ SECCION DE  PRODUCTOS ----------------*/
 .productos {
     display: flex;
     flex-direction: column;
@@ -77,9 +65,7 @@ font-size: 0.7rem;}
     position: relative;
   overflow: hidden;
     background-color: white;
-    width: 100%;
-    height: 100%;
-    margin-right: 2%;}
+    width: 100%;}
 /*--------------Titulos h1 de las clases de producto------------*/
 .titulos {
     display: flex;
@@ -116,35 +102,47 @@ font-size: 0.7rem;}
 .ocultar_tipo {display: flex;}
 .mostrar_tipo {display: none;}
 
-/*------------------ CONTENEDOR DE PRODUCTOS ----------------*/
+/*------------------ CONTENEDOR DE  tarjetas de PRODUCTOS ----------------*/
 
 .productos_tipo {
     height: auto;
-    width: 100%;
+    display: flex;
+     flex-direction: column;
+position: relative;
+    z-index: 1;}
+/*----------------------*/
+/*ELEMENTO UL para la lista de tarjetas */
+.tarjetas-list{display: flex;
+flex-direction: row;
+width: 100%;
+margin: 1%;
+justify-content: center;
+align-items: center;
+gap: 2%;
+list-style-type: none;
+scroll-behavior: smooth;
+transition: transform 0.3s ease;}
+/*--------ELEMENTO LI tipo tarjeta---------------*/
+.tarjeta {
+    width: 20%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-overflow: visible;}
-/*----------------------*/
-.tarjetas {
-    width: 100%;
-    padding: 1%;
-    height: auto;
-    overflow: hidden;
-    display: flex;
-    transition: all 0.3s ease;}
-
-.tarjetas-list {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: center;
     align-items: center;
-    gap: 2%;
-    list-style-type: none;
-   overflow: hidden;
-    scroll-behavior: smooth;
-    transition: transform 0.3s ease;}
-/*----------------------*/
+    transition: transform 0.3s ease;
+    padding: 1%;
+    text-overflow: ellipsis;
+    white-space: normal; 
+    word-wrap: break-word;
+}
+/*--------------HOVER TARJETA------------------*/
+.tarjeta:hover ,
+.flecha:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    background-color: #FAC710;}
+
+/*FLECHAS DE LA LISTA TIPO LI */
 .flecha {
     width: 1%;
     border: 2% solid #FAC710;
@@ -157,68 +155,77 @@ overflow: visible;}
     border: 2% solid #FAC710;
     font-size: 1.2rem;
     color: white;}
-/*----------------------*/
-.tarjeta {
-    width: 20%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: transform 0.3s ease;
-    padding: 1%;
-    text-overflow: ellipsis;
-    white-space: normal; 
-    word-wrap: break-word;} 
- .tarjeta-link {
-    height: 70%; 
+/*--------------Link que contiene la imagen------------- */
+.tarjeta-link {
+    height: 50%; 
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;}
+    align-items: center;
+}
+/*-----------------Imagenes ----------------------*/
 
 .tarjeta-img {
-    max-width: 100%;
-    max-height: 100%;
-    height: 100%;}
-/*----------------------*/
+    max-width: 150px; /* Tamaño máximo */
+    height: auto; /* Mantener proporciones */
+    object-fit: contain; /* Asegura que la imagen esté completa */
+    transition: scale 1.3s;
+}
+.tarjeta-img:hover{
+    opacity: 90%; 
+    transform: scale(1.2);
+    overflow: visible;
+z-index: 9999;
+object-fit: contain;}
+/*-------------seccion de tarjeta----------------------------*/
+.compras {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    border-radius: 10%;
+    background-color: unset;}
 
-.descripcion,.precio {
-    width: 100%;
+/*------Parrafos de compras--------------------*/
+.descripcion, .precio {
+  
     font-size: 0.9rem;
     text-align: center;
     word-spacing: 0;
-    letter-spacing: 0.1rem;}
+    letter-spacing: 0.1rem;
+    word-wrap: break-word; 
+    overflow-wrap: break-word; }
+.descripcion {
+    
+    font-weight: bold;
 
-.descripcion {    color:black; }
-.precio{color: red;
-font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
-.carrito, .eliminar{
+    display: -webkit-box;
+   /* -webkit-line-clamp: 2; /* Limita a 2 líneas */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+background-color: #7c36ff;
+color: rgb(255, 255, 255);}
+
+.precio {
+    color: red;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
+
+/*-------------BOTONES DE AGREGAR PRODUCTOS------------*/
+.carrito, .eliminar {
     border: 2% solid green;
     border-radius: 30%;
-color: green;
-background-color: unset;
-padding: 0.2rem;
-font-size: 1.2rem;
-}
-.eliminar{display: none;}
+    background-color: gold;
+    color: #00774d;
+    font-size: 1rem;
+    padding: 0.5px;}
+.eliminar {display: none; }
+.items_producto {display: none; }
+.stock{
+color: blue;
+font-size: 1rem;
+font-weight: bold;
+letter-spacing: 1px;}
 
-.items_producto{display: none;}
-.compras{
-    border-radius: 10%;
-background-color: unset;}
-/*--------------HOVER TARJETA------------------*/
-.tarjeta:hover ,
-.flecha:hover{
-    transform: translateY(-10px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    background-color: #FAC710;}
-.tarjeta  a img:hover{
-    opacity: 90%; 
-    transform: (1.5,1.5);
-    overflow: visible;
-z-index: 10;
-object-fit: contain;}
-    
 /*------------------ ASIDE ----------------*/
 /* Contenedor del aside */
 .aside-container {
@@ -282,45 +289,63 @@ font-style: unset;
 
 
 @media(max-width: 890px){
+    .contenido{  grid-template-rows: 230px 1fr;}
     .descripcion,
     .precio {font-size: 75%;}
     .ofertas .descripcion,.ofertas .precio{font-size: 65%;}}
 /*----------------------*/
 
 @media (max-width:800px) {
-    .tarjetas{ width: 98%; }  }
+    .tarjetas-list{    margin: 0;
+        gap: 1.2%;}
+    .tarjeta-link {height: 60%; }
+    /*-----------------Imagenes ----------------------*/
+    .compras{height: 40%;}
+    .tarjeta-img {
+        max-width: 9rem; /* Tamaño máximo */}}
 /*----------------------*/
 
 @media(max-width: 650px){
+    .contenido{  grid-template-rows: 200px 1fr;}
+
    .aside-container{display: none;}
 #mtogglebutton{display: none;}}
 /*----------------------*/
+@media (max-width:500px){
+    .contenido{  grid-template-rows: 180px 1fr;}
+    .ofertas .tarjeta-img{height: 80px;}
+    .tarjeta,
+.flecha{
+    transition: unset;}
+    .tarjeta:hover,
+    .flecha:hover{
+        transform: unset;
+        box-shadow: unset;
+        background-color:unset;}
+    /*-----------------Adaptacion------------------------------------*/
+.productos_tipo{margin: 2px;}
+    .tarjetas-list{ flex-direction: column;}
+    .tarjeta-link{width: 100%;
+    height: auto;}
+ .tarjeta{width: 100%;}  
+.flecha-izquierda,.flecha-derecha{transform: rotate(90deg);}
+    /*-----------------Texto tarjeta------------------------------------*/
 
-@media(max-width: 600px){
-    .mensaje p{font-size: 80%;}
-    .ofertas .tarjetas-list, .tarjetas-list{
-        display: flex;
-        flex-direction: column;
-    height: 100%;}}
-/*
- .ofertas .tarjeta{   
-    width: 100%;
-    height: auto; 
-flex-direction: row;
-flex-wrap: nowrap;}
-.ofertas .tarjeta-img{
-    max-width: 100%;
-    max-height: 100%;
-    height: 100%;}
-.ofertas .tarjeta-link{
-    height: auto;
-    width: 70%}
-.compras{
-    display: flex;
-    flex-direction: column-reverse;}
-.tarjeta .ofertas, .tarjeta{
-    height: 20%;
-    width: 100%;
-    flex-direction: row;}
-.flecha-izquierda,.flecha-derecha{transform: rotate(90deg);}}
-*/
+.descripcion, .precio {
+    font-size: 1.2rem;
+    text-align: center;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+    word-wrap: unset; 
+    overflow-wrap: unset; }
+    .precio{    color: #0005fb;}
+.descripcion {
+  
+    width: 85%;
+    margin: 2%;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-style: italic;}
+.compras{flex-direction: row;}}
+@media(max-width: 300px){
+    .contenido{  grid-template-rows: 150px 1fr;}
+}
