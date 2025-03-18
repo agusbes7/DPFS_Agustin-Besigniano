@@ -1,0 +1,50 @@
+.contenido {
+  display: block;
+  height: auto;
+  flex-direction: column;
+
+  border: unset;
+  margin: 1rem;
+  }
+.contenido *{
+  margin: 0;
+  padding: 0;}
+.login{
+  border: 0.7rem solid red;
+  margin: 2rem;
+    /* align-items: center; */
+    display: flex
+;
+    flex-direction: column;
+    justify-content: center;
+}
+.contenido h1{width: 100%;}
+  /*------------formulario de login y registro-----------------------------*/
+.formLR{
+  display: flex; 
+  flex-direction: column;
+width: 100%;
+margin: 1%;}
+.format_input1 { /*input tipo texto y pass*/
+    display: flex;
+    flex-direction: column;
+    gap: 5%; /* Espacio entre elementos */
+    padding: 2%;
+    width: 100%;}
+
+.b_login{width: unset;
+background-color: blue;
+padding: 0.3rem;}
+.b_login:hover{background-color: blueviolet;}
+textarea{display: block;
+  width: 100%;
+  margin: 0;
+  padding: 12px;
+  font-size: var(--font-base);
+  font-family: var(--body-font);
+  line-height: 16px;
+  }
+  @media (max-width: 768px) {
+    .campo {
+      width: unset;
+    }

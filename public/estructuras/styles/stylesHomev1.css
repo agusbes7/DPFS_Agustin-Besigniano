@@ -226,64 +226,6 @@ font-size: 1rem;
 font-weight: bold;
 letter-spacing: 1px;}
 
-/*------------------ ASIDE ----------------*/
-/* Contenedor del aside */
-.aside-container {
-    position: absolute;
-     transition: width 0.9s;
-     box-shadow: 7.2px 7.2px 13.2px 5.2px rgb(81, 0, 0);
-      z-index: 1000;
-      width: 5%;
-      border-radius: 30%;
-      padding: 0.5rem;
-      margin-left: 0.5%;
-    overflow: visible;}
-.aside-container:hover {
-        width: 25%; 
-    opacity: 75%;
-    box-shadow: unset;
-   }
-/*----------------------------*/
-.aside {
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;}
-
-.aside:hover .aside-list { display: block;}
-#categoriasDesplegable{
-    border-radius: 50%;
-        color: rgb(180, 0, 0);
-        font-size: 1rem;
-    text-decoration: unset;}
-/*----------------------------------------------*/
-.encabezado_aside{
-        display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #ffffff;
-    text-shadow: 2%;
-     cursor: pointer;
-font-size: 0.8rem;}
- .aside-list{   
-      display: none;          
-    overflow-y: scroll;
-overflow-x: hidden;}
-.aside-link{
-    display: flex;
-gap: 2%;
-    list-style-type: none;
-    background-color: red;
-color: white;
-font-family: bold, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
-.subcategoria-list{
-font-style: unset;
-    list-style-image: url('../Medias/iconos/pila-de-libros.png');}
-.subcategoria-link{
-    align-items: start;
-    list-style-type: none;
-   text-decoration: unset;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 0.9rem;}
 
 /*--------------------Media queries -------------------------*/
 

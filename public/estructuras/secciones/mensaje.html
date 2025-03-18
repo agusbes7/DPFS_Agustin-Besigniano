@@ -8,6 +8,8 @@
 <link rel="shortcut icon" href="../Medias/Imagenes/4kvothe logo3.png" type="image/x-icon">
 <link rel="stylesheet" href="../styles/stylesgeneralv1.css">
 <link rel="stylesheet" href="../styles/stylesLoginv1.css">
+<link rel="stylesheet" href="../styles/stylesMessage.css">
+
 
 
 
@@ -99,56 +101,15 @@ rel="stylesheet">
           
             <section class="login">
 
-                <h1>Iniciar Sesion</h1>
+                <h1>Formulario de contacto</h1>
 
                 <form  class="formLR">
-<div class="format_input1">
-    <label for="user" class="user">User </label>
-    <input type="text" required placeholder="Ingresa tu username">
-
-    <label for="contraseña">Clave</label>
-    <input type="password" required placeholder="Ingrese tu password">
-</div>
-    <div class="form_radio">
-    <label for="rol" name="rol_acceso">Cliente      </label>
-    <input type="radio" name="rol_acceso" required>
-    <label for="rol" name="rol_acceso">Administrador</label>
-    <input type="radio" name="rol_acceso" required>
-</div>
-<button class="b_login">Iniciar</button>
-    <a href="recuperar_cuenta.html" class="desplegar_ocultar">¿Has olvidado tu contraseña?</a>
-                </form>
-            </section>
-           <div class="desplegar_ocultar">
-            <p>¿Aun no tienes una cuenta?</p>
-            <button class="b_login" class="aux" onclick="mostrarOcultarRegistro()">Registrar</button>
-            </div>
-               
-
-            <section class="registro">
-   <h1>Datos personales</h1>
-   <form action="" class="formLR registro">
     <div class="format_input1">
         <div class="campo">
             <label for="nombre">Nombre</label>
             <input type="text" id="nombre" placeholder="Ingresa tu nombre" required>
         </div>
-        
-        <div class="campo">
-            <label for="apellido">Apellido</label>
-            <input type="text" id="apellido" placeholder="Ingresa tu apellido" required>
-        </div>
-
-        <div class="campo">
-            <label for="usuario">Usuario</label>
-            <input type="text" id="usuario" placeholder="Ingresa tu username" required>
-        </div>
-
-        <div class="campo">
-            <label for="clave">Clave</label>
-            <input type="password" id="clave" placeholder="Ingresa tu contraseña" required>
-        </div>
-
+      
         <div class="campo">
             <label for="email">Correo</label>
             <input type="email" id="email" placeholder="Ingresa tu correo" required>
@@ -158,54 +119,36 @@ rel="stylesheet">
             <label for="telefono">Teléfono</label>
             <input type="tel" id="telefono" placeholder="Ingresa tu teléfono">
         </div>
+<div class="campo">
+    <label for="mesagge">Mensaje:</label>
+    <textarea name="message" id="" rows="7" placeholder="Deje aqui su mensaje" required></textarea>
+</div>
+       
 
         <div class="campo">
-            <label for="fecha">Fecha de nacimiento</label>
-            <input type="date" id="fecha" required>
-        </div>
-
-        <div class="campo">
-            <label for="provincias">Provincia</label>
-            <select id="provincias" name="provincias">
+            <label for="consulta">Motivo</label>
+            <select id="motivos" name="consulta" required>
                 <option value="" disabled selected>-- Selecciona una opción --</option>
-                <option value="buenos-aires">Buenos Aires</option>
-                <option value="cordoba">Córdoba</option>
-                <option value="mendoza">Mendoza</option>
-                <option value="tucuman">Tucumán</option>
-                <option value="chubut">Chubut</option>
-          <option value="cordoba">Córdoba</option>
-          <option value="corrientes">Corrientes</option>
-          <option value="entre-rios">Entre Ríos</option>
-          <option value="formosa">Formosa</option>
-          <option value="jujuy">Jujuy</option>
-          <option value="la-pampa">La Pampa</option>
-          <option value="la-rioja">La Rioja</option>
-          <option value="mendoza">Mendoza</option>
-          <option value="misiones">Misiones</option>
-          <option value="neuquen">Neuquén</option>
-          <option value="rio-negro">Río Negro</option>
-          <option value="salta">Salta</option>
-          <option value="san-juan">San Juan</option>
-          <option value="san-luis">San Luis</option>
-          <option value="santa-cruz">Santa Cruz</option>
-          <option value="santa-fe">Santa Fe</option>
-          <option value="santiago-del-estero">Santiago del Estero</option>
-          <option value="tierra-del-fuego">Tierra del Fuego</option>
-          <option value="tucuman">Tucumán</option>
-            </select>
+                <option value="consulta-general">Consulta General</option>
+                <option value="soporte-tecnico">Soporte Técnico</option>
+                <option value="estado-producto">Estado de Producto</option>
+                <option value="informacion-envio">Información de Envío</option>
+                <option value="problema-pedido">Problema con el Pedido</option>
+                <option value="devolucion-cambio">Devolución o Cambio de Producto</option>
+                <option value="sugerencias-comentarios">Sugerencias o Comentarios</option>
+                <option value="otro">Otro</option>
+            </select><br>
         </div>
-
         <div class="campo">
-            <label for="direccion">Dirección</label>
-            <input type="text" id="direccion" placeholder="Ingresa tu dirección" required>
-        </div>
+            <label for="">Deje aqui su archivo (Opcional)</label><br>
+<input type="file" >
+<br>
+</div>
+        
+           
+            <input type="submit" class="b_login"> 
 
-        <div class="campo">
-            <label for="codigo-postal">Código postal</label>
-            <input type="text" id="codigo-postal" placeholder="Ingresa tu código postal">
-        </div>
     </div>
-<input class="b_login" type="submit" value="Registrar">
  
     </form>
 </section>
