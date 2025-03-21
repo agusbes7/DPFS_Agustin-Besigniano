@@ -6,103 +6,126 @@
 .contenido *{
     padding: 0;
     margin: 0;}
-    /*----------------------------*/
-.item{
-        display:flex;
-        flex-direction:row;
-        height: auto;
-        align-content: center;
-        align-content: space-between;
-        overflow: hidden;
-        border-bottom: 0.4rem solid red;
-    padding: 1rem;}
-/*---------------*/
-.Imagen{ width: 50%;
-    padding: 2rem;
-align-items: center;
-justify-content: center;}
-.tarjeta-img{ 
-    object-fit: contain;
-    height: 90%;
-width: 90%;}
-.tarjeta-img:hover{
-    opacity: 90%; 
-    transform: (2,2);
-    overflow: visible;
-z-index: 10;
-object-fit: contain;}
+ /*---------Contenedor del producto a detallar-------------------*/
+    .Producto{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1px;
+        margin: 0.5rem;
+        gap: 10px;
+    }
+ /*---------------------------------------*/
 
-/*-----------------*/
-.detalle{width: 50%;
-display: flex;
-flex-direction: column;
-padding-top: 3rem;
-gap: 3%;}
-.precios,.titulo{
-    display: flex;
-    justify-content: center;
-    align-items: center;}
-.titulo{
-    color: rgb(221, 0, 0);
-    letter-spacing: 0.05rem;
-    font-size: 2.5rem;
-    letter-spacing: 0.2rem;
-    word-spacing: 0.1rem;}
-    .precios {
-        font-family: bold,Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
-        color: rgb(231, 0, 0);
-        font-size: 1.5rem;}
-    #descripcion{
-        flex-wrap: wrap;
-       font-size: 1.4rem;
-       color: rgb(21, 1, 1);
-       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-       font-style: italic,bold;
-       text-decoration: solid;
-       font-weight: 900;
-       word-spacing: 0.4rem;
-       letter-spacing: 0.2rem;}
-.compras2{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
-    gap: 2%;}
-.carrito2, .eliminar2{
-    font-size: 1rem;
-    border-radius: 10%;
-    width: 45%;
-    color: rgb(126, 34, 0);
-}
-.eliminar2{display: none;}
-/*------tarjetas---------------*/
-.tarjetas{display: flex;
-flex-direction: column;}
-.tarjetas h2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-style: italic;
-    font-variant: small-caps;
-    font-size: 1.5rem;
-    color: brown;
+.detalleProducto{
+        display: flex;
+        flex-direction: row;}
+/*--------------------Seccion de imagen del Producto-------------------*/
 
+.Imagen{
+    width: 40%;
+    max-width: 40%;
+    padding: 0.5rem;
+    justify-content: center;
+    display: flex;}
+.miniatura{
+    width: 300px;
+    height: auto;
+    max-height: 450px;}
+    .nombre{
+        width: 90%;
+        text-align: center;
+        margin: 1%;
+        padding: 1%;
+        background-color: red;
+        color: white;
+        font-size: 2.2rem;
+        font-weight: bold;
+        font-family: 'Bangers';}
+/*------------Contenedor de las tablas ---------------------------*/
+    .Table_informacion{
+        margin: 2%;
+        max-width: 60%;
+        display: flex;
+        flex-direction: column;
+    justify-content: center;
+gap: 1rem;}
+ /*------------------ tablas---------------*/
+        .Table_informacion table{
+            border-collapse: collapse;
+            border: 1px solid red;}
+/*-------------TH--- TD-------------------*/
+.Table_informacion table th,
+.Table_informacion table td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;}
+/*-------------TH-------------------*/
+.Table_informacion table th{
+        background-color: rgb(192, 192, 192);
+        color: black;
+        font-size: 1rem;}
+/*-------------TD row-------------------*/
+.Table_informacion table td{
+        background-color: white;
+        color: #000383;;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+    word-spacing: 2px;  
+      text-indent: 15px;
+           font-weight: 200;
+        padding: 4px;}
+/*Td descripcion/sinopsis o detalle del producto*/
+        .Descripcion{text-align: left;}
+ /*-----------Tables especificas de cada Producto---------------*/       
+        .DetailJuego, .DetailArticulo,.DetailLibro{
+        align-items: center;
+        display: flex;
+        justify-content: center;}
+        .DetailArticulo{display: none;}
+        .DetailLibro{display: none;}
+            
+    /*----------------Contenedor del boton -----------------------*/
+.seccion_btn{
+            width: 75%;
+            padding: 1rem;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            justify-content: center;}
+.monto{
+font-size: 2rem;
+color: red;
+font-family: 'Bangers';
+font-style: italic;
 }
+        .seccion_btn button{
+            font-size: 1.5rem;
+            width: 80%;
+            padding: 0.3rem;
+            border-radius: 15%;
+            border: 2px solid rgb(90, 0, 0);
+            color: white;
+            background-color: red;}
+/*---------------------------------------*/
+.tarjetas{display: none;}
+
 /*-------Querys---------------------*/
-@media (max-width: 600px){
-
-    .item{
-    flex-direction:column;
-    height: 50%;}
-    .media{height: auto;}
-.tarjeta-img,.Imagen,.detalle{width: 100%;}
-.Imagen{padding: unset;
-height: 50%;}
-.detalle{padding-top: unset;}
-#descripcion {
-    font-size: 1.2rem;
-    word-spacing: 0.2rem;
-    letter-spacing: unset;}
+@media (max-width: 650px){
+    .detalleProducto{flex-direction: column;
+    display: flex;
+align-items: center;}
+    .Table_informacion,
+    .Imagen{width: 100%;
+    max-width:90%;}
+    .Table_informacion{margin: 1%;
+    padding: 1%;}
+    .Table_informacion table td{
+        font-size: 1rem;
+        letter-spacing: unset;}
 }
-@media (max-width: 320px){
-    .item{height: auto;}}
+@media(max-width: 400px){
+    .miniatura{width: 200px;}
+}

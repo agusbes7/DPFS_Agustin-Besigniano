@@ -56,7 +56,8 @@ transition-duration: 1.2s;      }
     }
    
 /*----------TABLA----------------------*/
-
+.miniatura{width: 40px;
+margin: 1%;}
 table{width: 100%;
   min-width: 650px;
 border-collapse: collapse;}

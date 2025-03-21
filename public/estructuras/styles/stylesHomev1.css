@@ -187,7 +187,7 @@ object-fit: contain;}
     background-color: unset;}
 
 /*------Parrafos de compras--------------------*/
-.descripcion, .precio {
+.titulo, .precio {
   
     font-size: 0.9rem;
     text-align: center;
@@ -195,7 +195,7 @@ object-fit: contain;}
     letter-spacing: 0.1rem;
     word-wrap: break-word; 
     overflow-wrap: break-word; }
-.descripcion {
+.titulo {
     
     font-weight: bold;
 
@@ -203,7 +203,7 @@ object-fit: contain;}
    /* -webkit-line-clamp: 2; /* Limita a 2 líneas */
     -webkit-box-orient: vertical;
     overflow: hidden;
-background-color: #7c36ff;
+
 color: rgb(255, 255, 255);}
 
 .precio {
@@ -218,8 +218,7 @@ color: rgb(255, 255, 255);}
     color: #00774d;
     font-size: 1rem;
     padding: 0.5px;}
-.eliminar {display: none; }
-.items_producto {display: none; }
+
 .stock{
 color: blue;
 font-size: 1rem;
@@ -232,9 +231,9 @@ letter-spacing: 1px;}
 
 @media(max-width: 890px){
     .contenido{  grid-template-rows: 230px 1fr;}
-    .descripcion,
+    .titulo,
     .precio {font-size: 75%;}
-    .ofertas .descripcion,.ofertas .precio{font-size: 65%;}}
+    .ofertas .titulo,.ofertas .precio{font-size: 65%;}}
 /*----------------------*/
 
 @media (max-width:800px) {
@@ -273,7 +272,7 @@ letter-spacing: 1px;}
 .flecha-izquierda,.flecha-derecha{transform: rotate(90deg);}
     /*-----------------Texto tarjeta------------------------------------*/
 
-.descripcion, .precio {
+.titulo, .precio {
     font-size: 1.2rem;
     text-align: center;
     word-spacing: 1px;
@@ -281,7 +280,7 @@ letter-spacing: 1px;}
     word-wrap: unset; 
     overflow-wrap: unset; }
     .precio{    color: #0005fb;}
-.descripcion {
+.titulo {
   
     width: 85%;
     margin: 2%;

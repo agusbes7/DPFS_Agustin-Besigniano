@@ -47,4 +47,4 @@ textarea{display: block;
   @media (max-width: 768px) {
     .campo {
       width: unset;
-    }
+    }}
