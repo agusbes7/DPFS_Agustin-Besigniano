@@ -78,13 +78,25 @@ Probar en el futuro rediseñar todo con base en bootstrap para practicar y ver s
         </nav>
         <!-- ------------------------------------------------------------ -->
         <section class="informacion">
+            <div class="user">
+             <span>   <a href="./estructuras/secciones/login.html"><img src="./estructuras/Medias/iconos/usuario.png" alt="silueta"></a></span>
+            <div class="sesionOFF">
+            <p>¿Deseas iniciar session?</p>
+            <button ><a href="./estructuras/secciones/login.html">iniciar</a></button>
+            </div>
+            <div class="sesionON">
+                <span>Bienvenido pepe</span>
+            </div>
+            </div>
+            <div class="texto">
             <p>Aceptamos efectivo, transferencia, tarjetas </p>
-        
+        </div>
             <ul>
                 <li><img src="./estructuras/Medias/iconos/visa.png" alt="visa"></li>
                 <li><img src="./estructuras/Medias/iconos/tarjeta-de-credito (1).png" alt="tarjeta de credito"></li>
                 <li><img src="./estructuras/Medias/iconos/redondo.png" alt="Mastercard"></li>
                 <li><img src="./estructuras/Medias/iconos/tarjeta-de-credito.png" alt="tarjeta"></li>
+                
             </ul>
         </section>
         <!-- ----------------CARRITO-------------------------------------------- -->
@@ -100,6 +112,7 @@ Probar en el futuro rediseñar todo con base en bootstrap para practicar y ver s
     contenido a definir
     </div>
 </div>
+
 <!------------------------CONTENIDO---------------------------->
         <div class="contenido">
            
@@ -110,23 +123,73 @@ Probar en el futuro rediseñar todo con base en bootstrap para practicar y ver s
                         <bold>25% descuento</bold> en todo lo relacionado con el señor de los anillos pagando con
                         tarjeta Supervielle</p></div>
                 <div class="tarjetas">
-                    <ul class="tarjetas-list">
-                        <li class="tarjeta">
-                            <a href=".#" class="tarjeta-link">
-                                <img src="./estructuras/Medias/productos/catan2.jpg" alt="Imagen de tarjeta" class="tarjeta-img">
-                            </a>
+                  <ul class="tarjetas-list">
 
-                                <p class="descripcion">Amp 5-6 Exploradores y Piratas </p>
-                                <p class="precio"><del><small>$55000</small></del> $45000</p>
-                                          </li>
-                        <li class="tarjeta">
-                            <a href=".#" class="tarjeta-link">
-                                <img src="./estructuras/Medias/productos/articulo4.jpg" alt="Imagen de tarjeta"
-                                    class="tarjeta-img">
-                                </a>
-                                    <p class="descripcion">Cuerpo de linternas verde</p>
-                                <p class="precio"><del><small>$10000</small></del> $7700</p>
-                                              </li>
+                   
+                    <li>
+                         <div class="card">
+                             <div class="frente">
+                               <div class="efecto_target">
+                               <div class="img">
+                                 <a href="./estructuras/secciones/detalleproducto.html">  <img src="./estructuras/Medias/productos/catan.jpg" alt="Imagen de tarjeta" ></a>
+                                 <button class="b_frente">🔴</button>
+                               </div>
+                               <div class="text">
+                                 <a href="./estructuras/secciones/detalleproducto.html">    <h3 class="titulo">Catan Base</h3></a>
+                                 <h5 class="precio">$ 70000</h5>
+                               </div>
+                             </div>
+                           </div>
+                           <div class="reverso">
+                        <button class="b_reverso">🟢</button>
+
+                             <p class="descripcion">Juego de mesa de tablero modular, con cartas y dados. Las reglas son sencillas pero requiere estrategia y grandes dosis de negociación... ver mas</p>
+                           </div>
+                               <div class="btn">
+                                 <div class="btn1">
+                                 <button>Añadir al carrito</button>
+                               </div>
+                               <div class="btn2">
+                                 <button class="eliminar" disabled>-</button>
+                                 <span class="items_producto">1</span>
+                                 <button class="carrito">+</button>
+                               </div>
+                               </div>
+                           </div>
+                     </li>
+                     <li>
+                      <div class="card">
+                          <div class="frente">
+                            <div class="efecto_target">
+                            <div class="img">
+                              <a href="./estructuras/secciones/detalleproducto.html">  <img src="./estructuras/Medias/productos/articulo3.webp" alt="Imagen de tarjeta" ></a>
+                              <button class="b_frente">🔴</button>
+                              
+                           
+                            </div>
+                            <div class="text">
+                              <a href="./estructuras/secciones/detalleproducto.html">    <h3 class="titulo">Reliquias de la muerte</h3></a>
+                              <h5 class="precio"><del>$ 25000</del>$ 20000 </h5>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="reverso">
+                         <button class="b_reverso">🟢</button>
+
+                          <p class="descripcion">Juego de mesa de tablero modular, con cartas y dados. Las reglas son sencillas pero requiere estrategia y grandes dosis de negociación... ver mas</p>
+                        </div>
+                            <div class="btn">
+                              <div class="btn1">
+                              <button disabled>Añadir al carrito</button>
+                            </div>
+                            <div class="btn2">
+                              <button class="eliminar" disabled>-</button>
+                              <span class="items_producto">1</span>
+                              <button class="carrito">+</button>
+                            </div>
+                            </div>
+                        </div>
+                  </li>
                     </ul>
                 </div>
 
@@ -146,63 +209,168 @@ Probar en el futuro rediseñar todo con base en bootstrap para practicar y ver s
                     class="mostrar_tipo">▼</button>
             </div>
             <div class="tarjetas" id="juegos">
+              <button  class="flecha-izquierda" id="juegoVo">◄</button>
              
                 <ul class="tarjetas-list">
 
-                    <li class="flecha"><button  class="flecha-izquierda" id="juegoVo">◄</button></li>
-                    <li class="tarjeta">
-                        <a href="./estructuras/secciones/producto.html" class="tarjeta-link"> <img src="./estructuras/Medias/productos/catan.jpg" alt="Imagen de tarjeta" class="tarjeta-img">
-                        </a>
-                            <p class="descripcion">Catan Base</p>
-                            <p class="precio">$70000</p>
-                            <div class="compras">
-                        <button class="eliminar">-</button>
-                        <span class="items_producto">0</span>
-                        <button class="carrito">+</button>
-                    </div>
-                    </li>
-                    <li class="tarjeta">
-                        <a href=".#" class="tarjeta-link">
-                            <img src="./estructuras/Medias/productos/catan2.jpg" alt="Imagen de tarjeta" class="tarjeta-img">
-                        </a>
+                   
+                       <li>
+                            <div class="card">
+                                <div class="frente">
+                                  <div class="efecto_target">
+                                  <div class="img">
+                                    <a href="./estructuras/secciones/detalleproducto.html">  <img src="./estructuras/Medias/productos/catan.jpg" alt="Imagen de tarjeta" ></a>
+                                    <button class="b_frente">🔴</button>
+                                  </div>
+                                  <div class="text">
+                                    <a href="./estructuras/secciones/detalleproducto.html">    <h3 class="titulo">Catan Base</h3></a>
+                                    <h5 class="precio">$ 70000</h5>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="reverso">
+                           <button class="b_reverso">🟢</button>
 
-                            <p class="descripcion">Amp 5-6 Exploradores y Piratas </p>
-                            <p class="precio"><del><small>$55000</small></del> $45000</p>
-                            <div class="compras">
-                                <button class="eliminar">-</button>
-                                <span class="items_producto">0</span>
-                                <button class="carrito">+</button>
-                            </div>
-                    </li>
-                    <li class="tarjeta">
-                        <a href=".#" class="tarjeta-link">
-                            <img src="./estructuras/Medias/productos/catan3.jpg" alt="Imagen de tarjeta" class="tarjeta-img">
-                        </a>
-
-                            <p class="descripcion">Amp 5-6 mercaderes y barbaros</p>
-                            <p class="precio">$55000</p>
-                            <div class="compras">
-                                <button class="eliminar">-</button>
-                                <span class="items_producto">0</span>
-                                <button class="carrito">+</button>
-                            </div>
+                                <p class="descripcion">Juego de mesa de tablero modular, con cartas y dados. Las reglas son sencillas pero requiere estrategia y grandes dosis de negociación... ver mas</p>
+                              </div>
+                                  <div class="btn">
+                                    <div class="btn1">
+                                    <button>Añadir al carrito</button>
+                                  </div>
+                                  <div class="btn2">
+                                    <button class="eliminar" disabled>-</button>
+                                    <span class="items_producto">1</span>
+                                    <button class="carrito">+</button>
+                                  </div>
+                                  </div>
+                              </div>
                         </li>
-                    <li class="tarjeta">
-                        <a href=".#" class="tarjeta-link">
-                            <img src="./estructuras/Medias/productos/redcathedral.webp" alt="Imagen de tarjeta"
-                                class="tarjeta-img">
-                            </a>
+                       <li>
+                            <div class="card">
+                                <div class="frente">
+                                  <div class="efecto_target">
+                                  <div class="img">
+                                    <a href="./estructuras/secciones/detalleproducto.html">  <img src="./estructuras/Medias/productos/catan2.jpg" alt="Imagen de tarjeta" ></a>
+                                    <button class="b_frente">🔴</button>
+                                  </div>
+                                  <div class="text">
+                                    <a href="./estructuras/secciones/detalleproducto.html">    <h3 class="titulo">Amp 5-6 Exploradores y Piratas </h3></a>
+                                    <h5 class="precio"><del><small>$55000</small></del> $45000</h5>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="reverso">
+                           <button class="b_reverso">🟢</button>
 
-                                <p class="descripcion">Red Cathedral</p>
-                            <p class="precio">$56000</p>
-                            <div class="compras">
-                                <button class="eliminar">-</button>
-                                <span class="items_producto">0</span>
-                                <button class="carrito">+</button>
-                            </div>
+                                <p class="descripcion">Juego de mesa de tablero modular, con cartas y dados. Las reglas son sencillas pero requiere estrategia y grandes dosis de negociación... ver mas</p>
+                              </div>
+                                  <div class="btn">
+                                    <div class="btn1">
+                                    <button>Añadir al carrito</button>
+                                  </div>
+                                  <div class="btn2">
+                                    <button class="eliminar" disabled>-</button>
+                                    <span class="items_producto">1</span>
+                                    <button class="carrito">+</button>
+                                  </div>
+                                  </div>
+                              </div>
                         </li>
-                    <li class="flecha"><button  class="flecha-derecha" id="juegoAv">►</button></li>
+                       <li>
+                            <div class="card">
+                                <div class="frente">
+                                  <div class="efecto_target">
+                                  <div class="img">
+                                    <a href="./estructuras/secciones/detalleproducto.html">  <img src="./estructuras/Medias/productos/catan3.jpg" alt="Imagen de tarjeta" ></a>
+                                    <button class="b_frente">🔴</button>
+                                  </div>
+                                  <div class="text">
+                                    <a href="./estructuras/secciones/detalleproducto.html">    <h3 class="titulo">Amp 5-6 mercaderes y barbaros</h3></a>
+                                    <h5 class="precio">$ 5500</h5>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="reverso">
+                           <button class="b_reverso">🟢</button>
+
+                                <p class="descripcion">Juego de mesa de tablero modular, con cartas y dados. Las reglas son sencillas pero requiere estrategia y grandes dosis de negociación... ver mas</p>
+                              </div>
+                                  <div class="btn">
+                                    <div class="btn1">
+                                    <button>Añadir al carrito</button>
+                                  </div>
+                                  <div class="btn2">
+                                    <button class="eliminar" disabled>-</button>
+                                    <span class="items_producto">1</span>
+                                    <button class="carrito">+</button>
+                                  </div>
+                                  </div>
+                              </div>
+                        </li>
+                       <li>
+                            <div class="card">
+                                <div class="frente">
+                                  <div class="efecto_target">
+                                  <div class="img">
+                                    <a href="./estructuras/secciones/detalleproducto.html">  <img src="./estructuras/Medias/productos/redcathedral.webp" alt="Imagen de tarjeta" ></a>
+                                    <button class="b_frente">🔴</button>
+                                  </div>
+                                  <div class="text">
+                                    <a href="./estructuras/secciones/detalleproducto.html">    <h3 class="titulo">Red Cathedral</h3></a>
+                                    <h5 class="precio">$ 56000</h5>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="reverso">
+                           <button class="b_reverso">🟢</button>
+
+                                <p class="descripcion">Juego de mesa de tablero modular, con cartas y dados. Las reglas son sencillas pero requiere estrategia y grandes dosis de negociación... ver mas</p>
+                              </div>
+                                  <div class="btn">
+                                    <div class="btn1">
+                                    <button>Añadir al carrito</button>
+                                  </div>
+                                  <div class="btn2">
+                                    <button class="eliminar" disabled>-</button>
+                                    <span class="items_producto">1</span>
+                                    <button class="carrito">+</button>
+                                  </div>
+                                  </div>
+                              </div>
+                        </li>
+                        <li>
+                          <div class="card">
+                              <div class="frente">
+                                <div class="efecto_target">
+                                <div class="img">
+                                  <a href="./estructuras/secciones/detalleproducto.html">  <img src="./estructuras/Medias/productos/ciudadelas.png" alt="Imagen de tarjeta" ></a>
+                                  <button class="b_frente">🔴</button>
+                                </div>
+                                <div class="text">
+                                  <a href="./estructuras/secciones/detalleproducto.html">    <h3 class="titulo">Ciudadelas</h3></a>
+                                  <h5 class="precio">$ 56000</h5>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="reverso">
+                           <button class="b_reverso">🟢</button>
+
+                              <p class="descripcion">Juego de mesa de tablero modular, con cartas y dados. Las reglas son sencillas pero requiere estrategia y grandes dosis de negociación... ver mas</p>
+                            </div>
+                                <div class="btn">
+                                  <div class="btn1">
+                                  <button>Añadir al carrito</button>
+                                </div>
+                                <div class="btn2">
+                                  <button class="eliminar" disabled>-</button>
+                                  <span class="items_producto">1</span>
+                                  <button class="carrito">+</button>
+                                </div>
+                                </div>
+                            </div>
+                      </li>
                 </ul>
+              <button  class="flecha-derecha" id="juegoAv">►</button>
 
             </div>
 
@@ -218,72 +386,169 @@ Probar en el futuro rediseñar todo con base en bootstrap para practicar y ver s
                     class="mostrar_tipo">▼</button>
             </div>
             <div class="tarjetas" id="libros">
-                <ul class="tarjetas-list">
-                    <li class="flecha"><button  class="flecha-izquierda" id="libroVo">◄</button></li>
+            <button  class="flecha-izquierda" id="libroVo">◄</button>
 
-                    <li class="tarjeta">
-                        <a href=".#" class="tarjeta-link">
-                            <img src="./estructuras/Medias/productos/libro1.webp" alt="Imagen de tarjeta"
-                                class="tarjeta-img">
-                            </a>
-
-                                <p class="descripcion">Sandman:Vol 2 Casa de Muñecas</p>
-                            <p class="precio">$20000</p>
-                            <div class="compras">
-                                <button class="eliminar"  >-</button>
-                                <span class="items_producto">0</span>
-                                <button class="carrito"  >+</button>
-
+              <ul class="tarjetas-list">
+                   <li>
+                        <div class="card">
+                            <div class="frente">
+                              <div class="efecto_target">
+                              <div class="img">
+                                <a href="./estructuras/secciones/detalleproducto.html">  <img src="./estructuras/Medias/productos/libro1.webp" alt="Imagen de tarjeta" ></a>
+                              <button class="b_frente">🔴</button>
+                              </div>
+                              <div class="text">
+                                <a href="./estructuras/secciones/detalleproducto.html">    <h3 class="titulo">Sandman vol 2: La casa de las muñecas</h3></a>
+                                <h5 class="precio">$ 20000</h5>
+                              </div>
                             </div>
-                        </li>
-                    <li class="tarjeta">
-                        <a href=".#" class="tarjeta-link">
-                            <img src="./estructuras/Medias/productos/libro2.webp" alt="Imagen de tarjeta"
-                                class="tarjeta-img">
-                            
-                            </a>
-
-                                <p class="descripcion">Sandman:Vol 3 Pais de sueños</p>
-                            <p class="precio">$18000</p>
-                            <div class="compras">
-                                <button class="eliminar"  >-</button>
-                                <span class="items_producto">0</span>
-                                <button class="carrito"  >+</button>
-
-                            </div>
-                        </li>
-                    <li class="tarjeta">
-                        <a href=".#" class="tarjeta-link">
-                            <img src="./estructuras/Medias/productos/assimov fin de la eternidad.jpg" alt="Imagen de tarjeta" class="tarjeta-img">
-                        </a>
-
-                            <p class="descripcion">Issac Asimov: robot e imperio</p>
-                            <p class="precio">$25000</p>
-                            <div class="compras">
-                                <button class="eliminar"  >-</button>
-                                <span class="items_producto">0</span>
-                                <button class="carrito"  >+</button>
-
-                            </div>
+                          </div>
+                          <div class="reverso">
+                           <button class="b_reverso">🟢</button>
+                            <p class="descripcion">Vol 2 que recopila numeros del 9-18 de la serie regular de sandman de Neil Gaiman. Seguimos a Dream...  </p>
+                          </div>
+                              <div class="btn">
+                                <div class="btn1">
+                                <button>Añadir al carrito</button>
+                              </div>
+                              <div class="btn2">
+                                <button class="eliminar" disabled>-</button>
+                                <span class="items_producto">1</span>
+                                <button class="carrito">+</button>
+                              </div>
+                              </div>
+                          </div>
                     </li>
-                    <li class="tarjeta">
-                        <a href=".#" class="tarjeta-link">
-                            <img src="./estructuras/Medias/productos/fundacion e imperio.jpg" alt="Imagen de tarjeta" class="tarjeta-img">
-                        </a>
-
-                            <p class="descripcion">La trilogia de la Fundacion</p>
-                            <p class="precio">$20000</p>
-                            <div class="compras">
-                                <button class="eliminar"  >-</button>
-                                <span class="items_producto">0</span>
-                                <button class="carrito"  >+</button>
-
+                    <li>
+                      <div class="card">
+                          <div class="frente">
+                            <div class="efecto_target">
+                            <div class="img">
+                              <a href="./estructuras/secciones/detalleproducto.html">  <img src="./estructuras/Medias/productos/libro8.jpg" alt="Imagen de tarjeta" ></a>
+                              <button class="b_frente">🔴</button>
                             </div>
-                        </li>
+                            <div class="text">
+                              <a href="./estructuras/secciones/detalleproducto.html">    <h3 class="titulo">El temor de un hombre sabio</h3></a>
+                              <h5 class="precio">$ 50000</h5>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="reverso">
+                         <button class="b_reverso">🟢</button>
+
+                          <p class="descripcion">Comienza el 2do Dia Kvothe se dispone a continuar sus narraciones mientras se escucha el silencio de un hombre que espera la muerte</p>
+                        </div>
+                            <div class="btn">
+                              <div class="btn1">
+                              <button>Añadir al carrito</button>
+                            </div>
+                            <div class="btn2">
+                              <button class="eliminar" disabled>-</button>
+                              <span class="items_producto">1</span>
+                              <button class="carrito">+</button>
+                            </div>
+                            </div>
+                        </div>
+                  </li>
+                   <li>
+                        <div class="card">
+                            <div class="frente">
+                              <div class="efecto_target">
+                              <div class="img">
+                                <a href="./estructuras/secciones/detalleproducto.html">  <img src="./estructuras/Medias/productos/fundacion e imperio.jpg" alt="Imagen de tarjeta" ></a>
+                                <button class="b_frente">🔴</button>
+                              </div>
+                              <div class="text">
+                                <a href="./estructuras/secciones/detalleproducto.html">    <h3 class="titulo">fundacion e imperio</h3></a>
+                                <h5 class="precio">$ 40000</h5>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="reverso">
+                           <button class="b_reverso">🟢</button>
+
+                            <p class="descripcion">Libro 3 de la trilogia original de la saga de la fundicion </p>
+                          </div>
+                              <div class="btn">
+                                <div class="btn1">
+                                <button>Añadir al carrito</button>
+                              </div>
+                              <div class="btn2">
+                                <button class="eliminar" disabled>-</button>
+                                <span class="items_producto">1</span>
+                                <button class="carrito">+</button>
+                              </div>
+                              </div>
+                          </div>
+                    </li>
+                   <li>
+                        <div class="card">
+                            <div class="frente">
+                              <div class="efecto_target">
+                              <div class="img">
+                                <a href="./estructuras/secciones/detalleproducto.html">  <img src="./estructuras/Medias/productos/libro2.webp" alt="Imagen de tarjeta" ></a>
+                                <button class="b_frente">🔴</button>
+                              </div>
+                              <div class="text">
+                                <a href="./estructuras/secciones/detalleproducto.html">    <h3 class="titulo">Sandman vol 3: pais de sueños</h3></a>
+                                <h5 class="precio">$ 18000</h5>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="reverso">
+                           <button class="b_reverso">🟢</button>
+
+                            <p class="descripcion">Vol 3 que recopila numeros del 9-18 de la serie regular de sandman de Neil Gaiman. Seguimos a Dream...  </p>
+                          </div>
+                              <div class="btn">
+                                <div class="btn1">
+                                <button>Añadir al carrito</button>
+                              </div>
+                              <div class="btn2">
+                                <button class="eliminar" disabled>-</button>
+                                <span class="items_producto">1</span>
+                                <button class="carrito">+</button>
+                              </div>
+                              </div>
+                          </div>
+                    </li>
+           
+                   <li>
+                        <div class="card">
+                            <div class="frente">
+                              <div class="efecto_target">
+                              <div class="img">
+                                <a href="./estructuras/secciones/detalleproducto.html">  <img src="./estructuras/Medias/productos/assimov fin de la eternidad.jpg" alt="Imagen de tarjeta" ></a>
+                                <button class="b_frente">🔴</button>
+                              </div>
+                              <div class="text">
+                                <a href="./estructuras/secciones/detalleproducto.html">    <h3 class="titulo">Issac Asimov: Robot e Imperio</h3></a>
+                                <h5 class="precio">$ 12500</h5>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="reverso">
+                           <button class="b_reverso">🟢</button>
+
+                            <p class="descripcion">Juego de mesa de tablero modular, con cartas y dados. Las reglas son sencillas pero requiere estrategia y grandes dosis de negociación... ver mas</p>
+                          </div>
+                              <div class="btn">
+                                <div class="btn1">
+                                <button>Añadir al carrito</button>
+                              </div>
+                              <div class="btn2">
+                                <button class="eliminar" disabled>-</button>
+                                <span class="items_producto">1</span>
+                                <button class="carrito">+</button>
+                              </div>
+                              </div>
+                          </div>
+                    </li>
+    
                         
                     </li>
-                    <li class="flecha"><button class="flecha-derecha" id="libroAv">►</button></li>
                 </ul>
+<button class="flecha-derecha" id="libroAv">►</button>
 
             </div>
 
@@ -300,66 +565,173 @@ Probar en el futuro rediseñar todo con base en bootstrap para practicar y ver s
                     class="mostrar_tipo">▼</button>
             </div>
             <div class="tarjetas"  id="articulos">
-                <ul class="tarjetas-list">
-                    <li class="flecha"><button  class="flecha-izquierda" id="articuloVo">◄</button></li>
+<button  class="flecha-izquierda" id="articuloVo">◄</button>
 
-                    <li class="tarjeta">
-                        <a href=".#" class="tarjeta-link">
-                            <img src="./estructuras/Medias/productos/articulo1.png" alt="Imagen de tarjeta"
-                                class="tarjeta-img">
-                            </a>
-
-                                <p class="descripcion">El señor de los anillos</p>
-                            <p class="precio">$30000</p>
-                            <div class="compras">
-                                <button class="eliminar"  >-</button>
-                                <span class="items_producto">0</span>
-                                <button class="carrito"  >+</button>
-
+              <ul class="tarjetas-list">
+                   <li>
+                        <div class="card">
+                            <div class="frente">
+                              <div class="efecto_target">
+                              <div class="img">
+                                <a href="./estructuras/secciones/detalleproducto.html">  <img src="./estructuras/Medias/productos/articulo1.png" alt="Imagen de tarjeta" ></a>
+                                <button class="b_frente">🔴</button>
+                              
+                              </div>
+                              <div class="text">
+                                <a href="./estructuras/secciones/detalleproducto.html">    <h3 class="titulo">El señor de los anillos</h3></a>
+                                <h5 class="precio">$ 32500</h5>
+                              </div>
                             </div>
-                        </li>
-                    <li class="tarjeta">
-                        <a href=".#" class="tarjeta-link">
-                            <img src="./estructuras/Medias/productos/articulo 2.webp" alt="Imagen de tarjeta"
-                                class="tarjeta-img">
-                            </a>
-                                <p class="descripcion"><del>Reliquias de la muerte</del></p>
-                            <div class="compras">
-                                <span class="stock">Sin stock</span>
+                          </div>
+                          <div class="reverso">
+                           <button class="b_reverso">🟢</button>
 
-
+                            <p class="descripcion">Juego de mesa de tablero modular, con cartas y dados. Las reglas son sencillas pero requiere estrategia y grandes dosis de negociación... ver mas</p>
+                          </div>
+                              <div class="btn">
+                                <div class="btn1">
+                                <button>Añadir al carrito</button>
+                              </div>
+                              <div class="btn2">
+                                <button class="eliminar" disabled>-</button>
+                                <span class="items_producto">1</span>
+                                <button class="carrito">+</button>
+                              </div>
+                              </div>
+                          </div>
+                    </li>
+                    <li>
+                      <div class="card">
+                          <div class="frente">
+                            <div class="efecto_target">
+                            <div class="img">
+                              <a href="./estructuras/secciones/detalleproducto.html">  <img src="./estructuras/Medias/productos/libro7.jpg" alt="Imagen de tarjeta" ></a>
+                              <button class="b_frente">🔴</button>
+                           
                             </div>
-                        </li>
-                    <li class="tarjeta">
-                        <a href=".#" class="tarjeta-link">
-                            <img src="./estructuras/Medias/productos/articulo3.webp" alt="Imagen de tarjeta"
-                                class="tarjeta-img">
-                            </a>
-                            <p class="descripcion">collar Reliquias de la muerte</p>
-                            <p class="precio">$12000</p>
-                            <div class="compras">
-                                <button class="eliminar"  >-</button>
-                                <span class="items_producto">0</span>
-                                <button class="carrito"  >+</button>
-
+                            <div class="text">
+                              <a href="./estructuras/secciones/detalleproducto.html">    <h3 class="titulo">La musica del silencio</h3></a>
+                              <h5 class="precio">$ 30000</h5>
                             </div>
-                        </li>
-                    <li class="tarjeta">
-                        <a href=".#" class="tarjeta-link">
-                            <img src="./estructuras/Medias/productos/articulo4.jpg" alt="Imagen de tarjeta"
-                                class="tarjeta-img">
-                            </a>
-                            <p class="descripcion">Cuerpo de linternas verdes</p>
-                            <p class="precio">$15000</p>
-                            <div class="compras">
-                                <button class="eliminar"  >-</button>
-                                <span class="items_producto">0</span>
-                                <button class="carrito"  >+</button>
+                          </div>
+                        </div>
+                        <div class="reverso">
+                         <button class="b_reverso">🟢</button>
 
+                          <p class="descripcion">Sumergete en la vida de Auri por unos dias la palida y extraña chica que vive bajo la universidad mientras se prepara para recibir a kvothe</p>
+                        </div>
+                            <div class="btn">
+                              <div class="btn1">
+                              <button disabled>Añadir al carrito</button>
                             </div>
-                        </li>
-                    <li class="flecha"><button class="flecha-derecha" id="articuloAv">►</button></li>
+                            <div class="btn2">
+                              <button class="eliminar" disabled>-</button>
+                              <span class="items_producto">1</span>
+                              <button class="carrito">+</button>
+                            </div>
+                            </div>
+                        </div>
+                  </li>
+                    <li>
+                        <div class="card">
+                            <div class="frente">
+                              <div class="efecto_target">
+                              <div class="img">
+                                <a href="./estructuras/secciones/detalleproducto.html">  <img src="./estructuras/Medias/productos/articulo 2.webp" alt="Imagen de tarjeta" ></a>
+                                <button class="b_frente">🔴</button>
+                                
+                             
+                              </div>
+                              <div class="text">
+                                <a href="./estructuras/secciones/detalleproducto.html">    <h3 class="titulo">Reliquias de la muerte</h3></a>
+                                <h5 class="precio">Sin Stock</h5>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="reverso">
+                           <button class="b_reverso">🟢</button>
+
+                            <p class="descripcion">Juego de mesa de tablero modular, con cartas y dados. Las reglas son sencillas pero requiere estrategia y grandes dosis de negociación... ver mas</p>
+                          </div>
+                              <div class="btn">
+                                <div class="btn1">
+                                <button disabled>Añadir al carrito</button>
+                              </div>
+                              <div class="btn2">
+                                <button class="eliminar" disabled>-</button>
+                                <span class="items_producto">1</span>
+                                <button class="carrito">+</button>
+                              </div>
+                              </div>
+                          </div>
+                    </li>
+                   <li>
+                        <div class="card">
+                            <div class="frente">
+                              <div class="efecto_target">
+                              <div class="img">
+                                <a href="./estructuras/secciones/detalleproducto.html">  <img src="./estructuras/Medias/productos/articulo3.webp" alt="Imagen de tarjeta" ></a>
+                                <button class="b_frente">🔴</button>
+                           
+                              </div>
+                              <div class="text">
+                                <a href="./estructuras/secciones/detalleproducto.html">    <h3 class="titulo">collar de las reliquias de la muerte</h3></a>
+                                <h5 class="precio">$ 25000</h5>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="reverso">
+                           <button class="b_reverso">🟢</button>
+
+                            <p class="descripcion">Juego de mesa de tablero modular, con cartas y dados. Las reglas son sencillas pero requiere estrategia y grandes dosis de negociación... ver mas</p>
+                          </div>
+                              <div class="btn">
+                                <div class="btn1">
+                                <button disabled>Añadir al carrito</button>
+                              </div>
+                              <div class="btn2">
+                                <button class="eliminar" disabled>-</button>
+                                <span class="items_producto">1</span>
+                                <button class="carrito">+</button>
+                              </div>
+                              </div>
+                          </div>
+                    </li>
+                   <li>
+                        <div class="card">
+                            <div class="frente">
+                              <div class="efecto_target">
+                              <div class="img">
+                                <a href="./estructuras/secciones/detalleproducto.html">  <img src="./estructuras/Medias/productos/articulo4.jpg" alt="Imagen de tarjeta" ></a>
+                                <button class="b_frente">🔴</button>
+                            
+                              </div>
+                              <div class="text">
+                                <a href="./estructuras/secciones/detalleproducto.html">    <h3 class="titulo">Cuerpo de Linternas verdes</h3></a>
+                                <h5 class="precio">$ 20000</h5>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="reverso">
+                           <button class="b_reverso">🟢</button>
+
+                            <p class="descripcion">Juego de mesa de tablero modular, con cartas y dados. Las reglas son sencillas pero requiere estrategia y grandes dosis de negociación... ver mas</p>
+                          </div>
+                              <div class="btn">
+                                <div class="btn1">
+                                <button disabled>Añadir al carrito</button>
+                              </div>
+                              <div class="btn2">
+                                <button class="eliminar" disabled>-</button>
+                                <span class="items_producto">1</span>
+                                <button class="carrito">+</button>
+                              </div>
+                              </div>
+                          </div>
+                    </li>
+                          
                                         </ul>
+                                       <button class="flecha-derecha" id="articuloAv">►</button>
             
                 </div>
             </div>

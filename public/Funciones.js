@@ -1,3 +1,44 @@
+document.addEventListener("DOMContentLoaded", function() {
+  // Tu código que se ejecutará cuando el DOM esté listo.
+  console.log("El DOM se ha cargado correctamente.");
+});
+
+// --------DESCRIPCION--------------------------
+let target_efect = document.querySelectorAll(".frente");
+
+target_efect.forEach(e => {
+    let hijo_Img = e.querySelector(".efecto_target").querySelector(".img button"); // Botón rojo
+    let reverso = e.parentElement.querySelector(".reverso"); // Panel reverso
+    let botonVerde = reverso.querySelector("button"); // Botón verde en reverso
+
+    // DEPURACIÓN: Verifica si se encuentran los elementos
+    console.log("Elemento frente encontrado:", e);
+    console.log("Botón rojo encontrado:", hijo_Img);
+    console.log("Reverso encontrado:", reverso);
+    console.log("Botón verde encontrado:", botonVerde);
+
+    // Si algún elemento no se encuentra, muestra un error y detiene la ejecución.
+    if (!hijo_Img || !reverso || !botonVerde) {
+        console.warn("No se encontraron todos los elementos necesarios en una tarjeta.");
+        return;
+    }
+
+    // Evento para botón rojo 🔴
+    hijo_Img.addEventListener("click", function (event) {
+        event.stopPropagation(); // Evita que otros eventos interfieran
+        console.log("Clic en botón rojo");
+        reverso.style.display = "flex";
+        e.style.display = "none";
+    });
+
+    // Evento para botón verde 🟢
+    botonVerde.addEventListener("click", function (event) {
+        event.stopPropagation();
+        console.log("Clic en botón verde");
+        reverso.style.display = "none";
+        e.style.display = "flex";
+    });
+});
 //-----------------LOGIN-------------------
 let estadoRegistro =0;
 let monto=0;
@@ -69,6 +110,27 @@ function total(x,id){
   y.style.display="flex";
 
 }
+/*-----------------Abrir imagenes----------------*/
+document.querySelectorAll(".miniatura").forEach(i => {
+  i.addEventListener("click", function(event) {
+    let hermano = this.nextElementSibling; // Selecciona el siguiente elemento hermano (el div que contiene la imagen ampliada)
+    let elemento = hermano.querySelector(".img_exp"); // Selecciona la imagen dentro del div
+    console.log("click src:" + this.src); // Muestra la fuente de la imagen en la consola
+    elemento.src = this.src; // Establece el src de la imagen ampliada con el src de la imagen en miniatura
+    console.log("hermano src:" + elemento.src); // Muestra la nueva fuente de la imagen ampliada
+    hermano.style.display = "flex"; // Muestra el lightbox
+  });
+});
+/*--------------------Cerrar imagenes--------------- */
+document.querySelectorAll(".close").forEach(i =>{
+  i.addEventListener("click",function(event){
+
+let padre=this.parentElement;
+padre.style.display="none";
+let hermano=this.previousElementSibling;
+hermano.src="";})
+  });
+
 
 //---------------------------------------------
 function eliminarFila(boton) {
@@ -118,3 +180,4 @@ document.getElementById("numero_tarjeta").addEventListener("input", function (e)
   value = value.replace(/(.{4})/g, "$1-").replace(/-$/, ""); // Agrupa en bloques de 4 y agrega "-"
   e.target.value = value.slice(0, 19); // Limita el formato a 19 caracteres (16 dígitos + 3 guiones)
 });
+
