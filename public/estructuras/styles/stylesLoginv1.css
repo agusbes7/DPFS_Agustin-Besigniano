@@ -19,7 +19,7 @@
   /*------------formulario de login y registro-----------------------------*/
 .formLR{
   display: flex; 
-  flex-direction: row;
+  flex-direction: column;
 width: 100%;
 gap: 2%;
 align-items: center;

@@ -165,9 +165,8 @@ display: none;
     z-index: 9999;
     opacity: 0.7;
     top: 10%;
-    left: 92%;
+ right: 7px;
     font-size: 0.6rem;
-    -webkit-box-shadow: 2px 2px 2px 3px #000000; 
     box-shadow: 2px 2px 2px 3px #000000;
 transition-duration: 1.2s;
 animation: hundirse 1.5s ease-in-out infinite; 
@@ -202,7 +201,7 @@ padding: 0.1rem;}
 /*-----------------------------hover carrito---------------------------------------------*/
 .div_carrito:hover {
     opacity: 1;
-   left: 74%;
+  right: 10px;
     width: 20%;
     height: 20%;
     background-color: white;}
@@ -236,22 +235,19 @@ align-items: center;}
 min-width: 750px;
 gap: 3px;}
 
-.informacion p {
-    display: flex;
-    color: white;
-    font-size: 16px;
-     font-family: "Open Sans", sans-serif;
-    font-style: italic;
-    word-spacing: 0.2rem;
-   
-margin: 0;}
-.texto{ width: 70%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-}
-.informacion p, .informacion ul, .informacion .user{
+    .informacion p {
+        display: flex;
+        color: white;
+        font-size: 1.2rem;
+         font-family: "Open Sans", sans-serif;
+        font-style: italic;
+        word-spacing: 0.2rem;
+        width: 60%;
+    margin: 0;
+        margin-left: 10px;}
+
+.informacion p, .informacion ul{
             display: flex;
             flex-direction: row;
             align-items: center; }
@@ -259,7 +255,8 @@ margin: 0;}
     width: 30%;
    flex-direction: row;
     text-decoration: none;
-    list-style: none;}
+    list-style: none;
+gap: 1.2rem;}
 
 .informacion li, .informacion li a{
     text-decoration: none;
@@ -280,35 +277,11 @@ span{
     justify-content: start;}
 
 .informacion li img:hover , span:hover{
-    transform: scale(1.2) translateY(-0.4rem); /* Aumenta el tamaño y mueve el botón hacia arriba */
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3); /* Añade sombra para más realismo */
+    transform: scale(1.2) translateY(-0.4rem);
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
     z-index: 999;
     overflow: visible;}
-    .user{
-    width: 2%;
-        position: relative;
-    left:  10px;}
-    .user img{
-        width: 1.3rem;
-    }
-.sesionON,    .sesionOFF{display: none;
-position: absolute;
-z-index: 1500;
-background-color: white;
-    text-align: center;
-    font-size: 2rem;
-    opacity: 0.8;
-    font-family: cursive;}
-.user span{
-    color: black;
-
-}
-.sesionON:hover{
-    display: block;
-}
-.sesionOFF:hover{
-    display: block;
-}
+   
 /*--------------------FOOTER--------------------------*/
 footer{
     grid-area: footer;
