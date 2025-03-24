@@ -1,0 +1,215 @@
+.contenido {
+    display: flex;
+    overflow: hidden; }
+    .contenido *{
+       margin: 0;
+         padding: 0; }
+         /*-------------------------------------------*/
+         .ocultar_tipo,
+.mostrar_tipo,
+.encabezado_aside button{
+    height: 60%;
+    width: 4%;
+    justify-content: center;
+    align-items: center;
+    color: #FAC710;
+    font-size: 0.9rem;
+    background-color: unset;
+    border: 1px solid;
+    border-radius: 50%;
+    margin: 1%;}
+    .encabezado_aside button{height: 80%;
+        display: flex;
+    justify-content: center;
+    align-items: center;}
+.ocultar_tipo {display: flex;}
+.mostrar_tipo {display: none;}
+/*----------------------------------------------------------*/
+/*--------------elemento UL de ofertas -------------*/
+.productos {
+  display: flex;
+  flex-direction: column;
+  grid-area: productos;
+  position: relative;
+overflow: hidden;
+  background-color: white;
+  width: 100%;}
+/*--------------Titulos h1 de las clases de producto------------*/
+.titulos {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  color: white;
+  background-color: red;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 2%;}
+/*------------------ BOTONES PARA OCULTAR MOSTRAR ----------------*/
+
+/*----------------------------------------------------------*/
+/*------------ CONTENEDOR DE  tarjetas de PRODUCTOS --------*/
+
+.productos_tipo {
+    height: auto;
+    display: flex;
+     flex-direction: column;
+position: relative;
+    z-index: 1;
+  margin: 1%;}
+    /*Altura de la seccion de tarjetas*/
+.tarjetas{
+    display: flex;
+    justify-content: center;
+        position: relative;
+       }
+/*----------------------*/
+/*ELEMENTO UL para la lista de tarjetas */
+.tarjetas-list{
+ list-style: none;
+  display: grid;
+  gap: 0.5rem;
+    grid-template-columns: repeat(5, 1fr);
+  width: 100%; 
+  justify-items: center;}
+/*----------Tarjetas-------------*/
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 12rem;
+    height: 100%;
+    min-height: 150px;
+   transition: transform 0.3s ease;
+    padding: 0.3rem;
+    margin: 1%;
+    text-overflow: ellipsis;
+    white-space: normal;
+    word-wrap: break-word;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);}
+  .card *{overflow: hidden;}
+   
+  /*-----------------------COMUNES---------------------*/
+  .frente,.reverso,.img{
+     display: flex;
+  flex-direction: column;
+  align-items: center;}
+  /*-----------------------BTN---------------------*/
+  .btn {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+padding: 10px;
+margin: 5px;}
+  .btn button {
+  background-color: #0003c0;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10%;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background 1.3s ease;}
+  .btn2,.reverso{display: none;}
+  
+  /*-----------------------FRENTE---------------------*/
+  .frente {
+    position: relative;
+    background-color: #fff;}
+  /*-----------------------frente img---------------------*/
+  .img{  max-width: 100%; position: relative;}
+  .b_frente,.b_reverso{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    opacity: 0.5;
+    z-index: 9999;
+    width: 20px;
+    overflow: visible;
+    border: none;
+    margin: 0;
+  }
+  button:focus {
+    outline: none;
+  }
+  .b_reverso{right: 0;
+left: 0px;
+width: 8px;}
+  .img img {
+    max-width: auto;
+     height: 150px;
+    object-fit: contain;
+    transition: transform 0.3s ease; }
+  
+  /*-----------------------frente texto---------------------*/
+  .text {
+    padding: 4px;
+    text-align: center;  }
+  .text a{text-decoration:none;}
+  .titulo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(71, 4, 4);
+    display: block;
+    line-clamp: 2;}
+.precio {
+    font-size: 1.3rem;
+    color: #ff0000;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: 10px;}
+/*---------------------REVERSO--------------------*/
+.descripcion {
+    color: #000000;
+  transition: opacity 0.5s ease;
+    font-size: 1rem;
+      display: block;
+    word-spacing: unset;
+    letter-spacing: unset;}
+/*-------*/
+.reverso {
+     background-color: #fff;
+      padding: 3px;
+      margin: 1%;
+align-items: center;
+      transition: opacity 1s ease ;}
+/*-------------------EFECTOS----------------*/
+  .card:hover {
+      transform: translateY(-8px);
+    box-shadow: -13px 16px 12px 2px rgba(0,0,0,0.74);
+    background-color: #FAC710;
+  opacity: 0.9;}
+    .card:hover div {
+    background-color: #FAC710;}
+ 
+ /*-----*/
+  .btn button:hover {background-color: #33026b;}
+  .titulo:hover{color: blue;}
+  @media (max-width: 1000px){
+    .tarjetas-list{
+    grid-template-columns: repeat(4, 1fr);
+gap: 1rem;
+    }
+
+  }
+  @media (max-width: 640px){
+    .tarjetas-list{
+    grid-template-columns: repeat(3, 1fr);
+gap: 2px;}
+.btn button {font-size: 1rem;
+  padding: 2px 5px;}
+  }
+  @media (max-width: 400px){
+    .card, .img img{width: 9rem;}
+  .titulo{font-size: 1rem;}
+  .precio{font-size: 1.1rem;}
+  }
+  @media (max-width: 250px){
+    .tarjetas-list{
+      grid-template-columns: repeat(2, 1fr);
+  gap: 2px;}
+.card,.img img{width: 12rem;}}

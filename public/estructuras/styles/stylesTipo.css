@@ -11,14 +11,16 @@
      transition: width 0.9s;
      box-shadow: 7.2px 7.2px 13.2px 5.2px rgb(81, 0, 0);
       z-index: 1000;
-      width: 5%;
+      left: 22px;
+      top: 14px;
+      width: 30px;
       border-radius: 30%;
       padding: 0.5rem;
       margin-left: 0.5%;
     overflow: visible;}
 .aside-container:hover {
         width: 25%; 
-    opacity: 75%;
+    opacity: 0.9;
     box-shadow: unset;
    }
 /*----------------------------*/
@@ -73,7 +75,7 @@ font-style: unset;
 @media(max-width: 650px){
     .contenido{    grid-template-columns: auto;}
 
-   .aside-container{display: none;}
+  .aside-container{display: none;}
 #mtogglebutton{display: none;}}
 /*----------------------*/
 @media (max-width:500px){

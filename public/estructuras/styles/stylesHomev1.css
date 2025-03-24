@@ -273,7 +273,7 @@ align-items: center;
 .btn button {font-size: 0.7rem;}}
 @media(max-width: 890px){
     .contenido{  grid-template-rows: 230px 1fr;}
-.card{width: 9rem;}
+.card, .img img{width: 9rem;}
 .precio{font-size: 1rem;}
 .titulo{font-size: 1rem;}
 .btn button {font-size: 0.87rem;}
@@ -283,7 +283,7 @@ align-items: center;
 /*----------------------*/
 
 @media (max-width:800px) {
-    .img img {height: 120px;}
+   
     .tarjetas-list{    margin: 0;
         gap: 1.2%;}
 
@@ -295,8 +295,8 @@ align-items: center;
 @media(max-width: 650px){
     .contenido{  grid-template-rows: 200px 1fr;}
     .ofertas .card{ height: 200px;}
-    .img img { height: 100px;}
-.card{width: 9.5rem;}
+   /* .img img { height: 100px;}*/
+.card, .img img{width: 9.5rem;}
 .btn button {font-size: 1rem;
     padding: 2px 5px;}
 .aside-container{display: none;}

@@ -8,8 +8,9 @@
     <title>Cronica de Juegos</title>
 <link rel="shortcut icon" href="../Medias/Imagenes/4kvothe logo3.png" type="image/x-icon">
 <link rel="stylesheet" href="../styles/stylesgeneralv1.css">
-<link rel="stylesheet" href="../styles/stylesHomev1.css">
 <link rel="stylesheet" href="../styles/stylesTipo.css">
+<link rel="stylesheet" href="../styles/stylesMproductos.css">
+
 
 
 
@@ -139,120 +140,342 @@ Probar en el futuro rediseñar todo con base en bootstrap para practicar y ver s
                
             </div>
             <div class="tarjetas">
-             
-                <ul class="tarjetas-list">
-                 
-                    <li class="tarjeta">
-                        <a href="../secciones/producto.html" class="tarjeta-link"> <img src="../Medias/productos/catan.jpg" alt="Imagen de tarjeta" class="tarjeta-img">
-                        </a>
-                            <p class="descripcion">Catan Base</p>
-                            <p class="precio">$70000</p>
-                            <div class="compras">
-                        <button class="eliminar">-</button>
-                        <span class="items_producto">0</span>
-                        <button class="carrito">+</button>
+             <ul class="tarjetas-list">
+
+                <li>
+                    <div class="card">
+                        <div class="frente">
+                            <div class="efecto_target">
+                                <div class="img">
+<a href="../secciones/detalleproducto.html">                                                              <img src="../Medias/productos/catan.jpg" alt="Imagen de tarjeta">
+                                    </a>
+                                    <button class="b_frente">🔴</button>
+                                </div>
+                                <div class="text">
+<a href="../secciones/detalleproducto.html">                                                              <h3 class="titulo">Catan Base</h3>
+                                    </a>
+                                    <h5 class="precio">$70000</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reverso">
+                            <button class="b_reverso">🟢</button>
+                            <p class="descripcion">Juego de mesa donde los jugadores compiten para establecer asentamientos y ciudades sobre un tablero con recursos limitados...</p>
+                        </div>
+                        <div class="btn">
+                            <div class="btn1">
+                                <button disabled>Añadir al carrito</button>
+                            </div>
+                            <div class="btn2">
+                                <button class="eliminar" disabled>-</button>
+                                <span class="items_producto">0</span>
+                                <button class="carrito">+</button>
+                            </div>
+                        </div>
                     </div>
-                    </li>
-                    <li class="tarjeta">
-                        <a href=".#" class="tarjeta-link">
-                            <img src="../Medias/productos/catan2.jpg" alt="Imagen de tarjeta" class="tarjeta-img">
-                        </a>
-
-                            <p class="descripcion">Amp 5-6 Exploradores y Piratas </p>
-                            <p class="precio"><del><small>$55000</small></del> $45000</p>
-                            <div class="compras">
-                                <button class="eliminar">-</button>
-                                <span class="items_producto">0</span>
-                                <button class="carrito">+</button>
-                            </div>
-                    </li>
-                    <li class="tarjeta">
-                        <a href=".#" class="tarjeta-link">
-                            <img src="../Medias/productos/catan3.jpg" alt="Imagen de tarjeta" class="tarjeta-img">
-                        </a>
-
-                            <p class="descripcion">Amp 5-6 mercaderes y barbaros</p>
-                            <p class="precio">$55000</p>
-                            <div class="compras">
-                                <button class="eliminar">-</button>
-                                <span class="items_producto">0</span>
-                                <button class="carrito">+</button>
-                            </div>
-                        </li>
-                    <li class="tarjeta">
-                        <a href=".#" class="tarjeta-link">
-                            <img src="../Medias/productos/redcathedral.webp" alt="Imagen de tarjeta"
-                                class="tarjeta-img">
-                            </a>
-
-                                <p class="descripcion">Red Cathedral</p>
-                            <p class="precio">$56000</p>
-                            <div class="compras">
-                                <button class="eliminar">-</button>
-                                <span class="items_producto">0</span>
-                                <button class="carrito">+</button>
-                            </div>
-                        </li>
-                      
-                </ul>
-                <ul class="tarjetas-list">
-                    <li class="tarjeta">
-                        <a href=".#" class="tarjeta-link">
-                            <img src="../Medias/productos/redcathedral.webp" alt="Imagen de tarjeta"
-                                class="tarjeta-img">
-                            </a>
-
-                                <p class="descripcion">Red Cathedral</p>
-                            <p class="precio">$56000</p>
-                            <div class="compras">
-                                <button class="eliminar">-</button>
-                                <span class="items_producto">0</span>
-                                <button class="carrito">+</button>
-                            </div>
-                        </li>
-                    <li class="tarjeta">
-                        <a href="../secciones/producto.html" class="tarjeta-link"> <img src="../Medias/productos/catan.jpg" alt="Imagen de tarjeta" class="tarjeta-img">
-                        </a>
-                            <p class="descripcion">Catan Base</p>
-                            <p class="precio">$70000</p>
-                            <div class="compras">
-                        <button class="eliminar">-</button>
-                        <span class="items_producto">0</span>
-                        <button class="carrito">+</button>
-                    </div>
-                    </li>
-                    <li class="tarjeta">
-                        <a href=".#" class="tarjeta-link">
-                            <img src="../Medias/productos/catan2.jpg" alt="Imagen de tarjeta" class="tarjeta-img">
-                        </a>
-
-                            <p class="descripcion">Amp 5-6 Exploradores y Piratas </p>
-                            <p class="precio"><del><small>$55000</small></del> $45000</p>
-                            <div class="compras">
-                                <button class="eliminar">-</button>
-                                <span class="items_producto">0</span>
-                                <button class="carrito">+</button>
-                            </div>
-                    </li>
-                    <li class="tarjeta">
-                        <a href=".#" class="tarjeta-link">
-                            <img src="../Medias/productos/catan3.jpg" alt="Imagen de tarjeta" class="tarjeta-img">
-                        </a>
-
-                            <p class="descripcion">Amp 5-6 mercaderes y barbaros</p>
-                            <p class="precio">$55000</p>
-                            <div class="compras">
-                                <button class="eliminar">-</button>
-                                <span class="items_producto">0</span>
-                                <button class="carrito">+</button>
-                            </div>
-                        </li>
-                   
+                </li>
                 
-                </ul>
+                <li>
+                    <div class="card">
+                        <div class="frente">
+                            <div class="efecto_target">
+                                <div class="img">
+                                  <a href="../secciones/detalleproducto.html">                                                              <img src="../Medias/productos/catan2.jpg" alt="Imagen de tarjeta">
+                                    </a>
+                                    <button class="b_frente">🔴</button>
+                                </div>
+                                <div class="text">
+                                  <a href="../secciones/detalleproducto.html">                                                              <h3 class="titulo">Amp 5-6 Exploradores y Piratas</h3>
+                                    </a>
+                                    <h5 class="precio"><del>$55000</del> $45000</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reverso">
+                            <button class="b_reverso">🟢</button>
+                            <p class="descripcion">Expansión para 5-6 jugadores que agrega nuevas reglas y piezas, sumergiéndote en una nueva aventura...</p>
+                        </div>
+                        <div class="btn">
+                            <div class="btn1">
+                                <button disabled>Añadir al carrito</button>
+                            </div>
+                            <div class="btn2">
+                                <button class="eliminar" disabled>-</button>
+                                <span class="items_producto">0</span>
+                                <button class="carrito">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="card">
+                        <div class="frente">
+                            <div class="efecto_target">
+                                <div class="img">
+                                  <a href="../secciones/detalleproducto.html">                                                              <img src="../Medias/productos/catan3.jpg" alt="Imagen de tarjeta">
+                                    </a>
+                                    <button class="b_frente">🔴</button>
+                                </div>
+                                <div class="text">
+                                  <a href="../secciones/detalleproducto.html">                                                              <h3 class="titulo">Amp 5-6 Mercaderes y Bárbaros</h3>
+                                    </a>
+                                    <h5 class="precio">$55000</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reverso">
+                            <button class="b_reverso">🟢</button>
+                            <p class="descripcion">Expansión que incluye nuevas rutas comerciales y desafíos de barbarie para los jugadores...</p>
+                        </div>
+                        <div class="btn">
+                            <div class="btn1">
+                                <button disabled>Añadir al carrito</button>
+                            </div>
+                            <div class="btn2">
+                                <button class="eliminar" disabled>-</button>
+                                <span class="items_producto">0</span>
+                                <button class="carrito">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="card">
+                        <div class="frente">
+                            <div class="efecto_target">
+                                <div class="img">
+                                  <a href="../secciones/detalleproducto.html">                                                              <img src="../Medias/productos/redcathedral.webp" alt="Imagen de tarjeta">
+                                    </a>
+                                    <button class="b_frente">🔴</button>
+                                </div>
+                                <div class="text">
+                                  <a href="../secciones/detalleproducto.html">                                                              <h3 class="titulo">Red Cathedral</h3>
+                                    </a>
+                                    <h5 class="precio">$56000</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reverso">
+                            <button class="b_reverso">🟢</button>
+                            <p class="descripcion">Juego de estrategia y construcción en el que los jugadores compiten por la construcción de la catedral de una ciudad medieval...</p>
+                        </div>
+                        <div class="btn">
+                            <div class="btn1">
+                                <button disabled>Añadir al carrito</button>
+                            </div>
+                            <div class="btn2">
+                                <button class="eliminar" disabled>-</button>
+                                <span class="items_producto">0</span>
+                                <button class="carrito">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="card">
+                        <div class="frente">
+                            <div class="efecto_target">
+                                <div class="img">
+<a href="../secciones/detalleproducto.html">                                                              <img src="../Medias/productos/redcathedral.webp" alt="Imagen de tarjeta">
+                                    </a>
+                                    <button class="b_frente">🔴</button>
+                                </div>
+                                <div class="text">
+<a href="../secciones/detalleproducto.html">                                                              <h3 class="titulo">Red Cathedral</h3>
+                                    </a>
+                                    <h5 class="precio">$56000</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reverso">
+                            <button class="b_reverso">🟢</button>
+                            <p class="descripcion">Juego de estrategia y construcción en el que los jugadores compiten por la construcción de la catedral de una ciudad medieval...</p>
+                        </div>
+                        <div class="btn">
+                            <div class="btn1">
+                                <button disabled>Añadir al carrito</button>
+                            </div>
+                            <div class="btn2">
+                                <button class="eliminar" disabled>-</button>
+                                <span class="items_producto">0</span>
+                                <button class="carrito">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+            
+
+                    <li>
+                        <div class="card">
+                            <div class="frente">
+                                <div class="efecto_target">
+                                    <div class="img">
+    <a href="../secciones/detalleproducto.html">                                                                  <img src="../Medias/productos/catan.jpg" alt="Imagen de tarjeta">
+                                        </a>
+                                        <button class="b_frente">🔴</button>
+                                    </div>
+                                    <div class="text">
+    <a href="../secciones/detalleproducto.html">                                                                  <h3 class="titulo">Catan Base</h3>
+                                        </a>
+                                        <h5 class="precio">$70000</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reverso">
+                                <button class="b_reverso">🟢</button>
+                                <p class="descripcion">Juego de mesa donde los jugadores compiten para establecer asentamientos y ciudades sobre un tablero con recursos limitados...</p>
+                            </div>
+                            <div class="btn">
+                                <div class="btn1">
+                                    <button disabled>Añadir al carrito</button>
+                                </div>
+                                <div class="btn2">
+                                    <button class="eliminar" disabled>-</button>
+                                    <span class="items_producto">0</span>
+                                    <button class="carrito">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div class="card">
+                            <div class="frente">
+                                <div class="efecto_target">
+                                    <div class="img">
+                                      <a href="../secciones/detalleproducto.html">                                                                  <img src="../Medias/productos/catan2.jpg" alt="Imagen de tarjeta">
+                                        </a>
+                                        <button class="b_frente">🔴</button>
+                                    </div>
+                                    <div class="text">
+                                      <a href="../secciones/detalleproducto.html">                                                                  <h3 class="titulo">Amp 5-6 Exploradores y Piratas</h3>
+                                        </a>
+                                        <h5 class="precio"><del>$55000</del> $45000</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reverso">
+                                <button class="b_reverso">🟢</button>
+                                <p class="descripcion">Expansión para 5-6 jugadores que agrega nuevas reglas y piezas, sumergiéndote en una nueva aventura...</p>
+                            </div>
+                            <div class="btn">
+                                <div class="btn1">
+                                    <button disabled>Añadir al carrito</button>
+                                </div>
+                                <div class="btn2">
+                                    <button class="eliminar" disabled>-</button>
+                                    <span class="items_producto">0</span>
+                                    <button class="carrito">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div class="card">
+                            <div class="frente">
+                                <div class="efecto_target">
+                                    <div class="img">
+                                      <a href="../secciones/detalleproducto.html">                                                                  <img src="../Medias/productos/catan3.jpg" alt="Imagen de tarjeta">
+                                        </a>
+                                        <button class="b_frente">🔴</button>
+                                    </div>
+                                    <div class="text">
+                                      <a href="../secciones/detalleproducto.html">                                                                  <h3 class="titulo">Amp 5-6 Mercaderes y Bárbaros</h3>
+                                        </a>
+                                        <h5 class="precio">$55000</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reverso">
+                                <button class="b_reverso">🟢</button>
+                                <p class="descripcion">Expansión que incluye nuevas rutas comerciales y desafíos de barbarie para los jugadores...</p>
+                            </div>
+                            <div class="btn">
+                                <div class="btn1">
+                                    <button disabled>Añadir al carrito</button>
+                                </div>
+                                <div class="btn2">
+                                    <button class="eliminar" disabled>-</button>
+                                    <span class="items_producto">0</span>
+                                    <button class="carrito">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div class="card">
+                            <div class="frente">
+                                <div class="efecto_target">
+                                    <div class="img">
+                                      <a href="../secciones/detalleproducto.html">                                                                  <img src="../Medias/productos/redcathedral.webp" alt="Imagen de tarjeta">
+                                        </a>
+                                        <button class="b_frente">🔴</button>
+                                    </div>
+                                    <div class="text">
+                                      <a href="../secciones/detalleproducto.html">                                                                  <h3 class="titulo">Red Cathedral</h3>
+                                        </a>
+                                        <h5 class="precio">$56000</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reverso">
+                                <button class="b_reverso">🟢</button>
+                                <p class="descripcion">Juego de estrategia y construcción en el que los jugadores compiten por la construcción de la catedral de una ciudad medieval...</p>
+                            </div>
+                            <div class="btn">
+                                <div class="btn1">
+                                    <button disabled>Añadir al carrito</button>
+                                </div>
+                                <div class="btn2">
+                                    <button class="eliminar" disabled>-</button>
+                                    <span class="items_producto">0</span>
+                                    <button class="carrito">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card">
+                            <div class="frente">
+                                <div class="efecto_target">
+                                    <div class="img">
+    <a href="../secciones/detalleproducto.html">                                                                  <img src="../Medias/productos/redcathedral.webp" alt="Imagen de tarjeta">
+                                        </a>
+                                        <button class="b_frente">🔴</button>
+                                    </div>
+                                    <div class="text">
+    <a href="../secciones/detalleproducto.html">                                                                  <h3 class="titulo">Red Cathedral</h3>
+                                        </a>
+                                        <h5 class="precio">$56000</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reverso">
+                                <button class="b_reverso">🟢</button>
+                                <p class="descripcion">Juego de estrategia y construcción en el que los jugadores compiten por la construcción de la catedral de una ciudad medieval...</p>
+                            </div>
+                            <div class="btn">
+                                <div class="btn1">
+                                    <button disabled>Añadir al carrito</button>
+                                </div>
+                                <div class="btn2">
+                                    <button class="eliminar" disabled>-</button>
+                                    <span class="items_producto">0</span>
+                                    <button class="carrito">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    </ul>
             </div>
 
-        </div>
+      
         <div class="productos_tipo" >
             <div class="titulos" id="tituloJ">
                 <h1>EuroGames</h1>
@@ -260,179 +483,212 @@ Probar en el futuro rediseñar todo con base en bootstrap para practicar y ver s
             </div>
             <div class="tarjetas">
              
-                <ul class="tarjetas-list">
-                 
-                    <li class="tarjeta">
-                        <a href="../secciones/producto.html" class="tarjeta-link"> <img src="../Medias/productos/catan.jpg" alt="Imagen de tarjeta" class="tarjeta-img">
-                        </a>
-                            <p class="descripcion">Catan Base</p>
-                            <p class="precio">$70000</p>
-                            <div class="compras">
-                        <button class="eliminar">-</button>
-                        <span class="items_producto">0</span>
-                        <button class="carrito">+</button>
+         <ul class="tarjetas-list">
+            <li>
+                <div class="card">
+                    <div class="frente">
+                        <div class="efecto_target">
+                            <div class="img">
+                                <            <a href="../secciones/detalleproducto.html">                                          <<a href="../secciones/detalleproducto.html">                      
+                                    <img src="../Medias/productos/catan.jpg" alt="Imagen de tarjeta">
+                                </a>
+                                <button class="b_frente">🔴</button>
+                            </div>
+                            <div class="text">
+                                <            <a href="../secciones/detalleproducto.html">                                          <<a href="../secciones/detalleproducto.html">                      
+                                    <h3 class="titulo">Catan Base</h3>
+                                </a>
+                                <h5 class="precio">$70000</h5>
+                            </div>
+                        </div>
                     </div>
-                    </li>
-                    <li class="tarjeta">
-                        <a href=".#" class="tarjeta-link">
-                            <img src="../Medias/productos/catan2.jpg" alt="Imagen de tarjeta" class="tarjeta-img">
-                        </a>
-
-                            <p class="descripcion">Amp 5-6 Exploradores y Piratas </p>
-                            <p class="precio"><del><small>$55000</small></del> $45000</p>
-                            <div class="compras">
-                                <button class="eliminar">-</button>
-                                <span class="items_producto">0</span>
-                                <button class="carrito">+</button>
+                    <div class="reverso">
+                        <button class="b_reverso">🟢</button>
+                        <p class="descripcion">El clásico juego de mesa de colonización de islas, con recursos y comercio entre los jugadores. ¡Ideal para toda la familia!</p>
+                    </div>
+                    <div class="btn">
+                        <div class="btn1">
+                            <button disabled>Añadir al carrito</button>
+                        </div>
+                        <div class="btn2">
+                            <button class="eliminar" disabled>-</button>
+                            <span class="items_producto">0</span>
+                            <button class="carrito">+</button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <div class="card">
+                    <div class="frente">
+                        <div class="efecto_target">
+                            <div class="img">
+                              <a href="../secciones/detalleproducto.html">                                                          <img src="../Medias/productos/catan2.jpg" alt="Imagen de tarjeta">
+                                </a>
+                                <button class="b_frente">🔴</button>
                             </div>
-                    </li>
-                    <li class="tarjeta">
-                        <a href=".#" class="tarjeta-link">
-                            <img src="../Medias/productos/catan3.jpg" alt="Imagen de tarjeta" class="tarjeta-img">
-                        </a>
-
-                            <p class="descripcion">Amp 5-6 mercaderes y barbaros</p>
-                            <p class="precio">$55000</p>
-                            <div class="compras">
-                                <button class="eliminar">-</button>
-                                <span class="items_producto">0</span>
-                                <button class="carrito">+</button>
+                            <div class="text">
+                              <a href="../secciones/detalleproducto.html">                                                          <h3 class="titulo">Amp 5-6 Exploradores y Piratas</h3>
+                                </a>
+                                <h5 class="precio"><del><small>$55000</small></del> $45000</h5>
                             </div>
-                        </li>
-                    <li class="tarjeta">
-                        <a href=".#" class="tarjeta-link">
-                            <img src="../Medias/productos/redcathedral.webp" alt="Imagen de tarjeta"
-                                class="tarjeta-img">
-                            </a>
-
-                                <p class="descripcion">Red Cathedral</p>
-                            <p class="precio">$56000</p>
-                            <div class="compras">
-                                <button class="eliminar">-</button>
-                                <span class="items_producto">0</span>
-                                <button class="carrito">+</button>
+                        </div>
+                    </div>
+                    <div class="reverso">
+                        <button class="b_reverso">🟢</button>
+                        <p class="descripcion">Expansión de Catan que agrega exploradores y piratas, con nuevos desafíos y mecánicas para los jugadores. ¡Más diversión asegurada!</p>
+                    </div>
+                    <div class="btn">
+                        <div class="btn1">
+                            <button disabled>Añadir al carrito</button>
+                        </div>
+                        <div class="btn2">
+                            <button class="eliminar" disabled>-</button>
+                            <span class="items_producto">0</span>
+                            <button class="carrito">+</button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <div class="card">
+                    <div class="frente">
+                        <div class="efecto_target">
+                            <div class="img">
+                              <a href="../secciones/detalleproducto.html">                                                          <img src="../Medias/productos/catan3.jpg" alt="Imagen de tarjeta">
+                                </a>
+                                <button class="b_frente">🔴</button>
                             </div>
-                        </li>
-                    
-                </ul>
-                <ul class="tarjetas-list">
-                    <li class="tarjeta">
-                        <a href=".#" class="tarjeta-link">
-                            <img src="../Medias/productos/redcathedral.webp" alt="Imagen de tarjeta"
-                                class="tarjeta-img">
-                            </a>
-
-                                <p class="descripcion">Red Cathedral</p>
-                            <p class="precio">$56000</p>
-                            <div class="compras">
-                                <button class="eliminar">-</button>
-                                <span class="items_producto">0</span>
-                                <button class="carrito">+</button>
+                            <div class="text">
+                              <a href="../secciones/detalleproducto.html">                                                          <h3 class="titulo">Amp 5-6 Mercaderes y Bárbaros</h3>
+                                </a>
+                                <h5 class="precio">$55000</h5>
                             </div>
-                        </li>
-                  
-                    <li class="tarjeta">
-                        <a href=".#" class="tarjeta-link">
-                            <img src="../Medias/productos/catan3.jpg" alt="Imagen de tarjeta" class="tarjeta-img">
-                        </a>
-
-                            <p class="descripcion">Amp 5-6 mercaderes y barbaros</p>
-                            <p class="precio">$55000</p>
-                            <div class="compras">
-                                <button class="eliminar">-</button>
-                                <span class="items_producto">0</span>
-                                <button class="carrito">+</button>
+                        </div>
+                    </div>
+                    <div class="reverso">
+                        <button class="b_reverso">🟢</button>
+                        <p class="descripcion">Otra expansión de Catan que introduce nuevos elementos como mercaderes, bárbaros y nuevas reglas que cambian el curso del juego.</p>
+                    </div>
+                    <div class="btn">
+                        <div class="btn1">
+                            <button disabled>Añadir al carrito</button>
+                        </div>
+                        <div class="btn2">
+                            <button class="eliminar" disabled>-</button>
+                            <span class="items_producto">0</span>
+                            <button class="carrito">+</button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <div class="card">
+                    <div class="frente">
+                        <div class="efecto_target">
+                            <div class="img">
+                              <a href="../secciones/detalleproducto.html">                                                          <img src="../Medias/productos/redcathedral.webp" alt="Imagen de tarjeta">
+                                </a>
+                                <button class="b_frente">🔴</button>
                             </div>
-                        </li>
-                  
-                
-                </ul>
+                            <div class="text">
+                              <a href="../secciones/detalleproducto.html">                                                          <h3 class="titulo">Red Cathedral</h3>
+                                </a>
+                                <h5 class="precio">$56000</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reverso">
+                        <button class="b_reverso">🟢</button>
+                        <p class="descripcion">Juego de mesa de estrategia de construcción de catedrales. Los jugadores se enfrentan por el control de las diferentes provincias del imperio...</p>
+                    </div>
+                    <div class="btn">
+                        <div class="btn1">
+                            <button disabled>Añadir al carrito</button>
+                        </div>
+                        <div class="btn2">
+                            <button class="eliminar" disabled>-</button>
+                            <span class="items_producto">0</span>
+                            <button class="carrito">+</button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <div class="card">
+                    <div class="frente">
+                        <div class="efecto_target">
+                            <div class="img">
+                              <a href="../secciones/detalleproducto.html">                                                          <img src="../Medias/productos/redcathedral.webp" alt="Imagen de tarjeta">
+                                </a>
+                                <button class="b_frente">🔴</button>
+                            </div>
+                            <div class="text">
+                              <a href="../secciones/detalleproducto.html">                                                          <h3 class="titulo">Red Cathedral</h3>
+                                </a>
+                                <h5 class="precio">$56000</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reverso">
+                        <button class="b_reverso">🟢</button>
+                        <p class="descripcion">Juego de mesa de estrategia de construcción de catedrales. Los jugadores se enfrentan por el control de las diferentes provincias del imperio...</p>
+                    </div>
+                    <div class="btn">
+                        <div class="btn1">
+                            <button disabled>Añadir al carrito</button>
+                        </div>
+                        <div class="btn2">
+                            <button class="eliminar" disabled>-</button>
+                            <span class="items_producto">0</span>
+                            <button class="carrito">+</button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <div class="card">
+                    <div class="frente">
+                        <div class="efecto_target">
+                            <div class="img">
+                              <a href="../secciones/detalleproducto.html">                                                          <img src="../Medias/productos/catan3.jpg" alt="Imagen de tarjeta">
+                                </a>
+                                <button class="b_frente">🔴</button>
+                            </div>
+                            <div class="text">
+                              <a href="../secciones/detalleproducto.html">                                                          <h3 class="titulo">Amp 5-6 Mercaderes y Bárbaros</h3>
+                                </a>
+                                <h5 class="precio">$55000</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reverso">
+                        <button class="b_reverso">🟢</button>
+                        <p class="descripcion">Otra expansión de Catan que introduce nuevos elementos como mercaderes, bárbaros y nuevas reglas que cambian el curso del juego.</p>
+                    </div>
+                    <div class="btn">
+                        <div class="btn1">
+                            <button disabled>Añadir al carrito</button>
+                        </div>
+                        <div class="btn2">
+                            <button class="eliminar" disabled>-</button>
+                            <span class="items_producto">0</span>
+                            <button class="carrito">+</button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+         </ul>
             </div>
 
         </div>
-        <div class="productos_tipo" >
-            <div class="titulos" id="tituloJ">
-                <h1>Estrategia</h1>
-               
-            </div>
-            <div class="tarjetas">
-             
-                <ul class="tarjetas-list">
-                 
-                    <li class="tarjeta">
-                        <a href="../secciones/producto.html" class="tarjeta-link"> <img src="../Medias/productos/catan.jpg" alt="Imagen de tarjeta" class="tarjeta-img">
-                        </a>
-                            <p class="descripcion">Catan Base</p>
-                            <p class="precio">$70000</p>
-                            <div class="compras">
-                        <button class="eliminar">-</button>
-                        <span class="items_producto">0</span>
-                        <button class="carrito">+</button>
-                    </div>
-                    </li>
-                    <li class="tarjeta">
-                        <a href=".#" class="tarjeta-link">
-                            <img src="../Medias/productos/catan2.jpg" alt="Imagen de tarjeta" class="tarjeta-img">
-                        </a>
-
-                            <p class="descripcion">Amp 5-6 Exploradores y Piratas </p>
-                            <p class="precio"><del><small>$55000</small></del> $45000</p>
-                            <div class="compras">
-                                <button class="eliminar">-</button>
-                                <span class="items_producto">0</span>
-                                <button class="carrito">+</button>
-                            </div>
-                    </li>
-                    <li class="tarjeta">
-                        <a href=".#" class="tarjeta-link">
-                            <img src="../Medias/productos/catan3.jpg" alt="Imagen de tarjeta" class="tarjeta-img">
-                        </a>
-
-                            <p class="descripcion">Amp 5-6 mercaderes y barbaros</p>
-                            <p class="precio">$55000</p>
-                            <div class="compras">
-                                <button class="eliminar">-</button>
-                                <span class="items_producto">0</span>
-                                <button class="carrito">+</button>
-                            </div>
-                        </li>
-                    <li class="tarjeta">
-                        <a href=".#" class="tarjeta-link">
-                            <img src="../Medias/productos/redcathedral.webp" alt="Imagen de tarjeta"
-                                class="tarjeta-img">
-                            </a>
-
-                                <p class="descripcion">Red Cathedral</p>
-                            <p class="precio">$56000</p>
-                            <div class="compras">
-                                <button class="eliminar">-</button>
-                                <span class="items_producto">0</span>
-                                <button class="carrito">+</button>
-                            </div>
-                        </li>
-                       
-                </ul>
-                <ul class="tarjetas-list">
-                    <li class="tarjeta">
-                        <a href=".#" class="tarjeta-link">
-                            <img src="../Medias/productos/redcathedral.webp" alt="Imagen de tarjeta"
-                                class="tarjeta-img">
-                            </a>
-
-                                <p class="descripcion">Red Cathedral</p>
-                            <p class="precio">$56000</p>
-                            <div class="compras">
-                                <button class="eliminar">-</button>
-                                <span class="items_producto">0</span>
-                                <button class="carrito">+</button>
-                            </div>
-                        </li>
-                  
-                           
-                </ul>
-            </div>
-
-        </div>
+       
     </section>   
                
 
@@ -457,7 +713,7 @@ Probar en el futuro rediseñar todo con base en bootstrap para practicar y ver s
 
        
 
-    <script src="Funciones.js"></script>
+    <script src="../../Funciones.js"></script>
 </body>
 
 </html>
