@@ -14,8 +14,7 @@
     grid-area: ofertas;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    align-items: flex-start;}
+    width: 100%;}
 /*--------------DIV-------------*/
     .ofertas_descripcion {
     display: flex;
@@ -295,6 +294,7 @@ align-items: center;
 
 @media(max-width: 650px){
     .contenido{  grid-template-rows: 200px 1fr;}
+    .ofertas .card{ height: 200px;}
     .img img { height: 100px;}
 .card{width: 9.5rem;}
 .btn button {font-size: 1rem;
@@ -344,11 +344,11 @@ width: 2.5rem;}
 .productos_tipo  .precio{font-size: 1.5rem;}
 }
 @media (max-width:500px){
-  
+  .ofertas .img img{height: 90px;}
     /*-----------------Adaptacion------------------------------------*/
 .productos_tipo{margin: 2px;}
-    .tarjetas-list{ flex-direction: column;}
-    .tarjeta{width: 100%;}  
-.flecha-izquierda,.flecha-derecha{transform: rotate(90deg);}
+  .productos_tipo  .tarjetas-list{ flex-direction: column;}
+  .productos_tipo   .tarjeta{width: 100%;}  
+  .productos_tipo .flecha-izquierda, .productos_tipo .flecha-derecha{transform: rotate(90deg);}
     /*-----------------Texto tarjeta------------------------------------*/
 }
