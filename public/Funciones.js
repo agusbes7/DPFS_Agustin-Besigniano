@@ -3,19 +3,56 @@ document.addEventListener("DOMContentLoaded", function() {
   console.log("El DOM se ha cargado correctamente.");
 });
 
-// --------DESCRIPCION--------------------------
+//---------------SECCION DE CONTENIDO DE INDEX--------------------
+let botones = document.querySelectorAll(".ocultar_tipo");
+let botonesMostrar = document.querySelectorAll(".mostrar_tipo");
+
+botones.forEach(b => {
+  b.addEventListener("click", function () {
+    try {
+      console.log("Se presionó");
+    let padre = b.parentElement;  
+    if (!padre) return; // Si el padre no existe, salir
+    let hermano = padre.nextElementSibling;  
+    let bot_hermano = b.nextElementSibling;  
+   
+    if (hermano) {   hermano.style.display = 'none'; }
+
+    if (bot_hermano) {
+      b.style.display = 'none';  
+      bot_hermano.style.display = "flex"; }
+    } catch (error) {
+      console.error("Error en botón mostrar:", error);
+    }
+  });
+});
+botonesMostrar.forEach(b => {
+  b.addEventListener("click", function () {
+    try {
+      console.log("Se presionó");
+      let padre = b.parentElement;
+      if (!padre) return; // Si el padre no existe, salir
+
+      let hermano = padre.nextElementSibling;
+      let bot_hermano = b.previousElementSibling;
+
+      if (hermano) hermano.style.display = 'flex';
+      if (bot_hermano) {
+        b.style.display = 'none';
+        bot_hermano.style.display = "flex";
+      }
+    } catch (error) {
+      console.error("Error en botón mostrar:", error);
+    }
+  });
+});
+// --------DESCRIPCION TARJETAS EFECTO--------------------------
 let target_efect = document.querySelectorAll(".frente");
 
 target_efect.forEach(e => {
     let hijo_Img = e.querySelector(".efecto_target").querySelector(".img button"); // Botón rojo
     let reverso = e.parentElement.querySelector(".reverso"); // Panel reverso
     let botonVerde = reverso.querySelector("button"); // Botón verde en reverso
-
-    // DEPURACIÓN: Verifica si se encuentran los elementos
-    console.log("Elemento frente encontrado:", e);
-    console.log("Botón rojo encontrado:", hijo_Img);
-    console.log("Reverso encontrado:", reverso);
-    console.log("Botón verde encontrado:", botonVerde);
 
     // Si algún elemento no se encuentra, muestra un error y detiene la ejecución.
     if (!hijo_Img || !reverso || !botonVerde) {
@@ -24,112 +61,77 @@ target_efect.forEach(e => {
     }
 
     // Evento para botón rojo 🔴
+ 
     hijo_Img.addEventListener("click", function (event) {
-        event.stopPropagation(); // Evita que otros eventos interfieran
+      event.stopPropagation(); // Evita que eventos padres se disparen
+      try {
         console.log("Clic en botón rojo");
         reverso.style.display = "flex";
         e.style.display = "none";
+      } catch (error) {
+        console.error("Error en botón rojo:", error);
+      }
     });
-
+    
     // Evento para botón verde 🟢
     botonVerde.addEventListener("click", function (event) {
-        event.stopPropagation();
+      event.stopPropagation(); // Evita que eventos padres se disparen
+      try {
         console.log("Clic en botón verde");
         reverso.style.display = "none";
         e.style.display = "flex";
+      } catch (error) {
+        console.error("Error en botón rojo:", error);
+      }
     });
 });
 //-----------------LOGIN-------------------
-let estadoRegistro =0;
-let monto=0;
+let registro = document.getElementById("toggle_registro");
+let x = document.querySelector('.registro');
+let estadoRegistro = 0;
 
-function mostrarOcultarRegistro(){
-let x=document.querySelector('.registro');
-if(estadoRegistro==0){
-  estadoRegistro=1;
-  x.style.display='flex';
-}
-else{
-  estadoRegistro=0;
-  x.style.display='none';}}
+// Verificar si 'x' se obtiene correctamente
+console.log(x);  // Esto debería mostrar el elemento o 'null' si no se encuentra
+if(registro) {
+registro.addEventListener("click", function () {
+  console.log('estadoRegistro antes:', estadoRegistro);  // Depurar estado
 
-//--------------INDEX------------------------
-function ocultarGrilla(x) {
+  if (estadoRegistro == 0) {
+    x.style.display = 'flex';  // Mostrar el elemento
+    estadoRegistro++;  // Incrementar el estado
+  } else {
+    estadoRegistro--;  // Decrementar el estado
+    x.style.display = 'none';  // Ocultar el elemento
+  }
 
-  let aux = document.getElementById(getElemento(x));
-  let botonO = document.getElementById(getBotonO(x));
-  let botonM = document.getElementById(getBotonM(x));
-  let seccion=document.getElementById(getTitulo(x));
-  if (aux) aux.style.display = 'none';
-  if (botonO) botonO.style.display = 'none';
-  if (botonM) botonM.style.display = 'flex';
-seccion.style.height='auto';}
-//-----------------
-function mostrarGrilla(x) {
-  let seccion=document.getElementById(getTitulo(x));
-  let aux = document.getElementById(getElemento(x));
-  let botonO = document.getElementById(getBotonO(x));
-  let botonM = document.getElementById(getBotonM(x));
-  if (aux) aux.style.display = 'flex'; // Asegura que el elemento se muestre
-  if (botonO) botonO.style.display = 'flex';
-  if (botonM) botonM.style.display = 'none';
-seccion.style.height='auto';
-}
-//-----------------
-function getTitulo(x){
-  switch(x){
-    case 1: return 'tituloJ';
-    case 2: return 'tituloL';
-    case 3: return 'tituloA';
-    default: return null;}}
-//-----------------
-function getElemento(x) {
-  switch (x) {
-      case 1: return 'juegos';
-      case 2: return 'libros';
-      case 3: return 'articulos';
-      default: return null;  }}
-//-----------------
-function getBotonO(x) {
-  switch (x) {
-      case 1: return 'oTogglebuttonJ';
-      case 2: return 'oTogglebuttonL';
-      case 3: return 'oTogglebuttonA';
-      default: return null;}}
-//-----------------
-function getBotonM(x) {
-  switch (x) {
-      case 1: return 'mTogglebuttonJ';
-      case 2: return 'mTogglebuttonL';
-      case 3: return 'mTogglebuttonA';
-      default: return null;}}
-//-----------------
-
-function total(x,id){
-  let y=document.getElementById(id);
-  y.style.display="flex";
-
-}
-/*-----------------Abrir imagenes----------------*/
-document.querySelectorAll(".miniatura").forEach(i => {
-  i.addEventListener("click", function(event) {
-    let hermano = this.nextElementSibling; // Selecciona el siguiente elemento hermano (el div que contiene la imagen ampliada)
-    let elemento = hermano.querySelector(".img_exp"); // Selecciona la imagen dentro del div
-    console.log("click src:" + this.src); // Muestra la fuente de la imagen en la consola
-    elemento.src = this.src; // Establece el src de la imagen ampliada con el src de la imagen en miniatura
-    console.log("hermano src:" + elemento.src); // Muestra la nueva fuente de la imagen ampliada
-    hermano.style.display = "flex"; // Muestra el lightbox
-  });
+  console.log('estadoRegistro después:', estadoRegistro);  // Depurar estado
 });
+}
+
+
+/*-----------------Abrir imagenes----------------*/
+let abrir=document.querySelectorAll(".miniatura");
+
+if(abrir){abrir.forEach(i => {
+  i.addEventListener("click", function(event) {
+    let hermano = this.nextElementSibling; 
+    let elemento = hermano.querySelector(".img_exp"); 
+    console.log("click src:" + this.src); 
+    elemento.src = this.src; 
+    console.log("hermano src:" + elemento.src); 
+    hermano.style.display = "flex"; 
+  });
+});}
 /*--------------------Cerrar imagenes--------------- */
-document.querySelectorAll(".close").forEach(i =>{
+let cerrar=document.querySelectorAll(".close");
+if(cerrar){cerrar.forEach(i =>{
   i.addEventListener("click",function(event){
 
 let padre=this.parentElement;
 padre.style.display="none";
 let hermano=this.previousElementSibling;
 hermano.src="";})
-  });
+  });}
 
 
 //---------------------------------------------

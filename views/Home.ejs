@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include('./partials/head', { page }) -%>
+
+
+<body>
+   
+    <div class="container">
+    <%- include('./partials/header') %>
+    <%- include('./partials/banner') %>
+    <%- include('./partials/navegacion') %>
+    <%- include('./partials/informacion') %>
+    <%- include('./partials/carritoFlotante') %>
+
+<!------------------------CONTENIDO---------------------------->
+        <div class="contenido">
+           
+            <%- include('./particulares/ofertas',{MedioDeOferta: "Ofertas promocionales solo tarjetas de debito",
+             Descuento:  "25% descuento",
+              extra: "en todo lo relacionado con el señor de los anillos pagando con tarjeta Supervielle"})  %>
+
+    <section class="productos" >
+<%- include('./partials/productos_tipo', {productos:Juegos, tipo: "Juegos"}) -%>
+<%- include('./partials/productos_tipo', {productos: Libros,tipo: "Libros"}) -%>
+<%- include('./partials/productos_tipo',{productos: Articulos, tipo: "Articulos"}) -%>
+
+<% console.log(Juegos) %>
+        </section> 
+        </div>
+                    <!-- ------------------------------------------------------------ -->
+         
+                    
+                
+        
+                    <%- include('./partials/footer') %>
+
+        </div>
+        <!-- ------------------------------------------------------------ -->
+
+       
+
+    <script src="/public/Funciones.js"></script>
+</body>
+
+</html>

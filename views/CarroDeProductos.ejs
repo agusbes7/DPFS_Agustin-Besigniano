@@ -33,83 +33,23 @@ Probar en el futuro rediseñar todo con base en bootstrap para practicar y ver s
     <p>Envíos gratis a todo el país</p>
     <img src="./estructuras/Medias/iconos/camion-de-carga.png" alt="camion de envio" id="der">
 </header>
-    
-        <!-- ------------------BANNER------------------------------------------ -->
-        <section class="banner">
-            <img class="banner_img_f" src="./estructuras/Medias/Imagenes/Game_Chronicle__1_-removebg-preview.png"
-                alt="Hombre pelirrojo con penetrantes ojos verdes">
-        <div class="banner_format">
-        <h1>GAME CHRONICLE</h1>
-            <img class="banner_img_s" src="./estructuras/Medias/iconos/icons8-guitar-96-removebg-preview-removebg-preview.png"
-                alt="Laud instrumento musical">
-            </div>
-            </section>
-
-        <!-- ------------------------NAVIGATION------------------------------------ -->
-
-        <nav class="navigation">
-            <!-- -----------------LISTA DE NAVEGACION-------------------------- -->
-<!-- Botón de menú hamburguesa -->
-<input type="checkbox" id="menu_toggle">
-<label for="menu_toggle" class="menu_label">☰</label>
-
-            <div class="navigation_opc">
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="./estructuras/secciones/Juegos.html">Juegos</a></li>
-                    <li><a href="./estructuras/secciones/Libros.html">Libros</a></li>
-                    <li><a href="./estructuras/secciones/Articulos.html">Articulos</a></li>
-                    <li><a href="./estructuras/secciones/mensaje.html">Contacto</a></li>
-                    <li><a href="./estructuras/secciones/login.html">cuenta</a></li>
-                </ul>
-
-            </div>
-            <!-- -------------------BUSCADOR BARRA DE NAV----------------------------------------- -->
-            <div class="busqueda">
-                <form action="#">
-                    <input type="text" placeholder="Search"
-                           name="search">
-                    <button>
-                        <i class="fa fa-search"></i>
-                    </button>
-                </form>
-              
-            </div>
-        </nav>
-        <!-- ------------------------------------------------------------ -->
-        <section class="informacion">
-    
-            <p>Aceptamos efectivo, transferencia, tarjetas </p>
-            <ul>
-                <li><img src="./estructuras/Medias/iconos/visa.png" alt="visa"></li>
-                <li><img src="./estructuras/Medias/iconos/tarjeta-de-credito (1).png" alt="tarjeta de credito"></li>
-                <li><img src="./estructuras/Medias/iconos/redondo.png" alt="Mastercard"></li>
-                <li><img src="./estructuras/Medias/iconos/tarjeta-de-credito.png" alt="tarjeta"></li>
-                
-            </ul>
-        </section>
-        <!-- ----------------CARRITO-------------------------------------------- -->
-       <div class="div_carrito">
-            <div class="carrito_icon">
-            <a href="./estructuras/secciones/carrito.html"><img src="./estructuras/Medias/iconos/carrito-de-compras.png" alt="carrito de compras"></a>
-            <span>∅</span>
-        </div>
-            <div class="mensaje_carrito">
-    <p>No hay articulos en el carrito aun</p>
-            </div>
-  <div class="preview_articulos">
-    contenido a definir
-    </div>
-</div>
+   <%- include('./partials/header') %>
+    <%- include('./partials/banner') %>
+    <%- include('./partials/navegacion') %>
+    <%- include('./partials/informacion') %>
+    <%- include('./partials/carrito') %>
 
 <!------------------------CONTENIDO---------------------------->
         <div class="contenido">
            
+            <%- include('./particulares/ofertas') %>
+
+
             <!-- ------------------------------------------------------------ -->
             <section class="ofertas">
                 <div class="ofertas_descripcion">
                     <p class="ofertasp">Ofertas promocionales solo tarjetas de debito  
-                        <b>25% descuento </b>> en todo lo relacionado con el señor de los anillos pagando con
+                        <bold>25% descuento</bold> en todo lo relacionado con el señor de los anillos pagando con
                         tarjeta Supervielle</p></div>
                 <div class="tarjetas">
                   <ul class="tarjetas-list">
@@ -190,11 +130,11 @@ Probar en el futuro rediseñar todo con base en bootstrap para practicar y ver s
     
 
         <div class="productos_tipo" >
-            <div class="titulos" id="tituloJ">
-                <h1>Juegos</h1>
-                <button  type="button" name="vistaproductos" class="ocultar_tipo">▲</button>
-                <button  type="button" name="vistaproductos" class="mostrar_tipo">▼</button>
-            </div>
+          <div class="titulos">
+            <h1>Juegos</h1>
+            <button  type="button" name="vistaproductos"  class="ocultar_tipo">▲</button>
+            <button  type="button" name="vistaproductos" class="mostrar_tipo">▼</button>
+        </div>
             <div class="tarjetas" id="juegos">
               <button  class="flecha-izquierda" id="juegoVo">◄</button>
              
@@ -365,11 +305,11 @@ Probar en el futuro rediseñar todo con base en bootstrap para practicar y ver s
         <!-- ------------------------------------------------------------ -->
 
         <div class="productos_tipo" >
-            <div class="titulos" id="tituloL">
-                <h1>Libros</h1>
-                <button type="button" name="vistaproductos" class="ocultar_tipo">▲</button>
-                <button  type="button" name="vistaproductos" class="mostrar_tipo">▼</button>
-            </div>
+          <div class="titulos">
+            <h1>Libros</h1>
+            <button  type="button" name="vistaproductos"  class="ocultar_tipo">▲</button>
+            <button  type="button" name="vistaproductos" class="mostrar_tipo">▼</button>
+        </div>
             <div class="tarjetas" id="libros">
             <button  class="flecha-izquierda" id="libroVo">◄</button>
 
@@ -542,11 +482,11 @@ Probar en el futuro rediseñar todo con base en bootstrap para practicar y ver s
         <!-- ------------------------------------------------------------ -->
 
         <div class="productos_tipo">
-            <div class="titulos">
-                <h1>Articulos</h1>
-                <button  type="button" name="vistaproductos"  class="ocultar_tipo">▲</button>
-                <button  type="button" name="vistaproductos" class="mostrar_tipo">▼</button>
-            </div>
+          <div class="titulos">
+            <h1>Articulos</h1>
+            <button  type="button" name="vistaproductos"  class="ocultar_tipo">▲</button>
+            <button  type="button" name="vistaproductos" class="mostrar_tipo">▼</button>
+        </div>
             <div class="tarjetas"  id="articulos">
 <button  class="flecha-izquierda" id="articuloVo">◄</button>
 
@@ -726,15 +666,8 @@ Probar en el futuro rediseñar todo con base en bootstrap para practicar y ver s
                     
                 
         
-            <footer>
-                <div class="mensaje">
-                    <p>@Derechos Reservados 2024@ <i>Hora de perseguir el viento</i></p>
-                    <input type="checkbox" name="menu_Responsive" id="menu_toggle">
-                    <label for="menu_toggle" class="menu_label"></label>
-                    <div class="foo_container">Estructura</div>
-                </div>
-    
-               </footer>
+                    <%- include('./partials/footer') %>
+
         </div>
         <!-- ------------------------------------------------------------ -->
 
