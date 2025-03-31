@@ -1,0 +1,20 @@
+<div class="productos_tipo">
+    <div class="titulos">
+        <h1><%= tipo %></h1>
+        <button type="button" name="vistaproductos" class="ocultar_tipo">▲</button>
+        <button type="button" name="vistaproductos" class="mostrar_tipo">▼</button>
+    </div>
+    <div class="tarjetas">
+        <button class="flecha-izquierda">◄</button>
+
+        <ul class="tarjetas-list">
+            <% productos.forEach(producto => { %>
+                <li>
+                    <%- include('../partials/card', { producto }) %>
+                </li>
+            <% }) %>
+        </ul>
+
+        <button class="flecha-derecha">►</button>
+    </div>
+</div>

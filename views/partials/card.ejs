@@ -1,0 +1,33 @@
+<div class="card">
+    <div class="frente">
+        <div class="efecto_target">
+            <div class="img">
+                <a href="/detailProduct/1">
+
+                    <img src="<%= producto.imagen %>" alt="imagen del producto">
+                </a>
+                <button class="b_frente">🔴</button>
+            </div>
+            <div class="text">
+                <a href="#">
+                    <h3 class="titulo"><%= producto.nombre %></h3>
+                </a>
+                <h5 class="precio">$ <%= producto.precio %></h5>
+            </div>
+        </div>
+    </div>
+    <div class="reverso">
+        <button class="b_reverso">🟢</button>
+        <p class="descripcion"><%= producto.descripcion.slice(0,100)+ "..." %></p>
+    </div>
+    <div class="btn">
+        <div class="btn1">
+            <button>Añadir al carrito</button>
+        </div>
+        <div class="btn2">
+            <button class="eliminar" >-</button>
+            <span class="items_producto">1</span>
+            <button class="carrito">+</button>
+        </div>
+    </div>
+</div>

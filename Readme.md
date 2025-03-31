@@ -55,10 +55,8 @@ Funciones.js
 
 >cuando avance con estas secciones sin estar familiarizado con js mas avanzado y herramientas como node js, express, el implementar bases de datos no estaba seguro de como podia cargar miles de productos aqui y tener todo controlado cada seccion con boton correspondiente y  tantos comportamiento tan milimetricos que era dificil iba a tener documentos tendiendo a infinito como en limites.Me preocupe demasiado por controlar cosas que excedian el control que html y css podian brindar y eso alargo mucho el proceso de trabajo. Luego comence a avanzar con los contenidos  del curso y me despreocupe de eso, ademas eran problemas para otros sprints. 
 Dejo algunas imagenes de secciones para que puedan observar 
----
 
 
-![alt text](./public/estructuras/Medias/Imagenes/banXH0tDw.jpg)
 
 ## **INDEX**
 >![alt text](<public/estructuras/Medias/maquetas/sprint 2/index1.jpg>)  
@@ -83,3 +81,8 @@ Dejo algunas imagenes de secciones para que puedan observar
 >![alt text](<public/estructuras/Medias/maquetas/sprint 2/producto1.jpg>)  
 
 >![alt text](<public/estructuras/Medias/maquetas/sprint 2/producto2.jpg>)
+
+
+Por ultimo cree la estructura de proyectos para comenzar con node y express proximamente mientras seguia viendo que se puede refinar y mejorar aun más 
+
+![alt text](./public/estructuras/Medias/Imagenes/banXH0tDw.jpg)

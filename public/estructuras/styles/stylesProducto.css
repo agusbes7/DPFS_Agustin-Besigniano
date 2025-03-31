@@ -83,8 +83,7 @@ gap: 1rem;}
         align-items: center;
         display: flex;
         justify-content: center;}
-        .DetailArticulo{display: none;}
-        .DetailLibro{display: none;}
+        
             
     /*----------------Contenedor del boton -----------------------*/
 .seccion_btn{

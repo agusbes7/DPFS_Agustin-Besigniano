@@ -1,0 +1,29 @@
+<div class="DetailLibro">
+    <table>
+        <tbody>
+    <tr>
+      <th>ISBN:</th>
+      <td><%= producto.ISBN %></td> 
+     </tr> <tr>
+      <th>Autor</th>
+      <td><%= producto.Autor %></td> 
+     </tr> <tr>
+      <th>Paginas:</th>
+      <td><%= producto.Paginas %></td> 
+     </tr> <tr>
+      <th>fecha de publicacion:</th>
+      <td><%= producto.FechaDePublicacion %></td> 
+     </tr> <tr>
+      <th>idiomas:</th>
+      <td><%= producto.idiomas.join(",") %></td> 
+     </tr> <tr>
+      <th>Formato:</th>
+      <td><%= producto.Formato %></td> 
+     </tr>
+     <tr>
+      <th>Editorial:</th>
+      <td><%= producto.Editorial %></td> 
+     </tr>
+        </tbody>
+    </table>
+   </div>

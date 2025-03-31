@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include('partials/head', { page: "login" }) %>
+
+    
+<body>
+   
+    <div class="container">
+    <%- include('partials/header') %>
+    <%- include('partials/banner') %>
+    <%- include('partials/navegacion') %>
+    <%- include('partials/informacion') %>
+    <%- include('partials/carritoFlotante') %>
+
+<!------------------------CONTENIDO---------------------------->
+        <div class="contenido">
+           
+            <%- include('particulares/formularios/form_login') %>
+            <%- include('particulares/formularios/login_registrar') %>
+            <%- include('particulares/formularios/form_registro') %>
+         
+        </div>
+                    <!-- ------------------------------------------------------------ -->
+         
+                    
+                
+        
+                    <%- include('partials/footer') %>
+
+        </div>
+        <!-- ------------------------------------------------------------ -->
+
+       
+
+    <script src="/Funciones.js"></script>
+</body>
+
+</html>

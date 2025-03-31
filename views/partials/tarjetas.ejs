@@ -1,0 +1,7 @@
+<div class="tarjetas">
+    <ul class="tarjetas-list">
+        <% productos.forEach(function(producto) { %>
+            <%- include('producto', { producto: producto }) %>
+        <% }); %>
+    </ul>
+</div>

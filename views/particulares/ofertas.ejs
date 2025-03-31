@@ -1,0 +1,16 @@
+<section class="ofertas">
+    <div class="ofertas_descripcion">
+        <p class="ofertasp"><%= oferta.MedioDeOferta %>  <b><%= oferta.Descuento %></b>  <%= oferta.extra %></p></div>
+    <div class="tarjetas">
+      <ul class="tarjetas-list">
+        <% ProductoOferta.forEach(producto => { %>
+            <li>
+                <%- include('../partials/card', { producto }) %>
+
+            </li>
+        <% }) %>
+       
+        </ul>
+    </div>
+
+</section>

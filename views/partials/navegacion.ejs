@@ -1,0 +1,30 @@
+<nav class="navigation">
+    <!-- -----------------LISTA DE NAVEGACION-------------------------- -->
+<!-- Botón de menú hamburguesa -->
+<input type="checkbox" id="menu_toggle">
+<label for="menu_toggle" class="menu_label">☰</label>
+
+    <div class="navigation_opc">
+        <ul>
+            
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/estructuras/secciones/Juegos.html">Juegos</a></li>
+            <li><a href="/estructuras/secciones/Libros.html">Libros</a></li>
+            <li><a href="/estructuras/secciones/Articulos.html">Articulos</a></li>
+            <li><a href="FormularioDeContacto">Contacto</a></li>
+            <li><a href="<%= direccion %>">cuenta</a></li>
+        </ul>
+
+    </div>
+    <!-- -------------------BUSCADOR BARRA DE NAV----------------------------------------- -->
+    <div class="busqueda">
+        <form action="#">
+            <input type="text" placeholder="Search"
+                   name="search">
+            <button>
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+      
+    </div>
+</nav>

@@ -1,0 +1,66 @@
+<div class="articulosCarrito">
+          
+    <div class="Carrito_Table">
+            <table>
+               <!------------------- Encabezado de columnas-------------------------------->
+                <thead>
+                <tr>
+                    <th>Descripcion</th>
+                          <th>imagen</th>
+                  <th>Costo Unitario $</th>
+                  <th>Unidades</th>
+                  <th>subTotal</th>
+                  <th> </th>
+                </tr>
+            </thead>
+               <!------------------- Cuerpo de tablas-------------------------------->
+    
+            <tbody>
+                <% Array.from(productos).forEach(producto => { %>
+                    <tr>
+                        <td><%= producto.nombre %></td>
+                        <td >
+                          <div class="Imagen">
+                            <img class="miniatura" src="<%= producto.imagen %>"  alt="<%= producto.accesibilidad %>">
+                            <div class="abrir_imagen">
+                             <span class="close">&times;</span>
+                             <img class="img_exp" src="" alt="Imagen ampliada">
+                         </div>
+                               </div>   </td>
+                        <td><%= producto.precio %></td>
+                        <td>
+                            <select name="cantidad" id="cantidadSelect" onchange="actualizarPrecio(this)">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </td>
+                        <td class="subtotal"><%= producto.precio %></td>
+
+                        <td><button  id="1" onclick="eliminarFila(this)">🗑️</button></td>
+                    </tr>
+
+                    <% }); %>
+
+                 
+            </tbody>
+               <!------------------- Pie de tabla-------------------------------->
+    
+            <tfoot>
+                <tr class="total-row">
+                    <td   colspan="4">Total</td>
+                    <td  colspan="2" id="monto">$ <%= monto %></td>
+                  </tr>
+                  </tfoot>
+            </table>
+    <!--------------------BOTON ----------------------------->        
+               </div>
+         <button  id="abrirPago" class="boton">confirmar</button>
+    
+              </div>

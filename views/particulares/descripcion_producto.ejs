@@ -1,0 +1,45 @@
+<div class="Producto" id="item">
+    <h3 class="nombre"><%= producto.nombre %></h3>
+    
+           <div class="detalleProducto">
+                            <div class="Imagen">
+                           <img src="<%= producto.imagen %>" alt="<%= producto.accesibilidad %>" class="miniatura">
+                           <div class="abrir_imagen">
+                            <span class="close">&times;</span>
+                            <img class="img_exp" src="" alt="Imagen ampliada">
+                        </div>
+                              </div>
+                            <div class="Table_informacion">
+                                <div class="DetailComun">
+                                <table>
+      
+                <tbody>
+                      <tr>
+                      <th >Descripcion:</th>
+                      <td class="Descripcion"><%= producto.descripcion%> </td> 
+                     </tr>
+                     <tr>
+                      <th>Categorias:</th>
+                      <td><%= producto.categoria.join(", ") %></td> 
+                     </tr>
+                </tbody>
+                     </table>
+                   </div>
+                   <% if (producto.tipo == "JUEGO") { %>
+                    <%- include('detallesProducto/juegos', {producto: producto}) %>
+                <% } else { %>
+                    <% if (producto.tipo == "ARTICULO") { %>
+                        <%- include('detallesProducto/articulos', {producto: producto}) %>
+                    <% } else { %>
+                        <%- include('detallesProducto/libros', {producto: producto}) %>
+                    <% } %>
+                <% } %>
+                
+        </div>
+    
+        </div>
+            <div class="seccion_btn">
+                <p class="monto">$ <%= producto.precio %></p>
+            <button>Añadir al carrito</button>
+            </div>
+    </div>

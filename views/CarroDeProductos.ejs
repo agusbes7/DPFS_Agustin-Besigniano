@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include('partials/head', { page: "carroDeProducto" }) %>
+
+    
+<body>
+   
+    <div class="container">
+    <%- include('partials/header') %>
+    <%- include('partials/banner') %>
+    <%- include('partials/navegacion',{direccion:direccion}) %>
+    <%- include('partials/informacion') %>
+
+
+<!------------------------CONTENIDO---------------------------->
+        <div class="contenido">
+           
+<%- include('particulares/seccion_carrito') %>
+        </div>
+                    <!-- ------------------------------------------------------------ -->
+         
+                    
+                
+        
+                    <%- include('partials/footer') %>
+
+        </div>
+        <!-- ------------------------------------------------------------ -->
+
+       
+
+    <script src="/Funciones.js"></script>
+</body>
+
+</html>
