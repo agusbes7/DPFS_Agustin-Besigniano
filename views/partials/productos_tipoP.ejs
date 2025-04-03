@@ -1,0 +1,17 @@
+<div class="productos_tipo">
+    <div class="titulos">
+        <h1><%= titulo %></h1>
+        </div>
+    <div class="tarjetas">
+ 
+
+        <ul class="tarjetas-list">
+            <% productos.forEach(producto => { %>
+                <li>
+                    <%- include('../partials/card', { producto }) %>
+                </li>
+            <% }) %>
+        </ul>
+
+    </div>
+</div>

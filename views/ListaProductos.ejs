@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include('partials/head', { page: "seccionProductos" }) %>
+
+    
+<body>
+   
+    <div class="container">
+    <%- include('partials/header') %>
+    <%- include('partials/banner') %>
+    <%- include('partials/navegacion',{direccion:direccion}) %>
+    <%- include('partials/informacion') %>
+    <%- include('partials/carritoFlotante') %>
+
+<!------------------------CONTENIDO---------------------------->
+        <div class="contenido">
+            <%- include('particulares/aside/asideJuegos') %> 
+
+            <section class="productos">
+                <% datosSecciones.forEach(element => { %>
+                    <%- include('partials/productos_tipoP', { titulo: element.titulo, productos: element.productos }) %>
+                <% }) %>
+            </section>
+            
+       
+
+        </section> 
+        </div>
+                    <!-- ------------------------------------------------------------ -->
+         
+                    
+                
+        
+                    <%- include('partials/footer') %>
+
+        </div>
+        <!-- ------------------------------------------------------------ -->
+
+       
+<script src="/Function index.js"></script>
+    <script src="/Function otras.js"></script>
+</body>
+
+</html>

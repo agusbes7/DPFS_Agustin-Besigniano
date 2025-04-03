@@ -134,7 +134,8 @@ const Libros = [
         imagen: "./estructuras/Medias/productos/assimov fin de la eternidad.jpg",
         descripcion: "Novela de ciencia ficción donde se explora el destino de la galaxia tras la guerra entre humanos y robots.",
     }
-  ];/**/
+  ];
+  /*
   const productoBase = new Producto(
     "El nombre del viento",
     "/estructuras/Medias/productos/libro8.jpg", 
@@ -153,8 +154,61 @@ const Libros = [
     ["Español", "Inglés"], 
     "Tapa dura", 
     "horse comcis" );
-  const lista="hola mundo";
-  let items=new Set();
+*/
+let items=new Set(); 
+const productoBase1 = new Producto(
+        "El nombre del viento",
+        "/estructuras/Medias/productos/libro8.jpg",
+        "Comienza el segundo día de las narraciones de Kvothe.",
+        "Accesible para todos",
+        30.99,
+        "LIBRO",
+        ["Fantasía", "Maravilloso"],
+        1.5);
+    
+    const libro1 = new Libro(
+        productoBase1,
+        "978-3-16-148410-0",
+        "Patrick Rothfuss",
+        1350,
+        "2013-03-30",
+        ["Español", "Inglés"],
+        "Tapa dura",
+        "Horse Comics");
+    
+    const productoBase2 = new Producto(
+        "Duna",
+        "/estructuras/Medias/productos/libro7.jpg",
+        "El clásico de la ciencia ficción.",
+        "Accesible para todos",
+        28.99,
+        "LIBRO",
+        ["Ciencia Ficción"],
+        1.8
+    );
+    
+    const libro2 = new Libro(
+        productoBase2,
+        "978-0-441-17271-9",
+        "Frank Herbert",
+        896,
+        "1965-06-01",
+        ["Español", "Inglés"],
+        "Tapa dura",
+        "Ace Books"
+    );
+    
+    // Agrupar libros en secciones
+    const datosSecciones = [
+        {
+            titulo: "Libros de Fantasía",
+            productos: [libro1,libro2,libro1,libro2]
+        },
+        {
+            titulo: "Libros de Ciencia Ficción",
+            productos: [libro2,libro1,libro2,libro1,libro2,libro1,libro2,libro1]
+        }
+    ];
 //_----------------------------------------------------------
 //_----------------------------------------------------------
 //_----------------------------------------------------------
@@ -193,7 +247,14 @@ app.get('/detailProduct/1', (req,res) =>{
    
     res.render('DetallesProducto',{producto:libro,lista});
 });
-
+app.get('/Products', (req,res) =>{
+   
+    res.render('ListaProductos',{aside:"hola",datosSecciones});
+});
+app.get('/admin', (req,res) =>{
+   let producto=libro1;
+    res.render('gestiondeProductos',{producto});
+});
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });

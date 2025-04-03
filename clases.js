@@ -51,12 +51,12 @@ Editorial;
         constructor(producto, ISBN, autor, paginas, fechaDePublicacion, idiomas, formato, editorial) {
             super(producto.nombre, producto.imagen, producto.descripcion, producto.accesibilidad, producto.precio, producto.tipo, producto.categoria, producto.peso);
             this.ISBN = ISBN;
-            this.autor = autor;
-            this.paginas = paginas;
-            this.fechaDePublicacion = fechaDePublicacion;
+            this.Autor = autor;
+            this.Paginas = paginas;
+            this.FechaDePublicacion = fechaDePublicacion;
             this.idiomas = idiomas;
-            this.formato = formato;
-            this.editorial = editorial;
+            this.Formato = formato;
+            this.Editorial = editorial;
         }
     }
     

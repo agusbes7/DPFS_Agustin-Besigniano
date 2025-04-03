@@ -25,9 +25,9 @@ function rotarLista(lista, tiempo) {
 }
 
 // Inicializar rotación con tiempos diferidos
-let listas = document.querySelectorAll(".tarjetas-list");
+let listas = document.querySelectorAll(".productos .tarjetas-list");
 let tiempos = [4000, 5000, 6000];
-
+if(window.location.pathname === "/"){
 listas.forEach((lista, index) => {
   let tiempoAsignado = tiempos[index % tiempos.length];
   lista.dataset.tiempo = tiempoAsignado;
@@ -55,7 +55,7 @@ function resetearRotacion(lista) {
   }
   let tiempoOriginal = parseInt(lista.dataset.tiempo);
   lista.dataset.timer = setTimeout(() => rotarLista(lista, tiempoOriginal), tiempoOriginal);
-}
+}}
 
 // Eventos de las flechas
 document.querySelectorAll(".flecha-derecha").forEach((boton) => {

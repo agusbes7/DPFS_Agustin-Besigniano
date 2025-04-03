@@ -1,0 +1,124 @@
+<div class="modify-remove-product">
+   
+
+    <form class="row g-3" id="produ-new">
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" value="<%= producto.nombre %>" aria-label="Titulo"></div>
+        <div class="row">
+          <label for="formFile" class="form-label">Cargar imagen de producto</label>
+          <input class="form-control" type="file" id="formFile" >
+          </div>
+       
+        <div class="row">
+        
+        <img src="<%= producto.imagen %>">
+        <div class="input-group mb-3">
+          <span class="input-group-text">$</span>
+          <input type="number" class="form-control" value="<%= producto.precio %>" aria-label="Precio">
+        </div>  
+      
+      </div>
+        
+      <div class="container-fluid px-3">
+        <div class="row">
+            <div class="col-md-6">
+                <label for="descripcion" class="form-label">Descripción</label>
+                <textarea class="form-control w-100" id="descripcion" rows="6"  placeholder="<%= producto.descripcion %>"></textarea>
+       
+            </div>
+            <div class="col-md-6">
+              <div class="row">
+                <label for="tamaño" class="form-label">Unidades de stock</label>
+                <input type="number"  class="form-control" value="<%= producto.Stock %>" aria-label="stock del producto">
+                   </div>
+              <div class="row">
+              <label for="descripcion" class="form-label">Peso</label>
+              <input type="text" class="form-control" value="<%= producto.peso %>" aria-label="Peso">
+                 </div>
+                 <div class="row">
+                  <label for="tamaño" class="form-label">Tamaño</label>
+                  <input type="text" class="form-control" value="23x70x10" aria-label="Tamaño">
+                     </div>
+                  
+                    </div>
+  
+             
+      
+        </div>
+     </div>
+    
+      <div class="Libro">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">Autor</span>
+          <input type="text" class="form-control" aria-label="Nombre del Autor" value="<%= producto.Autor %>" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-4 w-50">
+          <input type="text" class="form-control text-center" placeholder="ISBN" value="<%= producto.ISBN %>" aria-label="ISBN" min="1" required>
+          <input type="number" class="form-control text-center" placeholder="Paginas" value="1300" aria-label="Paginas" min="1"  required>
+            <input type="text" class="form-control" id="editorial" value="Debolsillo" placeholder="<%= producto.Editorial %>">
+          </div>
+          
+        <div class="mb-2 text-center w-50">
+          <label for="publicacion">Fecha de publicación</label>
+          <input type="datetime-local" id="publicacion" name="publicacion">
+        </div>
+      <div class="input-group mb-2 w-100">
+  
+        <div class="mb-2 w-50">
+          <label class="form-label">Idiomas</label>
+          <div class="d-flex gap-3 flex-wrap">
+              <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ingles" name="idiomas" value="ingles"checked>
+                  <label class="form-check-label" for="ingles">Inglés</label>
+              </div>
+              <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="espanol" name="idiomas" value="espanol">
+                  <label class="form-check-label" for="espanol">Español</label>
+              </div>
+              <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="italiano" name="idiomas" value="italiano">
+                  <label class="form-check-label" for="italiano">Italiano</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="Ruso" name="idiomas" value="Ruso">
+                <label class="form-check-label" for="Ruso">Ruso</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="Francia" name="idiomas" value="Francia">
+              <label class="form-check-label" for="Francia">Frances</label>
+          </div>
+          </div>
+      </div>
+      <div class="mb-2 w-50">
+        <label class="form-label">Formato</label>
+        <div class="d-flex gap-3 flex-wrap">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="tapaDura" name="formato" value="dura" checked>
+                <label class="form-check-label" for="tapaDura">Tapa dura</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="tapaBlanda" name="formato" value="blanda">
+                <label class="form-check-label" for="tapaBlanda">Tapa blanda</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="bolsillo" name="formato" value="bolsillo" checked>
+                <label class="form-check-label" for="bolsillo">Edición de bolsillo</label>
+            </div>
+        </div>
+    </div>
+    
+      </div>
+    
+      </div>
+    
+    
+      
+      
+    
+      <div class="Btn">
+        <button type="submit" class="btn btn-primary">Actualizar</button>
+        <button type="submit" class="btn btn-primary">Eliminar Producto</button>
+
+      </div>
+    </form>
+    </div>

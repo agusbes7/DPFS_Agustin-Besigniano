@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABM de Producto</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="shortcut icon" href="/estructuras/Medias/Imagenes/4kvothe logo3.png" type="image/x-icon">
+
+
+<link rel="stylesheet" href="/estructuras/styles/stylesABM.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+  rel="stylesheet">
+</head>
+<body>
+  <div class="contenido">
+<section class="banner">
+  <img class="banner_img_f" src="/estructuras/Medias/Imagenes/Game_Chronicle__1_-removebg-preview.png"
+      alt="Hombre pelirrojo con penetrantes ojos verdes">
+<h1>GAME CHRONICLE</h1>
+   
+  </section>
+ 
+    <nav class="navbar navbar-expand-md">
+
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../../index copy.html">Inicio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link"  href="./Articulos.html">Articulos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Juegos.html">Juegos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Juegos.html">Libros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Juegos.html">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Juegos.html">Perfil</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-xxl">
+    <h2>Gestión de Productos</h2>
+    <select  id="operacion" class="form-select form-select-lg mb-3" aria-label="Disabled Large select example" >
+      <option disabled selected>Operacion de Producto</option>
+      <option value="1">Cargar Producto</option>
+      <option value="2">Modificar/Eliminar producto</option>
+      
+    </select>
+<div class="new-product">
+
+
+  <form class="row g-3" id="produ-new">
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Titulo" aria-label="Titulo">
+      <span class="input-group-text">$</span>
+      <input type="number" class="form-control" placeholder="Precio" aria-label="Precio">
+    </div>
+    <div class="container-fluid px-3">
+      <div class="row">
+          <div class="col-md-6">
+              <label for="descripcion" class="form-label">Descripción</label>
+              <textarea class="form-control w-100" id="descripcion" rows="6" required></textarea>
+     
+          </div>
+          <div class="col-md-6">
+            <div class="row">
+              <label for="tamaño" class="form-label">Unidades de stock</label>
+              <input type="number" min="1" class="form-control" placeholder="stock" aria-label="stock del producto">
+                 </div>
+            <div class="row">
+            <label for="descripcion" class="form-label">Peso</label>
+            <input type="text" class="form-control" placeholder="Peso" aria-label="Peso">
+               </div>
+               <div class="row">
+                <label for="tamaño" class="form-label">Tamaño</label>
+                <input type="text" class="form-control" placeholder="Tamaño" aria-label="Tamaño">
+                   </div>
+                  </div>
+
+           
+    
+      </div>
+      <div class="mb-3">
+        <label for="formFile" class="form-label">Cargar imagen de producto</label>
+        <input class="form-control" type="file" id="formFile" required>
+    </div>
+    </div>
+  <div class="Tipo mb-3 d-flex justify-content-center">
+    <select id="tipo-producto" class="form-select form-select-lg w-50 text-center" required>
+        <option value="" disabled selected>Tipo de Producto</option>
+        <option value="1">Juego</option>
+        <option value="2">Libro</option>
+        <option value="3">Artículo</option>
+    </select>
+</div>
+
+  <div class="Juego p-2">
+    <!-- Grupo de Duración y Edad -->
+    <div class="input-group mb-2 w-50">
+        <input type="number" class="form-control text-center" placeholder="Duración (min)" aria-label="Duración en minutos" min="1" required>
+        <input type="number" class="form-control text-center" placeholder="Edad mínima" aria-label="Edad mínima" min="1" max="200" required>
+        <span class="input-group-text">+</span>
+    </div>
+
+    <!-- Grupo de Jugadores -->
+    <div class="mb-2 text-center w-50">
+        <label class="form-label">Jugadores</label>
+        <div class="d-flex justify-content-center gap-2">
+            <input type="number" id="minPlayers" class="form-control text-center w-50" min="1" placeholder="Mín." required>
+            <input type="number" id="maxPlayers" class="form-control text-center w-50" min="1" placeholder="Máx." required>
+        </div>
+    </div>
+</div>
+
+  
+    <div class="Libro">
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">Autor</span>
+        <input type="text" class="form-control" aria-label="Nombre del Autor" aria-describedby="inputGroup-sizing-default">
+      </div>
+      <div class="input-group mb-4 w-50">
+        <input type="text" class="form-control text-center" placeholder="ISBN" aria-label="ISBN" min="1" required>
+        <input type="number" class="form-control text-center" placeholder="Paginas" aria-label="Paginas" min="1"  required>
+          <input type="text" class="form-control" id="editorial" placeholder="Editorial">
+        </div>
+        
+      <div class="mb-2 text-center w-50">
+        <label for="publicacion">Fecha de publicación</label>
+        <input type="datetime-local" id="publicacion" name="publicacion">
+      </div>
+    <div class="input-group mb-2 w-100">
+
+      <div class="mb-2 w-50">
+        <label class="form-label">Idiomas</label>
+        <div class="d-flex gap-3 flex-wrap">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="ingles" name="idiomas" value="ingles">
+                <label class="form-check-label" for="ingles">Inglés</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="espanol" name="idiomas" value="espanol">
+                <label class="form-check-label" for="espanol">Español</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="italiano" name="idiomas" value="italiano">
+                <label class="form-check-label" for="italiano">Italiano</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="Ruso" name="idiomas" value="Ruso">
+              <label class="form-check-label" for="Ruso">Ruso</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="Francia" name="idiomas" value="Francia">
+            <label class="form-check-label" for="Francia">Frances</label>
+        </div>
+        </div>
+    </div>
+    <div class="mb-2 w-50">
+      <label class="form-label">Formato</label>
+      <div class="d-flex gap-3 flex-wrap">
+          <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="tapaDura" name="formato" value="dura">
+              <label class="form-check-label" for="tapaDura">Tapa dura</label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="tapaBlanda" name="formato" value="blanda">
+              <label class="form-check-label" for="tapaBlanda">Tapa blanda</label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="bolsillo" name="formato" value="bolsillo">
+              <label class="form-check-label" for="bolsillo">Edición de bolsillo</label>
+          </div>
+      </div>
+  </div>
+  
+    </div>
+  
+    </div>
+  
+    <div class="Articulo">
+    
+      <div class="mb-2 w-50">
+        <label class="form-label">Talles</label>
+        <div class="d-flex gap-3 flex-wrap">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="talleXS" name="talle" value="xs">
+                <label class="form-check-label" for="talleXS">XS</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="talleS" name="talle" value="s">
+                <label class="form-check-label" for="talleS">S</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="talleM" name="talle" value="m">
+                <label class="form-check-label" for="talleM">M</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="talleXL" name="talle" value="xl">
+                <label class="form-check-label" for="talleXL">XL</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="talleXXL" name="talle" value="xxl">
+                <label class="form-check-label" for="talleXXL">XXL</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="talleXXXL" name="talle" value="xxxl">
+                <label class="form-check-label" for="talleXXXL">XXXL</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="talleNA" name="talle" value="n/a">
+                <label class="form-check-label" for="talleNA">N/A</label>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mb-2 w-50">
+        <label class="form-label">Colores</label>
+        <div class="d-flex gap-3 flex-wrap">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="colorRojo" name="color" value="rojo">
+                <label class="form-check-label" for="colorRojo">Rojo</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="colorVerde" name="color" value="verde">
+                <label class="form-check-label" for="colorVerde">Verde</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="colorAmarillo" name="color" value="amarillo">
+                <label class="form-check-label" for="colorAmarillo">Amarillo</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="colorNegro" name="color" value="negro">
+                <label class="form-check-label" for="colorNegro">Negro</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="colorAzul" name="color" value="azul">
+                <label class="form-check-label" for="colorAzul">Azul</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="colorBlanco" name="color" value="blanco">
+                <label class="form-check-label" for="colorBlanco">Blanco</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="colorNA" name="color" value="n/a">
+                <label class="form-check-label" for="colorNA">N/A</label>
+            </div>
+        </div>
+    </div>
+    
+    </div>
+  
+    <div class="Btn">
+      <button type="submit" class="btn btn-primary">Registrar</button>
+    </div>
+  </form>
+  </div>
+ <%- include('particulares/formularios/form_mrProduct', producto) %>
+ 
+</div>
+<footer class="py-1">
+  <div class="mensaje">
+    <p>@Derechos Reservados 2025@ <i>Hora de perseguir el viento</i></p>
+    <input type="checkbox" name="menu_Responsive" id="menu_toggle">
+    <label for="menu_toggle" class="menu_label"></label>
+  <div class="row">
+    <div class="col-6 col-md-2 mb-3">
+      <h5>Section</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+      </ul>
+    </div>
+
+    <div class="col-6 col-md-2 mb-3">
+      <h5>Section</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+      </ul>
+    </div>
+
+    <div class="col-6 col-md-2 mb-3">
+      <h5>Section</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+      </ul>
+    </div>
+
+    <div class="col-md-5 offset-md-1 mb-3">
+      <form>
+        <h5>Subscribe to our newsletter</h5>
+        <p>Monthly digest of what's new and exciting from us.</p>
+        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+          <label for="newsletter1" class="visually-hidden">Email address</label>
+          <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+          <button class="btn btn-primary" type="button">Subscribe</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  
+</footer>
+
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+ <script src="/estructuras/abm.js"></script>
+</body>
+</html>
