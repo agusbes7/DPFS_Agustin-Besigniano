@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
   console.log("El DOM se ha cargado correctamente.");
 });
 
+
 //---------------SECCION DE CONTENIDO DE INDEX--------------------
 let botones = document.querySelectorAll(".ocultar_tipo");
 let botonesMostrar = document.querySelectorAll(".mostrar_tipo");

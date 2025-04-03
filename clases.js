@@ -7,6 +7,7 @@ precio;
 tipo;
 categoria;
 peso;
+Stock;
         constructor(nombre, imagen, descripcion, accesibilidad, precio, tipo, categoria, peso) {
             this.nombre = nombre;
             this.imagen = imagen;
@@ -17,6 +18,14 @@ peso;
             this.categoria = categoria;
             this.peso = peso;
         }
+    setUnidades(cantidad){
+        this.Stock=cantidad;}
+    DisminuirUnidad(){
+        this.Stock--;}
+    AumentarUnidad(){
+        this.Stock++;}
+    ModificarStock(cantidad){
+        this.Stock+=cantidad;}
     }
     
     class Juego extends Producto {

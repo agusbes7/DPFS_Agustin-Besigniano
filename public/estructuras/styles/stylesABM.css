@@ -1,0 +1,145 @@
+¨*body,html{
+    background-color: rgb(131, 131, 131);
+}
+.contenido {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+     "banner"
+    "navigation"
+    "contenido"
+    "footer";
+    min-height: 100vh;
+    grid-template-rows: min-content min-content  auto auto;
+max-width: 1400px;
+flex-grow: 1;
+padding: 10px;
+margin: 5px;}
+/*-------------------------------------------------------------*/
+.banner{
+    overflow: hidden;
+    grid-area: banner;
+    flex-direction: row;
+    background-color: #DD4204;
+    height: auto;  /* En lugar de 100%, usa auto para que respete el tamaño del grid */
+    max-height: 40vh;  /* Limita la altura si se expande demasiado */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;}
+    .banner_img_f{
+         max-width: 100%;
+        max-height: 100%;
+        display: flex;
+        justify-items: center;
+        animation: hundirse 1.5s ease-in-out infinite; }
+    .banner_img_f {height: 100%;}
+    .banner h1 {
+        color: #FAC710;
+        font-size: 4rem;
+        font-family: "Bangers", system-ui;
+        font-style: normal;
+        display: flex;
+        text-align: center;
+     text-shadow: 2px 2px  rgb(255, 21, 21);
+    
+    margin:0;}
+    .banner h1:hover {
+        transform: scale(1.2) translateY(-0.7rem); /* Aumenta el tamaño y mueve el botón hacia arriba */
+        box-shadow:  8px rgba(0, 0, 0, 0.3); /* Añade sombra para más realismo */
+      z-index: 999;
+      overflow: visible; }
+/*-------------------------------------------------------------*/
+.navbar{
+    grid-area: navigation;
+    background-color: red;
+    margin: 3px;}
+.navbar .navbar-brand,
+.navbar .nav-link {
+    color: white !important; /* Texto blanco */
+    font-weight: 600;}
+.navbar .nav-link:hover {
+    color: #f1c40f !important; /* Amarillo al pasar el mouse */}
+.btn { color: white;}
+.btn:hover{ background-color: blue;}
+/*-------------------------------------------------------------*/
+.container{margin: 10px;
+padding: 2px;
+justify-content: center;
+align-items: center;
+background-color: rgb(104, 97, 97);}
+.container-xxl{
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;}
+.container-xxl .form-select{width: 50%;}
+.form-select{background-color: red;}
+/*--------------OPERACIONES-----------------*/
+.new-product,
+.modify-remove-product{
+    display: none;
+    flex-direction: column;
+}
+/*-------------------------------*/
+#produ-new{justify-content: center;}
+.Btn{
+    display: flex;
+    justify-content: center;}
+/*-------------------------------*/
+.row{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 7px;}
+.form-label{font-size: 1.2rem;}
+.container h2{
+    background-color: orangered;
+    color: red;}
+.contenido{background-color: rgb(231, 231, 231);}
+#tipo-producto{background-color: orangered;
+color: white;}
+#descripcion{width: 50%;}
+/*----------------tipo de producto------------------*/
+.Juego,
+.Libro,
+.Articulo{display: none;}
+.Juego,.Libro{
+    flex-direction: column;
+    align-items: center;  
+}
+/*-------------------------------*/
+.form-label{background-color: red;
+color: white;
+border: 1px solid red;
+width: 50%;
+text-align: center;}
+/*--------------FOOTER-----------------*/
+.row img{
+    height: 150px;
+    width: auto;
+    object-fit: contain;}
+.modify-remove-product .Libro{display: flex;}
+
+footer{
+    grid-area: footer;
+    background-color: #DD4204;
+    color: #FAC710;
+   }
+
+.py-1 .row{display: none;}
+.mensaje{display: flex;
+justify-content: center;
+align-items: center;}
+#menu_toggle{display: none;}
+
+.alterar{
+    overflow-x: scroll;
+    min-width: 1000px;
+}
+.t-juego, .t-Libro, .t-Articulo {
+    display: none;  }
+    @media(max-width:600px){
+        *body,html{
+            font-size: 14px;
+        }
+    }

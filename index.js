@@ -1,21 +1,25 @@
 const express = require('express');
 const session = require('express-session');
 const path = require('path');
-
 const app = express();
 const PORT = process.env.PORT || 3000;
-
+//Importar clases creadas para manejar articulos juegos,libros
 const  { Dirección,Tarjeta,Usuario,Producto, Articulo,Juego,Libro}  = require('./clases.js');
+
+//----------------------------------------------------------
+//----------------------------------------------------------
+//----------------------------------------------------------
 
 // Configurar EJS como motor de plantillas
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.set('view cache', false);
-
 // Servir archivos estáticos (si tienes archivos en 'public')
 app.use(express.static(path.join(__dirname, 'public')));
-// carga de productos 
-
+//----------------------------------------------------------
+//----------------------------------------------------------
+//----------------------------------------------------------
+//Ejemplos de productos
 const oferta={
    MedioDeOferta: "Ofertas promocionales solo tarjetas de debito",
     Descuento:  "25% descuento",
@@ -130,21 +134,42 @@ const Libros = [
         imagen: "./estructuras/Medias/productos/assimov fin de la eternidad.jpg",
         descripcion: "Novela de ciencia ficción donde se explora el destino de la galaxia tras la guerra entre humanos y robots.",
     }
-  ];
+  ];/**/
+  const productoBase = new Producto(
+    "El nombre del viento",
+    "/estructuras/Medias/productos/libro8.jpg", 
+    "comienza el segundia de las narraciones de Kvothe.",
+    "Accesible para todos",
+    30.99,  
+    "LIBRO", 
+    ["Fantasia", "Maravilloso"], 
+    1.5    );
+    const libro = new Libro(
+    productoBase,
+    "978-3-16-148410-0",  
+    "Patrick RouthFuss",  
+    1350,  
+    "2013-03-30",  
+    ["Español", "Inglés"], 
+    "Tapa dura", 
+    "horse comcis" );
+  const lista="hola mundo";
   let items=new Set();
-
+//_----------------------------------------------------------
+//_----------------------------------------------------------
 //_----------------------------------------------------------
 //CONFIGURAR SESIONES 
-// Configuración de sesiones
+
 app.use(session({
-    secret: 'tu_secreto_seguro', // Clave para firmar la sesión
-    resave: false,               // No guardar la sesión si no hay cambios
-    saveUninitialized: true,      // Guardar sesiones vacías
-    cookie: { secure: false }     // Debe ser true si usas HTTPS
+    secret: 'secret', 
+    resave: false,        
+    saveUninitialized: true,   
+    cookie: { secure: true }     
 }));
+//_----------------------------------------------------------
+//_----------------------------------------------------------
 
-
-  app.use((req, res, next) => {
+app.use((req, res, next) => {
     res.locals.direccion = req.session.username ? "/Profile" : "/Login";
     res.locals.productos=items; //carro de productos
     res.locals.monto=0; 
@@ -165,29 +190,7 @@ app.get('/confirmarCompra', (req,res) =>{
     res.render('CarroDeproductos');
 });
 app.get('/detailProduct/1', (req,res) =>{
-    const productoBase = new Producto(
-        "El nombre del viento",
-        "/estructuras/Medias/productos/libro8.jpg", 
-        "comienza el segundia de las narraciones de Kvothe.",
-        "Accesible para todos",
-        30.99,  // Precio
-        "LIBRO",  // Tipo
-        ["Fantasia", "Maravilloso"],  // Categoría
-        1.5  // Peso en kg
-      );
-      
-      // Luego, crea el libro usando el objeto producto
-      const libro = new Libro(
-        productoBase,
-        "978-3-16-148410-0",  // ISBN
-        "Patrick RouthFuss",  // Autor
-        1350,  // Páginas
-        "2013-03-30",  // Fecha de publicación
-        ["Español", "Inglés"],  // Idiomas
-        "Tapa dura",  // Formato
-        "Editorial XYZ"  // Editorial
-      );
-      const lista="hola mundo";
+   
     res.render('DetallesProducto',{producto:libro,lista});
 });
 
