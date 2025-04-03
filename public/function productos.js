@@ -1,6 +1,6 @@
 // Obtener todos los contenedores .btn
   const btnContainers = document.querySelectorAll(".btn");
-const btnDetalle=document.querySelector(".seccion_btn");
+
   // Elementos globales del carrito
   const carritoIconSpan = document.querySelector(".carrito_icon span");
   const mensajeCarrito = document.querySelector(".mensaje_carrito p");
@@ -33,3 +33,4 @@ const btnDetalle=document.querySelector(".seccion_btn");
       carritoIconSpan.textContent = totalItems > 0 ? totalItems : "∅";
       mensajeCarrito.textContent = totalItems > 0 ? "Hay elementos en el carrito" : "No hay artículos en el carrito aún";
   }
+

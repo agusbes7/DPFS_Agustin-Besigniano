@@ -1,8 +1,59 @@
-document.addEventListener("DOMContentLoaded", function() {
-  // Tu código que se ejecutará cuando el DOM esté listo.
-  console.log("El DOM se ha cargado correctamente.");
+document.addEventListener("DOMContentLoaded", function () {
+if(window.location.pathname === "/confirmarCompra"){
+  
+  recalcularTotal();}
+  console.log("Estado cargado");
 });
 
+function actualizarPrecio(selectElem) {
+  var item = selectElem.closest('tr');
+  
+  // obtener el precio de la columna de la tabla
+    var precioItem = parseFloat(item.children[2].textContent) || 0;
+  
+  // Obtenemos la cantidad seleccionada
+  var unidades = parseInt(selectElem.value) || 1;
+  
+  // Calculamos el subtotal
+  var subtotal = precioItem * unidades;
+  
+  // Actualizamos la celda del subtotal 
+  item.querySelector('.subtotal').textContent = subtotal.toFixed(2);
+  
+  // Recalcular el total general
+  recalcularTotal();
+}
+
+// Función para recalcular el total general del carrito
+function recalcularTotal() {
+  let total = 0;
+  
+  // Iteramos sobre cada fila del tbody
+  const filas = document.querySelectorAll("tbody tr");
+  filas.forEach(item => {
+    const subtotalElem = item.querySelector(".subtotal");
+    if (subtotalElem) {
+      // Convertir el contenido de la celda a número
+      const subtotal = parseFloat(subtotalElem.textContent) || 0;
+      total += subtotal;
+    }
+  });
+  
+  // Actualizamos el elemento con id "monto"
+  document.getElementById("monto").textContent = "$ " + total.toFixed(2);
+}
+
+// Función para eliminar una fila y recalcular el total
+function eliminarFila(boton) {
+  // Usamos closest para encontrar la fila (tr) que contiene el botón
+  const fila = boton.closest("tr");
+  if (fila) {
+    // Eliminamos la fila del tbody
+    fila.parentNode.removeChild(fila);
+    // Recalcula el total general después de eliminar la fila
+    recalcularTotal();
+  }
+}
 
 //---------------SECCION DE CONTENIDO DE INDEX--------------------
 let botones = document.querySelectorAll(".ocultar_tipo");
@@ -136,10 +187,8 @@ hermano.src="";})
 
 
 //---------------------------------------------
-function eliminarFila(boton) {
-  let fila = boton.parentNode.parentNode; // Se obtiene la fila del botón
-  fila.parentNode.removeChild(fila); // Se elimina la fila de la tabla
-}
+
+
 //--------------------pago
 //  Abrir ventana de pago
 document.getElementById("abrirPago").addEventListener("click", function () {
