@@ -241,11 +241,11 @@ app.get('/FormularioDeContacto', (req, res) => {
     res.render('contacto');
 });
 app.get('/confirmarCompra', (req,res) =>{
-    res.render('CarroDeproductos');
+    res.render('CarroDeproductos',{productos:Libros});
 });
 app.get('/detailProduct/1', (req,res) =>{
    
-    res.render('DetallesProducto',{producto:libro,lista});
+    res.render('DetallesProducto',{producto:libro1,lista:Libros});
 });
 app.get('/Products', (req,res) =>{
    
