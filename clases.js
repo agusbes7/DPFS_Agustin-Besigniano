@@ -69,7 +69,7 @@ Editorial;
             this.talle = talle;
             this.color = color;}
     }
-
+//------------------------------------------------------
 class Dirección{
     apodo;
     calle;
@@ -111,7 +111,7 @@ class Usuario {
         correo;
         telefono;
         direccion
-      
+      admin=false;
         constructor(nombre, apellido, nombreDeUsuario, correo, telefono, direccion, tarjeta, contrasena) {
             this.nombre = nombre;
             this.apellido = apellido;
