@@ -32,25 +32,23 @@ const mainRoutes = require('./routes/mainRoutes');
 const loginRoutes=require('./routes/LoginRoutes');
 const contacto=require('./routes/ContactoRoutes');
 const compra=require('./routes/CarroProductosRoutes');
-const detailP=require('./routes/DetalleProductoRoutes');
+const detailProduct=require('./routes/DetalleProductoRoutes');
 const cargaProducto=require('./routes/FormularioProductoRoutes');
+const productos= require('./routes/ListasProductoRoutes');
+
 
 app.use('/', mainRoutes);
 app.use('/', loginRoutes);
+//enviar mensajes a la empresa
 app.use('/',contacto);
 app.use('/',compra); //añadir logica de guardar y remover items del req.session
-app.use('/',detailP);
+//producto por id dinamico
+app.use('/',detailProduct);
+//pagina de carga y edicion por id dinamico incorporar busqueda en la edicion
 app.use('/',cargaProducto);
-/*
-});
-app.get('/Products', (req,res) =>{
-   
-    res.render('ListaProductos',{aside:"hola",datosSecciones});
-});
-app.get('/admin', (req,res) =>{
-   let producto=libro1;
-    res.render('gestiondeProductos',{producto});
-});*/
+//generos y aside se reciben(modificar al incorporar base de datos)
+app.use('/',productos);
+
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
