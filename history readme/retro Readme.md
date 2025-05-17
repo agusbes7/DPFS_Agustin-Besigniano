@@ -3,6 +3,23 @@
 ![Banner de github](../public/estructuras/Medias/Imagenes/Banner-3.jpg)
 
 ---
+
+##  Retroalimentacion    **SPRINT 2**   marzo-abril del 2025
+ Lograr lo que uno se propuso o imaginó es realmente dificil. Nunca se esta conforme con el resultado y comenzas a retocar y retocar y nunca termina. A veces no conoces otra forma de lograr cierto resultado y siempre utilizas la misma estrategia y resulta funcional por mas "feo" o poco estetico que quede...
+ 
+ Tengo la sensacion de que este sprint  lo deje "terminado" desde principios de febrero  y no pude continuar con el curso durante ese resto de mes ya que debia preparar algunos finales. Cuando lo retomé en marzo estaba en condiciones de avanzar con el siguiente sprint,sin embargo en vez de avanzar con el poco tiempo del que disponia... lo miré y no me gustaba el resultado final, no estaba conforme y decidi mejorarlo y mejorar estructuras y diseños que habia.
+
+Retomando las ideas anteriores durante el desarrollo del html todo mi documento se basaba en flex.Ademas todo lo que sea medida estaba en % o rem no habia nada de px. Habia realizado un curso anterior en otro sitio y se me habia dicho de que todo sitio responsivo usaba unidades de medidas responsivas y durante ese desarrollo de curso no se usaba casi px. Crei que era malo o hasta un error trabajar con px y trabajé todo con % y rem aunque fue todo un desafio y muchas horas de prueba y error para pequeños fragmentos o secciones del sitio simplemente.
+ 
+Posteriormente a visualizar los contenidos de js y la seccion de grid en el curso de html y css sobre todo, me adentré en agregar  y reorganizar todo mi proyecto con un esquema  grid ya que me di cuenta de que las principales secciones del sitio seguian todas un esquema y solo cambiaban el "medio" por decirlo asi. No estaba muy familiarizado en la practica de trabajar con esquemas grid, pero aun asi lo intenté.
+
+Fue dificil agarrarle medianamente la mano a grid y lograr sin partir de 0 un mejor resultado con las estructuras que ya habia armado.Uno de los mayores problemas fue la hoja de estilos. En esta todo era flex y unidades de % y rem asi que tenia que  mejorar cada hoja de estilo (estas no bajaban de las 100 lineas cada una algunas de mas de 400).
+
+Si hablamos de posiciones,colores bordes y las ubicaciones de las cosas esas estaban como lo habia planificado, no obstante estaban en % y todo en rem y  al cambiar el esquema a grid y modificar algunas cosas muchas cosas se salian de lugar y no funcionaban bien.   
+Comencé a utilizar px y note que incluso en resoluciones de pantalla inferior estas eran utiles en ciertas partes y no requerian demasiados retoques. No obstante fue un proceso muy largo las capas de estilos eran realmente largas y tenes que seguir la nomenclatura usada como nombre de cada clase o cada id. Y eso lleva a perderse o haber usado la misma clase en multiples partes que por el contexto no responden igual y te meten en algunos aprietos.  
+
+Para ir cerrando siempre pensé y aun pienso en nuevas ideas que implicaban aumentar y seguir reformando el html y todo lo que ello acarrea en js y css, pero no podia seguir atrasandome hay muchas ideas que son quizas mejoras de versiones del proyecto o mejoras de lo que es la parte visual del sitio. Tenia en mente cierto tipo de footer por ejemplo que jamas llegué a implementar pero a futuro se puede revisar y ver. Igual que una mini seccion más flotante con los items del carrito sin la necesidad de acceder a dicha seccion o mejorar las tarjetas de productos entre otras ideas. 
+
 ##  Retroalimentacion    **SPRINT 1**
 
 1. En aspectos generales aunque aun no estoy acostumbrado todo lo relacionado con las metodologias agiles y el tablero de trabajo ayudó significativamente. Te otorga cierta estructura o molde para partir y cumplir pero tampoco requiere del todo que lo vayas haciendo en un orden lineal o que un paso requiera del otro.
