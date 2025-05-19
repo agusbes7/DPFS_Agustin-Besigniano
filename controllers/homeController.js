@@ -1,4 +1,4 @@
-const { oferta, ProductoOferta, Libros, Juegos, Articulos } = require('../datos'); 
+const { oferta, ProductoOferta, Libros, Juegos, Articulos } = require('../extras/datos'); 
 
 
 module.exports = {

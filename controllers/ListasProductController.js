@@ -1,5 +1,5 @@
 
-let datos=require('../datos');
+let datos=require('../extras/datos');
 module.exports ={
     index: (req,res) => {
 const parte=req.params.seccion;

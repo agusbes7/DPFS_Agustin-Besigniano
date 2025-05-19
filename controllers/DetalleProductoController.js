@@ -1,5 +1,5 @@
-const { Producto } = require('../clases');
-let item=require('../datos');
+const { Producto } = require('../extras/clases');
+let item=require('../extras/datos');
 module.exports ={
 
     show: (req, res) => { 

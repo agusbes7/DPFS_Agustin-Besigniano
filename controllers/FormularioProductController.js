@@ -1,4 +1,4 @@
-const { Producto } = require('../clases');
+const { Producto } = require('../extras/clases');
 module.exports =  {
 create: (req,res) =>{
 
