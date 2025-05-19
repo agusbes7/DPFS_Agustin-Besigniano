@@ -14,14 +14,15 @@
 
 <!------------------------CONTENIDO---------------------------->
         <div class="contenido">
-        <% if (sector === 1) { %>
+       
+            <section class="productos">
+                 <% if (sector === 1) { %>
   <%- include('particulares/aside/asideJuegos') %>
 <% } else if (sector === 2) { %>
   <%- include('particulares/aside/asideLibros') %>
 <% } else if (sector === 3) { %>
   <%- include('particulares/aside/asideArticulos') %>
 <% } %>
-            <section class="productos">
                 <% datosSecciones.forEach(element => { %>
                     <%- include('partials/productos_tipoP', { titulo: element.titulo, productos: element.productos }) %>
                 <% }) %>
