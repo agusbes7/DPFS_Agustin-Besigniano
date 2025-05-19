@@ -1,13 +1,5 @@
 class Producto {
-        nombre;
-imagen;
-descripcion;
-accesibilidad;
-precio;
-tipo;
-categoria;
-peso;
-Stock;
+        nombre; imagen; descripcion; accesibilidad;precio; tipo;categoria; peso; Stock;
         constructor(nombre, imagen, descripcion, accesibilidad, precio, tipo, categoria, peso) {
             this.nombre = nombre;
             this.imagen = imagen;
@@ -16,8 +8,7 @@ Stock;
             this.precio = precio;
             this.tipo = tipo;
             this.categoria = categoria;
-            this.peso = peso;
-        }
+            this.peso = peso;}
     setUnidades(cantidad){
         this.Stock=cantidad;}
     DisminuirUnidad(){
@@ -25,29 +16,18 @@ Stock;
     AumentarUnidad(){
         this.Stock++;}
     ModificarStock(cantidad){
-        this.Stock+=cantidad;}
-    }
+        this.Stock+=cantidad;}}
     
     class Juego extends Producto {
-   edad;
-    Jugadores;
-    Duracion;
+   edad;Jugadores;Duracion;
         constructor(producto, edad, cantidadJugadores, duracion) {
             super(producto.nombre, producto.imagen, producto.descripcion, producto.accesibilidad, producto.precio, producto.tipo, producto.categoria, producto.peso);
             this.edad = edad;
             this.cantidadJugadores = cantidadJugadores;
-            this.duracion = duracion;
-        }
-    }
+            this.duracion = duracion;}}
     
     class Libro extends Producto {
-        ISBN;
-Autor;
-Paginas;
-FechaDePublicacion;
-idiomas;
-Formato;
-Editorial;
+        ISBN;Autor;Paginas;FechaDePublicacion;idiomas;Formato;Editorial;
         constructor(producto, ISBN, autor, paginas, fechaDePublicacion, idiomas, formato, editorial) {
             super(producto.nombre, producto.imagen, producto.descripcion, producto.accesibilidad, producto.precio, producto.tipo, producto.categoria, producto.peso);
             this.ISBN = ISBN;
@@ -57,8 +37,7 @@ Editorial;
             this.idiomas = idiomas;
             this.Formato = formato;
             this.Editorial = editorial;
-        }
-    }
+        }   }
     
     class Articulo extends Producto {
         Talle; //M/s,/XL/XXL/XXXL / 48-52
@@ -67,8 +46,7 @@ Editorial;
         constructor(producto, talle, color) {
             super(producto.nombre, producto.imagen, producto.descripcion, producto.accesibilidad, producto.precio, producto.tipo, producto.categoria, producto.peso);
             this.talle = talle;
-            this.color = color;}
-    }
+            this.color = color;}}
 //------------------------------------------------------
 class Dirección{
     apodo;
