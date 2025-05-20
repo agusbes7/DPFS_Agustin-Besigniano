@@ -1,5 +1,6 @@
 ¨*body,html{
     background-color: rgb(131, 131, 131);
+    overflow-x: hidden;
 }
 .contenido {
     display: grid;
@@ -91,7 +92,7 @@ background-color: rgb(104, 97, 97);}
     justify-content: center;
     text-align: center;
     margin: 7px;}
-.form-label{font-size: 1.2rem;}
+/*.form-label{font-size: 1.2rem;}*/
 .container h2{
     background-color: orangered;
     color: red;}
@@ -103,7 +104,7 @@ color: white;}
 .Juego,
 .Libro,
 .Articulo{display: none;}
-.Juego,.Libro{
+.Articulo,.Juego,.Libro{
     flex-direction: column;
     align-items: center;  
 }
@@ -143,3 +144,61 @@ align-items: center;}
             font-size: 14px;
         }
     }
+    /* Scroll horizontal para pantallas pequeñas */
+ thead {
+      background-color: #b30000; /* rojo oscuro */
+      color: white;
+    }
+    tbody tr:nth-child(odd) {
+      background-color: #ffe5e5; /* tono rojo claro */
+    }
+    tbody tr:nth-child(even) {
+      background-color: #ffcccc; /* tono rojo más claro */
+    }
+    input, select {
+      font-size: 0.85rem;
+      padding: 2px 4px;
+    }
+    .table td, .table th {
+      vertical-align: middle;}
+      .table-responsive{ 
+    width: 100%;
+  overflow-x: auto;}
+    select {
+  color: black;
+  background-color: #fff;
+  min-width: 60px;
+}
+option {
+  color: black;
+}
+/*--------------------FORM MR PRODUCT*/
+.filtro{
+        background-color: #ff000047;
+    padding: 22px;
+    margin: 20px;
+     width: 100%;
+    }
+    .d-flex{
+        justify-content: space-between;
+        gap: 2px;
+    align-items: center;
+    }
+    #buscador{
+       display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 2px;
+    border-radius: 15px;
+    padding: 20px;
+    }
+
+    .results{
+        min-width: 800px;
+     }
+     @media(max-width: 800px) {
+        .results{
+            overflow-x:scroll;
+        }
+        
+     }

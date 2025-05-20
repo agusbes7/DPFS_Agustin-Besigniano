@@ -9,6 +9,7 @@ CREATE TABLE Productos (
   accesibilidad TEXT,
   precio DECIMAL(10, 2) NOT NULL,
   peso DECIMAL(10, 2) );
+ 
   -- USERs 
 CREATE TABLE Usuarios (
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -86,9 +87,14 @@ id_producto INT NOT NULL,
 CREATE TABLE talles(
 id INT PRIMARY KEY AUTO_INCREMENT,
 Tamanio VARCHAR(8) NOT NULL UNIQUE);
-CREATE TABLE  Color(
-id INT PRIMARY KEY AUTO_INCREMENT,
-Color VARCHAR(20) NOT NULL UNIQUE);
+CREATE TABLE talles_color(
+id_talle INT,
+id_Articulo INT,
+color VARCHAR(200) NOT NULL,
+PRIMARY KEY (id_talle, id_Articulo),
+    FOREIGN KEY (id_talle) REFERENCES talles(id),
+    FOREIGN KEY (id_Articulo) REFERENCES articulos(id));
+
 -- ------------------------------- 
 -- Agregar columna y clave foránea en juegos
 ALTER TABLE juegos
@@ -113,54 +119,30 @@ ALTER TABLE libros
 ADD CONSTRAINT fk_libros_producto
 FOREIGN KEY (id_producto) REFERENCES Productos(id);
 
+ALTER TABLE libros ADD COLUMN
+editorial VARCHAR(50) NOT NULL;
+ALTER TABLE libros ADD COLUMN
+formato ENUM('TAPA DURA','TAPA BLANDA') NOT NULL;
+ALTER TABLE libros ADD COLUMN
+bolsillo boolean default TRUE;
+ALTER TABLE libros ADD COLUMN
+cantidad INT UNSIGNED NOT NULL;
+ALTER table libros ADD COLUMN 
+idioma ENUM('ESPAÑOL','FRANCES','INGLES','ALEMAN','ITALIANO','RUSO') NOT NULL DEFAULT 'ESPAÑOL';
+ALTER TABLE libro DROP COLUMN factor_precio;
+ALTER TABLE libros ADD COLUMN
+factor_precio DECIMAL(4,2) UNSIGNED NOT NULL;
 -- Tamaño
 ALTER TABLE productos ADD Tamanio VARCHAR(50);
 ALTER TABLE JUEGOS  ADD Jugadores Varchar(100) NOT NULL;
 
--- Lista de idiomas
-CREATE TABLE Idiomas(
-id INT PRIMARY KEY AUTO_INCREMENT,
-Idioma VARCHAR(50) NOT NULL UNIQUE);
--- Lista de formatos 
-CREATE TABLE tipo_formato (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  tipo ENUM('TAPA DURA', 'TAPA BLANDA') NOT NULL,
-  bolsillo BOOLEAN DEFAULT TRUE
-);
--- Lista de editoriales 
-CREATE TABLE editoriales (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  nombre VARCHAR(100) UNIQUE NOT NULL
-);
--- Relacion del formato con la editorial
-CREATE TABLE formatos (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  id_tipo_formato INT NOT NULL,
-  id_editorial INT NOT NULL,
-  precio_override DECIMAL(10,2),
-  FOREIGN KEY (id_tipo_formato) REFERENCES tipo_formato(id),
-  FOREIGN KEY (id_editorial) REFERENCES editoriales(id)
-);
--- Relacion del formato con el libro
-CREATE TABLE libro_formato (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  id_libro INT NOT NULL,
-  id_formato INT NOT NULL,
-  FOREIGN KEY (id_libro) REFERENCES libros(id),
-  FOREIGN KEY (id_formato) REFERENCES formatos(id)
-);
-ALTER TABLE libro_formato
-ADD  factor_precio DECIMAL(8,2);
 
+ALTER TABLE juegos ADD COLUMN
+cantidad INT unsigned NOT NULL;
+ALTER TABLE articulos ADD COLUMN
+cantidad INT unsigned NOT NULL;
 -- Relacion del libro_formato con los idiomas disponibles 
-CREATE TABLE idioma_libro_formato (
-  id_libro_formato INT,
-  id_idioma INT,
-  cantidad INT DEFAULT 1,
-  PRIMARY KEY (id_libro_formato, id_idioma),
-  FOREIGN KEY (id_libro_formato) REFERENCES libro_formato(id),
-  FOREIGN KEY (id_idioma) REFERENCES idiomas(id)
-);
+
 -- secciones de usuario y ventas
 -- Usuario con varias direcciones almacenadas 
 CREATE TABLE Usuario_Direccion(
