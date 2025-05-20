@@ -21,11 +21,14 @@ app.use(session({
     cookie: { secure: true }     
 }));
 //_----------------------------------------------------------
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 app.use((req, res, next) => {
     res.locals.direccion = req.session.username ? "/Profile" : "/Login";
     res.locals.productos=items; //carro de productos
-    res.locals.monto=0; 
+    res.locals.monto=0;
+      console.log(`[${req.method}] ${req.url}`); 
       next();});
 
 const mainRoutes = require('./routes/mainRoutes');
