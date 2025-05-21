@@ -25,3 +25,29 @@ Luego de renderizar de forma generica en index.js todas las vistas Y crear algun
 #### Finalmente separamos las renderizaciones hechas en index en el patron MVC e implementamos algunos de los metodos seguros se requieren otros en el futuro o modificaciones o mejorar de los ya hechos.
 ![Estructura de proyecto](<public/estructuras/Medias/Modelos/estructura de proyecto.jpg>)
 --- 
+Debido a que saltamos gran parte del sprint 4 y 5 tenemos varias reformas que aplicar y corregir ademas de ir trabajando vistas de perfil,usuario y ABM de productos para los administradores
+Creamos un modelo en drawio.io de entidad Relacion que fue mutando con el tiempo mientras se implementaba en mysql
+Tomamos ideas del diagrama de clases y pensamos que producto es una clase abstracta y superclase de juegos,libros o articulos --> en la BDD va a existir pero solo con los atributos basicos y los especializados de cada clase lo tiene los hijos junto con una referencia FK a su padre.
+Habia muchas relaciones muchos a muchos, algunas se implementaron y otras se penso como se podia evitar o rediseñar para no tener tantas tablas.
+
+--- 
+
+## Modulos y paquetes instalados
+1. instalamos node
+2. instalamos express y express-session
+3. instalamos los modulos para conectar con mysql 
+4. instalamos sequelize
+5. instalamos el modulo para cifrar contraseñas bcrypt
+6. instalamos dotenv para ocultar las credenciales de acceso a la bdd
+7. instalamos el motor de vistas ejs
+
+---
+## Tareas pendientes
+1.  implementar el resto de procesos en las rutas y controladores 
+2.  aplicar modificaciones(y mejoraras) en las vistas y formularios para que los productos recibidos provengan de la bdd y no de objetos y variables literales cargados en el momento en js
+3. cargar mas productos y usuarios 
+4. implementar metodos para que lo traido de la base de datos se transforme y llegue como queremos a las vistas
+5. Implementar formularios para la carga de Direcciones,Tarjetas y para la modificacion de datos de usuario.
+6. crear funciones de busqueda para traer productos y pasarlos a las vistas
+7. Realizar sprint de react sobre el carrito 
+
